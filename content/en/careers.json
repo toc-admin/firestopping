@@ -1,0 +1,114 @@
+{
+  "companies": [
+    {
+      "name": "FSB d.o.o.",
+      "description": "Leading Croatian fire protection company with over 30 years of experience. We specialize in design, implementation, and supervision of fire protection systems in all types of buildings."
+    },
+    {
+      "name": "FSB SOLUTIONS d.o.o.",
+      "description": "Sister company specialized in distribution and technical support of top-quality fire protection products. We represent leading European manufacturers and provide complete technical support."
+    }
+  ],
+  "contactEmail": "hr@fsb-zagreb.hr",
+  "jobs": [
+    {
+      "slug": "fire-protection-project-manager",
+      "title": "Fire Protection Project Manager",
+      "type": "Full-time",
+      "location": "Zagreb",
+      "department": "Projects",
+      "description": "We are looking for an experienced project manager to coordinate fire protection work execution on demanding projects throughout Croatia. Join our team and work on the most challenging projects in the region.",
+      "responsibilities": [
+        "Planning and coordinating fire protection work execution",
+        "Leading project team and collaborating with subcontractors",
+        "Communication with investors and supervising engineers",
+        "Monitoring project progress and quality control",
+        "Preparing reports and documentation",
+        "Ensuring compliance with deadlines and budgets"
+      ],
+      "requirements": [
+        "Higher education in technical field (civil engineering, mechanical engineering, or similar)",
+        "Minimum 5 years of project management experience",
+        "Knowledge of fire protection regulations",
+        "Excellent organizational and communication skills",
+        "Category B driving license",
+        "Knowledge of English language"
+      ],
+      "benefits": [
+        "Competitive salary and bonuses",
+        "Company car",
+        "Continuous education and certifications",
+        "Advancement opportunities",
+        "Work on prestigious projects",
+        "Stimulating work environment"
+      ],
+      "active": true
+    },
+    {
+      "slug": "fire-sealing-installation-technician",
+      "title": "Fire Sealing Installation Technician",
+      "type": "Full-time",
+      "location": "Zagreb and surrounding area",
+      "department": "Installation",
+      "description": "We are looking for motivated installation technicians for fire sealing installation on construction sites. We offer training and certification for working with the latest materials and technologies.",
+      "responsibilities": [
+        "Installing fire sealing according to project documentation",
+        "Working with different types of penetrations (cables, pipes, combined)",
+        "Following technical specifications and standards",
+        "Documenting completed work",
+        "Installing identification plates",
+        "Collaborating with project manager and other team members"
+      ],
+      "requirements": [
+        "Secondary technical education",
+        "Construction experience (fire protection experience preferred)",
+        "Willingness to work at heights and in confined spaces",
+        "Physical fitness for field work",
+        "Category B driving license",
+        "Responsibility and precision in work"
+      ],
+      "benefits": [
+        "Regular salary and per diems for field work",
+        "Free education and certification",
+        "Permanent employment opportunity",
+        "Work equipment and tools",
+        "Teamwork and colleague support",
+        "Advancement opportunities"
+      ],
+      "active": true
+    },
+    {
+      "slug": "sales-engineer",
+      "title": "Sales Engineer",
+      "type": "Full-time",
+      "location": "Zagreb",
+      "department": "Sales",
+      "description": "Join our sales team as a sales engineer and represent premium fire protection products to our clients. Ideal position for technical professionals with sales skills.",
+      "responsibilities": [
+        "Developing and maintaining relationships with existing clients",
+        "Identifying new sales opportunities",
+        "Technical presentation of products and solutions",
+        "Preparing quotes and technical documentation",
+        "Monitoring market and competition",
+        "Participating in trade fairs and professional events"
+      ],
+      "requirements": [
+        "Higher education in technical field",
+        "Minimum 2 years of technical sales experience",
+        "Knowledge of construction industry",
+        "Excellent presentation and negotiation skills",
+        "Category B driving license",
+        "Knowledge of English language"
+      ],
+      "benefits": [
+        "Attractive base salary + commission",
+        "Company car and phone",
+        "Flexible working hours",
+        "Continuous education",
+        "Advancement opportunities",
+        "Work with leading industry brands"
+      ],
+      "active": true
+    }
+  ]
+}

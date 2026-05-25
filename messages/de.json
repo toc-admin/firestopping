@@ -1,0 +1,380 @@
+{
+  "common": {
+    "companyName": "FSB Brandschutz",
+    "tagline": "Brandschutz-Experten",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle anzeigen",
+    "contact": "Kontakt",
+    "contactUs": "Kontaktieren Sie uns",
+    "getInTouch": "Kontakt aufnehmen",
+    "sendMessage": "Nachricht senden",
+    "readMore": "Weiterlesen",
+    "back": "Zurueck",
+    "home": "Startseite",
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "notFound": "Nicht gefunden",
+    "yearsExperience": "Jahre Erfahrung",
+    "openMenu": "Menue oeffnen",
+    "closeMenu": "Menue schliessen"
+  },
+  "navigation": {
+    "about": "Ueber uns",
+    "services": "Leistungen",
+    "solutions": "Loesungen",
+    "projects": "Projekte",
+    "products": "Produkte",
+    "blog": "Blog",
+    "careers": "Karriere",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "description": "Ueber 30 Jahre Erfahrung in Brandschutzplanung, -ausfuehrung und -ueberwachung.",
+    "servicesTitle": "Leistungen",
+    "productsTitle": "Produkte",
+    "companyTitle": "Unternehmen",
+    "partnerTitle": "Partner",
+    "privacyPolicy": "Datenschutz",
+    "termsOfUse": "Nutzungsbedingungen",
+    "copyright": "Alle Rechte vorbehalten.",
+    "workingHours": "Mo - Fr: 08:00 - 16:00"
+  },
+  "hero": {
+    "subtitle": "FSB Brandschutz",
+    "titleLine1": "Ihr zuverlaessiger",
+    "titleLine2": "Partner",
+    "titleLine3": "fuer Brandschutz",
+    "description": "Ueber 30 Jahre Erfahrung in Brandschutzplanung, -ausfuehrung und -ueberwachung. Vertrauen Sie Ihre Projekte den Experten an.",
+    "cta": "Kontaktieren Sie uns",
+    "learnMore": "Mehr erfahren"
+  },
+  "stats": {
+    "yearsExperience": "Jahre Erfahrung",
+    "projects": "Projekte",
+    "experts": "Experten",
+    "quality": "Qualitaet",
+    "certificate": "9001 Zertifikat"
+  },
+  "services": {
+    "sectionLabel": "Unsere Leistungen",
+    "sectionTitle": "Alles was Sie brauchen fuer",
+    "sectionTitleHighlight": "Brandschutz",
+    "learnMore": "Mehr erfahren",
+    "title": "Leistungen",
+    "subtitle": "Unsere Leistungen",
+    "description": "Professionelle Brandschutzdienstleistungen fuer alle Gebaeudetypen und Anwendungen.",
+    "viewAllServices": "Zurueck zu allen Leistungen",
+    "features": "Leistungsmerkmale",
+    "items": {
+      "implementation": {
+        "title": "Brandschutzausfuehrung",
+        "description": "Professionelle Ausfuehrung aller Brandschutzarbeiten."
+      },
+      "optimization": {
+        "title": "Kostenoptimierung",
+        "description": "Fachkundige Hilfe bei der Kostenoptimierung ohne Kompromisse."
+      },
+      "education": {
+        "title": "Schulung & Ausbildung",
+        "description": "Schulungsprogramme fuer Planer und Ausfuehrende."
+      },
+      "testing": {
+        "title": "Laborpruefung",
+        "description": "Akkreditierte Pruefung von Brandschutzsystemen."
+      }
+    }
+  },
+  "products": {
+    "sectionLabel": "Produkte",
+    "sectionTitle": "Hochwertige",
+    "sectionTitleHighlight": "Brandschutzprodukte",
+    "sectionDescription": "Wir vertreiben Produkte fuehrender Hersteller wie Promat und Rudolf Hensel.",
+    "title": "Produkte",
+    "subtitle": "Brandschutzprodukte",
+    "description": "Hochwertige Brandschutzprodukte fuehrender europaeischer Hersteller.",
+    "allProducts": "Alle Produkte",
+    "viewAllProducts": "Alle Produkte anzeigen",
+    "authorizedDistributor": "Autorisierter Haendler",
+    "categories": {
+      "sealing": "Brandschottung",
+      "coatings": "Brandschutzbeschichtungen",
+      "boards": "Brandschutzplatten",
+      "modules": "Brandschutzmodule",
+      "glass": "Brandschutzglas",
+      "wool": "Brandschutzwolle",
+      "silicate": "Silikatplatten"
+    },
+    "specifications": "Spezifikationen",
+    "manufacturer": "Hersteller",
+    "datasheet": "Technisches Datenblatt",
+    "downloadDatasheet": "Datenblatt herunterladen"
+  },
+  "solutions": {
+    "title": "Loesungen",
+    "subtitle": "Innovative Brandschutzsysteme",
+    "description": "Entdecken Sie unser Sortiment an zertifizierten Brandschutzloesungen fuer verschiedene Anwendungen.",
+    "viewAllSolutions": "Alle Loesungen anzeigen",
+    "fireResistance": "Feuerwiderstand",
+    "standard": "Standard",
+    "application": "Anwendung"
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "sectionTitle": "Ausgewaehlte Projekte",
+    "sectionDescription": "Erkunden Sie einige unserer erfolgreich abgeschlossenen Brandschutzprojekte.",
+    "title": "Projekte",
+    "subtitle": "Unser Portfolio",
+    "description": "Entdecken Sie unsere erfolgreich abgeschlossenen Brandschutzprojekte.",
+    "allProjects": "Alle Projekte",
+    "viewAllProjects": "Zurueck zu allen Projekten",
+    "viewProject": "Projekt ansehen",
+    "category": "Kategorie",
+    "location": "Standort",
+    "year": "Jahr",
+    "scope": "Projektumfang",
+    "gallery": "Projektgalerie",
+    "categories": {
+      "healthcare": "Gesundheitseinrichtungen",
+      "commercial": "Gewerbebauten",
+      "infrastructure": "Oeffentliche Infrastruktur",
+      "retail": "Einkaufszentren",
+      "hospitality": "Hotels",
+      "industrial": "Industrie"
+    }
+  },
+  "blog": {
+    "sectionLabel": "Neuigkeiten",
+    "sectionTitle": "Aus unserem Blog",
+    "sectionDescription": "Fachartikel, Branchenneuigkeiten und praktische Brandschutztipps.",
+    "allArticles": "Alle Artikel",
+    "readTime": "Min Lesezeit",
+    "author": "Autor",
+    "publishedOn": "Veroeffentlicht am",
+    "category": "Kategorie",
+    "featured": "Empfohlen",
+    "title": "Blog",
+    "subtitle": "Neuigkeiten & Einblicke",
+    "description": "Fachartikel, Branchenneuigkeiten und praktische Brandschutztipps.",
+    "viewAllPosts": "Zurueck zu allen Artikeln"
+  },
+  "certifications": {
+    "sectionLabel": "Zertifizierungen",
+    "sectionTitle": "Qualitaetsgarantie",
+    "sectionDescription": "Wir besitzen alle erforderlichen Zertifizierungen und Genehmigungen fuer professionelle Brandschutzarbeiten.",
+    "title": "Qualitaetsgarantie",
+    "subtitle": "Zertifizierungen",
+    "description": "Wir besitzen alle erforderlichen Zertifizierungen fuer professionelle Brandschutzarbeiten.",
+    "items": {
+      "iso": {
+        "title": "ISO 9001:2015",
+        "description": "Qualitaetsmanagementsystem-Zertifikat"
+      },
+      "mup": {
+        "title": "MUP-Genehmigung",
+        "description": "Genehmigung fuer Brandschutzsystempruefung"
+      },
+      "eta": {
+        "title": "ETA-Zertifikate",
+        "description": "Europaeische Technische Bewertung von Produkten"
+      },
+      "ce": {
+        "title": "CE-Kennzeichnung",
+        "description": "Konformitaet mit europaeischen Standards"
+      }
+    }
+  },
+  "partner": {
+    "officialPartner": "Offizieller Partner",
+    "title": "FSB DOORS",
+    "subtitle": "Partner fuer Brandschutztueren",
+    "description": "In Zusammenarbeit mit FSB DOORS bieten wir hochwertige Brandschutztueren mit europaeischen Zertifizierungen. Von Standard- bis zu massgeschneiderten Loesungen - wir sorgen fuer den kompletten Schutz Ihres Gebaeudes.",
+    "features": [
+      "Brandschutztueren Klasse EI 30 bis EI 120",
+      "EU-Zertifizierungen und Pruefzeugnisse",
+      "Massgeschneiderte Loesungen",
+      "Technischer Support und Beratung"
+    ],
+    "visitSite": "FSB DOORS besuchen",
+    "since": "seit 2015"
+  },
+  "cta": {
+    "title": "Brauchen Sie Hilfe?",
+    "description": "Kontaktieren Sie uns fuer eine kostenlose Beratung zu Ihren Brandschutzanforderungen."
+  },
+  "contactCta": {
+    "label": "Kontaktieren Sie uns",
+    "title": "Brauchen Sie Expertenhilfe beim",
+    "titleHighlight": "Brandschutz?",
+    "description": "Kontaktieren Sie uns fuer kostenlose Beratung. Unser Expertenteam steht Ihnen fuer alle Anfragen und Projekte zur Verfuegung.",
+    "requestQuote": "Angebot anfordern",
+    "callUs": "Rufen Sie uns an",
+    "sendEmail": "E-Mail senden"
+  },
+  "trustBadges": {
+    "yearsExperience": {
+      "title": "30+ Jahre",
+      "description": "Branchenerfahrung"
+    },
+    "iso": {
+      "title": "ISO 9001",
+      "description": "Zertifiziertes System"
+    },
+    "projects": {
+      "title": "300+ Projekte",
+      "description": "Erfolgreich abgeschlossen"
+    },
+    "team": {
+      "title": "Expertenteam",
+      "description": "Zertifizierte Ingenieure"
+    },
+    "response": {
+      "title": "Schnelle Reaktion",
+      "description": "24/7 Support"
+    },
+    "onTime": {
+      "title": "Puenktlich",
+      "description": "Termintreue"
+    }
+  },
+  "director": {
+    "label": "Fuehrung",
+    "name": "Dipl. ing. Miro Baclija",
+    "title": "Direktor und Gruender",
+    "bio1": "Mit ueber 30 Jahren Erfahrung im Brandschutz ist Miro Baclija einer der fuehrenden Experten in Kroatien. Er absolvierte die Fakultaet fuer Maschinenbau und Schiffbau in Zagreb.",
+    "bio2": "Unter seiner Leitung hat sich FSB Brandschutz zu einem der fuehrenden Brandschutzunternehmen in der Region entwickelt, mit ueber 300 erfolgreich abgeschlossenen Projekten.",
+    "bio3": "Er beteiligt sich aktiv an der Entwicklung von Standards und Vorschriften und bildet die Fachoeffentlichkeit regelmaessig durch Seminare und Publikationen weiter."
+  },
+  "about": {
+    "title": "Ueber uns",
+    "subtitle": "FSB Brandschutz",
+    "description": "Vertrauensbildung durch Exzellenz im Brandschutz seit ueber drei Jahrzehnten.",
+    "ourStory": "Unsere Geschichte",
+    "storyParagraph1": "FSB Brandschutz wurde mit dem Ziel gegruendet, erstklassige Brandschutzdienstleistungen anzubieten. Von Anfang an lag unser Fokus auf Qualitaet, Fachkompetenz und Zuverlaessigkeit.",
+    "storyParagraph2": "In ueber 30 Jahren Geschaeftstätigkeit haben wir mehr als 300 Projekte fuer anspruchsvollste Kunden abgeschlossen - von Gesundheitseinrichtungen und Buerogebaeuden bis hin zu oeffentlicher Infrastruktur und Industrieanlagen.",
+    "storyParagraph3": "Unser Team besteht aus erfahrenen Fachleuten mit langjaehriger Erfahrung im Brandschutz. Wir bilden uns kontinuierlich weiter und verfolgen die neuesten Trends und Technologien der Branche.",
+    "ourMission": "Unsere Mission",
+    "missionStatement": "Das hoechste Brandschutzniveau fuer alle Gebaeudetypen durch die Kombination von Fachwissen, Qualitaetsmaterialien und professioneller Ausfuehrung zu gewaehrleisten.",
+    "ourValues": "Unsere Werte",
+    "values": {
+      "expertise": {
+        "title": "Fachkompetenz",
+        "description": "Kontinuierliche Verbesserung und Einhaltung der neuesten Branchenstandards."
+      },
+      "quality": {
+        "title": "Qualitaet",
+        "description": "Verwendung nur erprobter Materialien und Technologien hoechster Qualitaet."
+      },
+      "reliability": {
+        "title": "Zuverlaessigkeit",
+        "description": "Einhaltung von Versprechen und vereinbarten Fristen und Bedingungen."
+      },
+      "partnership": {
+        "title": "Partnerschaft",
+        "description": "Aufbau langfristiger Kundenbeziehungen basierend auf Vertrauen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Kontakt",
+    "description": "Wir stehen Ihnen fuer alle Brandschutzanfragen zur Verfuegung.",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "workingHours": "Oeffnungszeiten",
+    "weekdays": "Mo - Fr: 08:00 - 16:00",
+    "weekend": "Samstag und Sonntag: geschlossen",
+    "responseTime": "Wir antworten innerhalb von 24 Stunden",
+    "sendInquiry": "Anfrage senden",
+    "inquiryDescription": "Fuellen Sie das Formular aus und wir melden uns schnellstmoeglich bei Ihnen.",
+    "ourLocations": "Unsere Standorte",
+    "locationsDescription": "Besuchen Sie uns an einem unserer Standorte in Zagreb.",
+    "emergency": {
+      "title": "Notfall?",
+      "description": "Fuer dringende Situationen rufen Sie uns direkt an. Wir sind auch ausserhalb der Geschaeftszeiten erreichbar."
+    },
+    "form": {
+      "name": "Vollstaendiger Name",
+      "namePlaceholder": "Geben Sie Ihren Namen ein",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "phone": "Telefonnummer",
+      "phonePlaceholder": "Geben Sie Ihre Telefonnummer ein",
+      "company": "Unternehmen",
+      "companyPlaceholder": "Geben Sie den Firmennamen ein",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Worum geht es bei Ihrer Anfrage?",
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihre Anfrage im Detail...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    }
+  },
+  "careers": {
+    "title": "Karriere",
+    "subtitle": "Werden Sie Teil unseres Teams",
+    "description": "Wir suchen talentierte Menschen, die unser wachsendes Team verstaerken moechten.",
+    "viewAllPositions": "Alle Positionen anzeigen",
+    "openPositions": "Offene Stellen",
+    "applyNow": "Jetzt bewerben",
+    "jobDetails": {
+      "type": "Beschaeftigungsart",
+      "location": "Standort",
+      "department": "Abteilung",
+      "responsibilities": "Aufgaben",
+      "requirements": "Anforderungen",
+      "benefits": "Was wir bieten"
+    },
+    "companies": {
+      "title": "Unsere Unternehmen",
+      "description": "Karrieremoeglichkeiten innerhalb der FSB-Gruppe"
+    },
+    "noPositions": "Derzeit keine offenen Stellen",
+    "spontaneousApplication": "Initiativbewerbung",
+    "spontaneousDescription": "Keine passende Stelle gefunden? Senden Sie uns trotzdem Ihren Lebenslauf."
+  },
+  "notFoundPage": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zurueck zur Startseite"
+  },
+  "metadata": {
+    "home": {
+      "title": "FSB Brandschutz | Brandschutz-Experten",
+      "description": "FSB Brandschutz - ueber 30 Jahre Erfahrung im Brandschutz. Ausfuehrung, Kostenoptimierung, Schulung und Laborpruefung."
+    },
+    "about": {
+      "title": "Ueber uns",
+      "description": "FSB Brandschutz - ueber 30 Jahre Erfahrung im Brandschutz. Lernen Sie unser Team kennen und erfahren Sie mehr ueber unsere Zertifizierungen."
+    },
+    "services": {
+      "title": "Leistungen",
+      "description": "Professionelle Brandschutzdienstleistungen - Ausfuehrung, Kostenoptimierung, Schulung und Laborpruefung."
+    },
+    "products": {
+      "title": "Produkte",
+      "description": "Hochwertige Brandschutzprodukte fuehrender europaeischer Hersteller. Brandschottung, Beschichtungen, Platten und mehr."
+    },
+    "solutions": {
+      "title": "Loesungen",
+      "description": "Innovative Brandschutzloesungen und -systeme. Kabelabschottung, Brandschutzklappen, Rauchabzug und mehr."
+    },
+    "projects": {
+      "title": "Projekte",
+      "description": "Entdecken Sie unsere abgeschlossenen Brandschutzprojekte in Gesundheits-, Gewerbe-, Industrie- und oeffentlichen Gebaeuden."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Aktuelle Neuigkeiten, Vorschriften und technische Richtlinien im Brandschutz."
+    },
+    "careers": {
+      "title": "Karriere",
+      "description": "Werden Sie Teil des FSB-Teams. Offene Stellen in Brandschutzprojekten, Vertrieb und Ausfuehrung."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Kontaktieren Sie FSB Brandschutz fuer alle Brandschutzanfragen. Erreichbar per Telefon, E-Mail oder persoenlich."
+    }
+  }
+}

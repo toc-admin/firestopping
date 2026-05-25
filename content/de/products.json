@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "slug": "fire-sealing",
+      "title": "Brandschottung",
+      "description": "Produkte zur Abdichtung von Kabel-, Rohr- und anderen Installationsdurchfuehrungen durch Brandschutzwaende.",
+      "image": "/images/products/categories/brtvljenje.jpg"
+    },
+    {
+      "slug": "fire-coatings",
+      "title": "Brandschutzbeschichtungen",
+      "description": "Intumeszierende Beschichtungen und Farben zum Schutz von Stahl- und Holzkonstruktionen vor Feuer.",
+      "image": "/images/products/categories/boja.jpg"
+    },
+    {
+      "slug": "fire-boards",
+      "title": "Brandschutzplatten",
+      "description": "Feuerwiderstandsfaehige Platten zur Verkleidung von Konstruktionen und Erstellung von Brandschutzwaenden.",
+      "image": "/images/products/categories/ploce.jpg"
+    },
+    {
+      "slug": "fire-modules",
+      "title": "Brandschutzmodule",
+      "description": "Modulare Systeme zur Abdichtung komplexer Durchfuehrungen mit verschiedenen Installationstypen.",
+      "image": "/images/products/categories/moduli.jpg"
+    },
+    {
+      "slug": "fire-glass",
+      "title": "Brandschutzglas",
+      "description": "Feuerwiderstandsfaehiges Glas fuer Brandschutzwaende, Tueren und Fenster.",
+      "image": "/images/products/categories/stakla.jpg"
+    },
+    {
+      "slug": "fire-wool",
+      "title": "Brandschutzwolle",
+      "description": "Mineralwolle fuer Waermedaemmung und Brandschutz.",
+      "image": "/images/products/categories/vuna.jpg"
+    },
+    {
+      "slug": "silicate-boards-fireplaces",
+      "title": "Silikatplatten fuer Kamine",
+      "description": "Spezialplatten fuer Kamin- und Ofeninstallation und -schutz.",
+      "image": "/images/products/categories/silikatne.jpg"
+    }
+  ],
+  "products": [
+    {
+      "slug": "promat-unicable",
+      "category": "fire-sealing",
+      "title": "PROMAT UNICABLE",
+      "manufacturer": "Promat",
+      "description": "Universelles Kabelabschottungssystem",
+      "fullDescription": "PROMAT UNICABLE ist ein innovatives Kabelabschottungssystem, das einfache Installation und nachtraegliche Aenderungen ermoeglicht. Das System bietet Feuerwiderstand bis zu 120 Minuten und ist nach EN 1366-3 zertifiziert.\n\nVorteile:\n- Einfache Installation\n- Moeglichkeit der spaeteren Kabelzufuehrung\n- Aesthetisches Erscheinungsbild\n- Lange Lebensdauer",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "sizes": "Verschiedene Abmessungen nach Bedarf"
+      },
+      "image": "/images/products/promat-unicable.jpg",
+      "datasheet": "/documents/promat-unicable.pdf"
+    },
+    {
+      "slug": "promat-collar",
+      "category": "fire-sealing",
+      "title": "PROMAT COLLAR",
+      "manufacturer": "Promat",
+      "description": "Brandschutzmanschette fuer Kunststoffrohre",
+      "fullDescription": "PROMAT COLLAR ist eine Brandschutzmanschette zur Abdichtung von Kunststoffrohr-Durchfuehrungen. Im Brandfall dehnt sich das intumeszierende Material aus und verschliesst die durch das Schmelzen des Kunststoffrohrs entstandene Oeffnung.\n\nEigenschaften:\n- Fuer Kunststoffrohre bis Durchmesser 160mm\n- Einfache Installation\n- Feuerwiderstand EI 120\n- Zertifiziert nach EN 1366-3",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "sizes": "Durchmesser 32 - 160 mm"
+      },
+      "image": "/images/products/promat-collar.jpg",
+      "datasheet": "/documents/promat-collar.pdf"
+    },
+    {
+      "slug": "hensel-firesafe",
+      "category": "fire-coatings",
+      "title": "Rudolf Hensel FIRESAFE",
+      "manufacturer": "Rudolf Hensel",
+      "description": "Intumeszierende Beschichtung fuer Stahlkonstruktionen",
+      "fullDescription": "Rudolf Hensel FIRESAFE ist eine hochwertige intumeszierende Beschichtung zum Schutz von Stahlkonstruktionen vor Feuer. Die Beschichtung dehnt sich bei erhoehten Temperaturen aus und bildet eine isolierende Schicht, die den Stahl schuetzt.\n\nVorteile:\n- Feuerwiderstand bis R 120\n- Duenne Schichtanwendung\n- Verschiedene Endfarben\n- Zertifiziert nach EN 13381-8",
+      "specifications": {
+        "fireResistance": "R 30 - R 120",
+        "standard": "EN 13381-8",
+        "coverage": "Abhaengig von Profil und erforderlichem Widerstand"
+      },
+      "image": "/images/products/hensel-firesafe.jpg",
+      "datasheet": "/documents/hensel-firesafe.pdf"
+    },
+    {
+      "slug": "promat-board",
+      "category": "fire-boards",
+      "title": "PROMATECT-H",
+      "manufacturer": "Promat",
+      "description": "Kalziumsilikatplatte fuer Brandschutz",
+      "fullDescription": "PROMATECT-H ist eine Hochleistungs-Kalziumsilikatplatte fuer Konstruktionsschutz und Brandwandkonstruktion. Die Platte ist stabil, leicht und einfach zu verarbeiten.\n\nAnwendungen:\n- Stahlkonstruktions-Verkleidung\n- Brandwandkonstruktion\n- Kabeltrassenschutz\n- Tunnelauskleidungen",
+      "specifications": {
+        "fireResistance": "Bis R 240",
+        "standard": "EN 13501-2",
+        "thickness": "6 - 60 mm"
+      },
+      "image": "/images/products/promatect-h.jpg",
+      "datasheet": "/documents/promatect-h.pdf"
+    },
+    {
+      "slug": "promat-modular",
+      "category": "fire-modules",
+      "title": "PROMAT MODULAR",
+      "manufacturer": "Promat",
+      "description": "Modulares System fuer komplexe Durchfuehrungsabdichtung",
+      "fullDescription": "PROMAT MODULAR ist ein flexibles modulares System zur Abdichtung komplexer Durchfuehrungen mit verschiedenen Installationstypen. Das System ermoeglicht die Kombination von Kabeln, Rohren und Kanaelen in einer Durchfuehrung.\n\nEigenschaften:\n- Flexible Konfiguration\n- Fuer alle Installationstypen\n- Einfache nachtraegliche Aenderungen\n- Feuerwiderstand EI 120",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "configuration": "Modular - anpassbar"
+      },
+      "image": "/images/products/promat-modular.jpg",
+      "datasheet": "/documents/promat-modular.pdf"
+    },
+    {
+      "slug": "promat-systemglas",
+      "category": "fire-glass",
+      "title": "PROMAT SYSTEMGLAS",
+      "manufacturer": "Promat",
+      "description": "Brandschutzglas fuer Waende und Tueren",
+      "fullDescription": "PROMAT SYSTEMGLAS ist Brandschutzglas fuer den Einbau in Brandschutzwaende und -tueren. Es bietet Transparenz und Sicherheit in einem.\n\nEigenschaften:\n- Feuerwiderstand EI 30 - EI 120\n- Hohe Transparenz\n- UV-Stabilitaet\n- Zertifiziert nach EN 1364",
+      "specifications": {
+        "fireResistance": "EI 30 - EI 120",
+        "standard": "EN 1364-1",
+        "thickness": "15 - 43 mm"
+      },
+      "image": "/images/products/promat-systemglas.jpg",
+      "datasheet": "/documents/promat-systemglas.pdf"
+    },
+    {
+      "slug": "promat-wool",
+      "category": "fire-wool",
+      "title": "PROMAT Steinwolle",
+      "manufacturer": "Promat",
+      "description": "Steinwolle fuer Brandschutzisolierung",
+      "fullDescription": "PROMAT Steinwolle ist hochwertige Mineralwolle fuer Brandschutz und Waermedaemmung. Ideal fuer den Einsatz bei Abdichtungen, Verkleidungen und Brandschutzwaenden.\n\nEigenschaften:\n- Schmelzpunkt >1000 Grad C\n- Hervorragende Waermedaemmung\n- Schalldaemmung\n- Nicht brennbares Material",
+      "specifications": {
+        "meltingPoint": ">1000 Grad C",
+        "standard": "EN 13501-1: A1",
+        "density": "40 - 150 kg/m3"
+      },
+      "image": "/images/products/promat-wool.jpg",
+      "datasheet": "/documents/promat-wool.pdf"
+    },
+    {
+      "slug": "silca-fireplace-boards",
+      "category": "silicate-boards-fireplaces",
+      "title": "SILCA Kaminplatten",
+      "manufacturer": "SILCA",
+      "description": "Silikatplatten fuer Kamininstallation",
+      "fullDescription": "SILCA Kaminplatten sind spezialisierte Kalziumsilikatplatten fuer sichere Kamin- und Ofeninstallation. Sie bieten die erforderliche Waermedaemmung und Feuerwiderstandsfaehigkeit.\n\nAnwendungen:\n- Daemmung hinter Kaminen\n- Ofenunterbauten\n- Bauelementeschutz\n- Dekorative Verkleidungen",
+      "specifications": {
+        "maxTemperature": "1100 Grad C",
+        "standard": "EN 13501-1: A1",
+        "thickness": "25 - 50 mm"
+      },
+      "image": "/images/products/silca-ploce.jpg",
+      "datasheet": "/documents/silca-ploce.pdf"
+    }
+  ]
+}

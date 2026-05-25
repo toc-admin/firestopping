@@ -1,0 +1,116 @@
+{
+  "projects": [
+    {
+      "slug": "kbc-sestre-milosrdnice",
+      "title": "KBC Sestre Milosrdnice Hospital",
+      "category": "Healthcare Facilities",
+      "location": "Zagreb, Croatia",
+      "year": "2022",
+      "description": "Complex fire protection project for a hospital complex. Included fire sealing of installation penetrations, installation of fire doors, and smoke exhaust systems.",
+      "scope": [
+        "Fire sealing of cable penetrations",
+        "Installation of EI 60 fire doors",
+        "Smoke and heat exhaust system",
+        "Fire protection coatings on steel structures"
+      ],
+      "image": "/images/projects/kbc-sestre.jpg",
+      "gallery": [
+        "/images/projects/kbc-sestre-1.jpg",
+        "/images/projects/kbc-sestre-2.jpg",
+        "/images/projects/kbc-sestre-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "bhb-office-building",
+      "title": "BHB Office Building",
+      "category": "Commercial Buildings",
+      "location": "Zagreb, Croatia",
+      "year": "2021",
+      "description": "Modern office building with the highest fire protection standards. The project included complete fire protection from foundation to roof.",
+      "scope": [
+        "Fire sealing of all penetrations",
+        "Fire dampers in ventilation system",
+        "Fire protection glass in atrium",
+        "Fire detection system"
+      ],
+      "image": "/images/projects/bhb.jpg",
+      "gallery": [
+        "/images/projects/bhb-1.jpg",
+        "/images/projects/bhb-2.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "sljeme-cable-car",
+      "title": "Sljeme Cable Car",
+      "category": "Public Infrastructure",
+      "location": "Zagreb - Sljeme, Croatia",
+      "year": "2022",
+      "description": "Fire protection for the new Sljeme cable car complex. Protection in demanding mountain conditions presented a special challenge.",
+      "scope": [
+        "Fire protection coatings on steel structures",
+        "Fire sealing in engine room",
+        "Cable tray protection",
+        "Fire protection boards"
+      ],
+      "image": "/images/projects/zicara-sljeme.jpg",
+      "gallery": [
+        "/images/projects/zicara-1.jpg",
+        "/images/projects/zicara-2.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "arena-shopping-center",
+      "title": "Arena Shopping Center",
+      "category": "Shopping Centers",
+      "location": "Zagreb, Croatia",
+      "year": "2020",
+      "description": "Large shopping center with complex fire protection requirements. Implementation included coordination with numerous contractors.",
+      "scope": [
+        "Fire zone compartmentation",
+        "Fire doors and glass walls",
+        "Smoke exhaust system",
+        "Sealing of all installation penetrations"
+      ],
+      "image": "/images/projects/arena.jpg",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "slug": "westin-hotel",
+      "title": "Westin Hotel",
+      "category": "Hotels",
+      "location": "Zagreb, Croatia",
+      "year": "2019",
+      "description": "Prestigious hotel with the strictest safety requirements. Fire protection aligned with international standards.",
+      "scope": [
+        "Fire sealing on all floors",
+        "Fire doors in corridors",
+        "Elevator and staircase protection",
+        "Fire dampers"
+      ],
+      "image": "/images/projects/westin.jpg",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "slug": "pliva-pharmaceutical-plant",
+      "title": "Pliva Pharmaceutical Plant",
+      "category": "Industrial",
+      "location": "Zagreb, Croatia",
+      "year": "2021",
+      "description": "Industrial facility with special requirements for cleanliness and fire protection. Specialized systems were applied.",
+      "scope": [
+        "Fire sealing in clean rooms",
+        "Special fire dampers",
+        "Process installation protection",
+        "Fire protection coatings"
+      ],
+      "image": "/images/projects/pliva.jpg",
+      "gallery": [],
+      "featured": false
+    }
+  ]
+}

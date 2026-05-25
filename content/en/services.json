@@ -1,0 +1,64 @@
+{
+  "services": [
+    {
+      "slug": "fire-protection-construction",
+      "title": "Fire Protection Construction",
+      "shortTitle": "Construction",
+      "description": "Professional execution of all types of fire protection work according to the highest quality standards.",
+      "fullDescription": "FSB Fire Protection offers professional execution of all types of fire protection work. Our team of experienced specialists ensures that every project is carried out according to the highest quality standards and in compliance with applicable regulations.\n\nOur construction services include:\n\n- Fire sealing of installation penetrations\n- Application of fire protection coatings on steel structures\n- Installation of fire protection boards\n- Assembly of smoke and heat exhaust systems\n- Installation of fire doors and windows\n\nWe carry out each project with special attention, from planning to final inspection, ensuring that our clients receive solutions that fully meet their needs and legal requirements.",
+      "image": "/images/services/izvodjenje-radova.jpg",
+      "features": [
+        "Certified contractors",
+        "Premium materials",
+        "Complete documentation",
+        "Quality guarantee"
+      ],
+      "icon": "wrench"
+    },
+    {
+      "slug": "cost-optimization",
+      "title": "Fire Protection Cost Optimization",
+      "shortTitle": "Cost Optimization",
+      "description": "Expert assistance in optimizing fire protection costs without compromising safety.",
+      "fullDescription": "We understand that fire protection costs are a significant item in every construction project. That's why we offer expert cost optimization services that enable you to achieve the maximum level of protection while using resources rationally.\n\nOur optimization services include:\n\n- Analysis of project documentation and identification of savings opportunities\n- Proposing alternative solutions of equal or better quality\n- Optimizing material selection based on price-performance ratio\n- Coordination with designers and contractors\n- Cost monitoring throughout the entire project\n\nWith our approach, clients regularly achieve significant savings while maintaining the highest level of fire protection and full compliance with regulations.",
+      "image": "/images/services/optimizacija.jpg",
+      "features": [
+        "Project analysis",
+        "Alternative solutions",
+        "Significant savings",
+        "No compromise on quality"
+      ],
+      "icon": "calculator"
+    },
+    {
+      "slug": "training-education",
+      "title": "Training & Education - Guarantee of Excellence and Safety",
+      "shortTitle": "Education",
+      "description": "Specialized training programs for designers, contractors, and supervising engineers.",
+      "fullDescription": "We believe that knowledge is the foundation of safety. That's why we offer comprehensive training programs for all participants in the design and execution process of fire protection.\n\nOur training programs include:\n\n- Seminars for designers on new regulations and technologies\n- Practical training for contractors on proper system installation\n- Specialized workshops for supervising engineers\n- In-house training tailored to company needs\n- Certification programs for specific systems\n\nOur instructors are recognized experts with many years of practical experience. The training program is regularly updated in accordance with the latest regulations and technological achievements in fire protection.",
+      "image": "/images/services/edukacija.jpg",
+      "features": [
+        "Experienced instructors",
+        "Practical training",
+        "Certificates",
+        "Current content"
+      ],
+      "icon": "graduation-cap"
+    },
+    {
+      "slug": "laboratory-testing",
+      "title": "Laboratory Testing",
+      "shortTitle": "Laboratory Testing",
+      "description": "Accredited laboratory testing of fire protection systems and materials.",
+      "fullDescription": "Our accredited laboratory provides testing services for fire protection systems and materials in accordance with Croatian and European standards. Testing is carried out by certified specialists using state-of-the-art equipment.\n\nLaboratory testing services:\n\n- Fire resistance testing of building elements\n- Fire reaction testing of materials\n- Testing of fire sealing penetrations\n- Testing of fire protection coatings\n- Testing of fire doors and windows\n\nThe results of our tests are recognized by relevant authorities and can be used to obtain necessary certificates and approvals. We guarantee the accuracy, reliability, and confidentiality of all test results.",
+      "image": "/images/services/laboratorij.jpg",
+      "features": [
+        "Accredited laboratory",
+        "Certified specialists",
+        "Modern equipment",
+        "Recognized results"
+      ],
+      "icon": "flask"
+    }
+  ]
+}

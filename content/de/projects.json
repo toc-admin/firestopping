@@ -1,0 +1,116 @@
+{
+  "projects": [
+    {
+      "slug": "kbc-sestre-milosrdnice",
+      "title": "KBC Sestre Milosrdnice Krankenhaus",
+      "category": "Gesundheitseinrichtungen",
+      "location": "Zagreb, Kroatien",
+      "year": "2022",
+      "description": "Komplexes Brandschutzprojekt fuer einen Krankenhauskomplex. Umfasste Brandschottung von Installationsdurchfuehrungen, Einbau von Brandschutztueren und Rauchabzugssysteme.",
+      "scope": [
+        "Brandschottung von Kabeldurchfuehrungen",
+        "Einbau von EI 60 Brandschutztueren",
+        "Rauch- und Waermeabzugssystem",
+        "Brandschutzbeschichtungen auf Stahlkonstruktionen"
+      ],
+      "image": "/images/projects/kbc-sestre.jpg",
+      "gallery": [
+        "/images/projects/kbc-sestre-1.jpg",
+        "/images/projects/kbc-sestre-2.jpg",
+        "/images/projects/kbc-sestre-3.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "bhb-office-building",
+      "title": "BHB Buerogebaeude",
+      "category": "Gewerbebauten",
+      "location": "Zagreb, Kroatien",
+      "year": "2021",
+      "description": "Modernes Buerogebaeude mit hoechsten Brandschutzstandards. Das Projekt umfasste kompletten Brandschutz vom Fundament bis zum Dach.",
+      "scope": [
+        "Brandschottung aller Durchfuehrungen",
+        "Brandschutzklappen im Lueftungssystem",
+        "Brandschutzglas im Atrium",
+        "Brandmeldeanlage"
+      ],
+      "image": "/images/projects/bhb.jpg",
+      "gallery": [
+        "/images/projects/bhb-1.jpg",
+        "/images/projects/bhb-2.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "sljeme-cable-car",
+      "title": "Sljeme Seilbahn",
+      "category": "Oeffentliche Infrastruktur",
+      "location": "Zagreb - Sljeme, Kroatien",
+      "year": "2022",
+      "description": "Brandschutz fuer den neuen Sljeme-Seilbahnkomplex. Der Schutz unter anspruchsvollen Bergbedingungen stellte eine besondere Herausforderung dar.",
+      "scope": [
+        "Brandschutzbeschichtungen auf Stahlkonstruktionen",
+        "Brandschottung im Maschinenraum",
+        "Kabeltrassenschutz",
+        "Brandschutzplatten"
+      ],
+      "image": "/images/projects/zicara-sljeme.jpg",
+      "gallery": [
+        "/images/projects/zicara-1.jpg",
+        "/images/projects/zicara-2.jpg"
+      ],
+      "featured": true
+    },
+    {
+      "slug": "arena-shopping-center",
+      "title": "Arena Einkaufszentrum",
+      "category": "Einkaufszentren",
+      "location": "Zagreb, Kroatien",
+      "year": "2020",
+      "description": "Grosses Einkaufszentrum mit komplexen Brandschutzanforderungen. Die Umsetzung erforderte Koordination mit zahlreichen Auftragnehmern.",
+      "scope": [
+        "Brandabschnittsbildung",
+        "Brandschutztueren und Glaswaende",
+        "Rauchabzugssystem",
+        "Abdichtung aller Installationsdurchfuehrungen"
+      ],
+      "image": "/images/projects/arena.jpg",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "slug": "westin-hotel",
+      "title": "Westin Hotel",
+      "category": "Hotels",
+      "location": "Zagreb, Kroatien",
+      "year": "2019",
+      "description": "Prestigetraechtiges Hotel mit strengsten Sicherheitsanforderungen. Brandschutz nach internationalen Standards.",
+      "scope": [
+        "Brandschottung auf allen Etagen",
+        "Brandschutztueren in Fluren",
+        "Aufzug- und Treppenhausschutz",
+        "Brandschutzklappen"
+      ],
+      "image": "/images/projects/westin.jpg",
+      "gallery": [],
+      "featured": false
+    },
+    {
+      "slug": "pliva-pharmaceutical-plant",
+      "title": "Pliva Pharmawerk",
+      "category": "Industrie",
+      "location": "Zagreb, Kroatien",
+      "year": "2021",
+      "description": "Industrieanlage mit besonderen Anforderungen an Sauberkeit und Brandschutz. Spezialisierte Systeme wurden angewendet.",
+      "scope": [
+        "Brandschottung in Reinraeumen",
+        "Spezielle Brandschutzklappen",
+        "Prozessanlagenschutz",
+        "Brandschutzbeschichtungen"
+      ],
+      "image": "/images/projects/pliva.jpg",
+      "gallery": [],
+      "featured": false
+    }
+  ]
+}

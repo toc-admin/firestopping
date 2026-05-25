@@ -1,0 +1,380 @@
+{
+  "common": {
+    "companyName": "FSB Fire Protection",
+    "tagline": "Fire Protection Experts",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "contact": "Contact",
+    "contactUs": "Contact us",
+    "getInTouch": "Get in touch",
+    "sendMessage": "Send message",
+    "readMore": "Read more",
+    "back": "Back",
+    "home": "Home",
+    "loading": "Loading...",
+    "error": "Error",
+    "notFound": "Not found",
+    "yearsExperience": "years of experience",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "navigation": {
+    "about": "About",
+    "services": "Services",
+    "solutions": "Solutions",
+    "projects": "Projects",
+    "products": "Products",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "Over 30 years of experience in fire protection design, execution, and supervision.",
+    "servicesTitle": "Services",
+    "productsTitle": "Products",
+    "companyTitle": "Company",
+    "partnerTitle": "Partner",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "copyright": "All rights reserved.",
+    "workingHours": "Mon - Fri: 08:00 - 16:00"
+  },
+  "hero": {
+    "subtitle": "FSB Fire Protection",
+    "titleLine1": "Your reliable",
+    "titleLine2": "partner",
+    "titleLine3": "for fire protection",
+    "description": "Over 30 years of experience in fire protection design, execution, and supervision. Trust your projects to the experts.",
+    "cta": "Contact Us",
+    "learnMore": "Learn More"
+  },
+  "stats": {
+    "yearsExperience": "Years of Experience",
+    "projects": "Projects",
+    "experts": "Experts",
+    "quality": "Quality",
+    "certificate": "9001 Certificate"
+  },
+  "services": {
+    "sectionLabel": "Our Services",
+    "sectionTitle": "Everything you need for",
+    "sectionTitleHighlight": "fire protection",
+    "learnMore": "Learn more",
+    "title": "Services",
+    "subtitle": "Our Services",
+    "description": "Professional fire protection services for all types of buildings and applications.",
+    "viewAllServices": "Back to all services",
+    "features": "Service Features",
+    "items": {
+      "implementation": {
+        "title": "Fire Protection Construction",
+        "description": "Professional execution of all types of fire protection work."
+      },
+      "optimization": {
+        "title": "Cost Optimization",
+        "description": "Expert assistance in optimizing costs without compromise."
+      },
+      "education": {
+        "title": "Training & Education",
+        "description": "Education programs for designers and contractors."
+      },
+      "testing": {
+        "title": "Laboratory Testing",
+        "description": "Accredited testing of fire protection systems."
+      }
+    }
+  },
+  "products": {
+    "sectionLabel": "Products",
+    "sectionTitle": "Premium",
+    "sectionTitleHighlight": "fire protection products",
+    "sectionDescription": "We distribute products from leading global manufacturers Promat and Rudolf Hensel.",
+    "title": "Products",
+    "subtitle": "Fire Protection Products",
+    "description": "Premium fire protection products from leading European manufacturers.",
+    "allProducts": "All products",
+    "viewAllProducts": "View all products",
+    "authorizedDistributor": "Authorized Distributor",
+    "categories": {
+      "sealing": "Fire Sealing",
+      "coatings": "Fire Coatings",
+      "boards": "Fire Boards",
+      "modules": "Fire Modules",
+      "glass": "Fire Glass",
+      "wool": "Fire Wool",
+      "silicate": "Silicate Boards"
+    },
+    "specifications": "Specifications",
+    "manufacturer": "Manufacturer",
+    "datasheet": "Technical Datasheet",
+    "downloadDatasheet": "Download Datasheet"
+  },
+  "solutions": {
+    "title": "Solutions",
+    "subtitle": "Innovative fire protection systems",
+    "description": "Discover our range of certified fire protection solutions for various applications.",
+    "viewAllSolutions": "View all solutions",
+    "fireResistance": "Fire Resistance",
+    "standard": "Standard",
+    "application": "Application"
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "sectionTitle": "Featured Projects",
+    "sectionDescription": "Explore some of our successfully completed fire protection projects.",
+    "title": "Projects",
+    "subtitle": "Our Portfolio",
+    "description": "Explore our successfully completed fire protection projects.",
+    "allProjects": "All projects",
+    "viewAllProjects": "Back to all projects",
+    "viewProject": "View project",
+    "category": "Category",
+    "location": "Location",
+    "year": "Year",
+    "scope": "Project Scope",
+    "gallery": "Project Gallery",
+    "categories": {
+      "healthcare": "Healthcare Facilities",
+      "commercial": "Commercial Buildings",
+      "infrastructure": "Public Infrastructure",
+      "retail": "Shopping Centers",
+      "hospitality": "Hotels",
+      "industrial": "Industrial"
+    }
+  },
+  "blog": {
+    "sectionLabel": "News",
+    "sectionTitle": "From Our Blog",
+    "sectionDescription": "Expert articles, industry news, and practical fire protection tips.",
+    "allArticles": "All articles",
+    "readTime": "min read",
+    "author": "Author",
+    "publishedOn": "Published on",
+    "category": "Category",
+    "featured": "Featured",
+    "title": "Blog",
+    "subtitle": "News & Insights",
+    "description": "Expert articles, industry news, and practical fire protection tips.",
+    "viewAllPosts": "Back to all articles"
+  },
+  "certifications": {
+    "sectionLabel": "Certifications",
+    "sectionTitle": "Quality Guarantee",
+    "sectionDescription": "We possess all necessary certifications and authorizations for professional fire protection work.",
+    "title": "Quality Guarantee",
+    "subtitle": "Certifications",
+    "description": "We possess all necessary certifications for professional fire protection work.",
+    "items": {
+      "iso": {
+        "title": "ISO 9001:2015",
+        "description": "Quality management system certificate"
+      },
+      "mup": {
+        "title": "MUP Authorization",
+        "description": "Authorization for fire protection system testing"
+      },
+      "eta": {
+        "title": "ETA Certificates",
+        "description": "European Technical Assessment of products"
+      },
+      "ce": {
+        "title": "CE Marking",
+        "description": "Compliance with European standards"
+      }
+    }
+  },
+  "partner": {
+    "officialPartner": "Official Partner",
+    "title": "FSB DOORS",
+    "subtitle": "Fire door partner",
+    "description": "In cooperation with FSB DOORS, we offer premium fire doors with European certifications. From standard to customized solutions - we ensure complete protection for your building.",
+    "features": [
+      "Fire doors class EI 30 to EI 120",
+      "EU certifications and attestations",
+      "Customized solutions",
+      "Technical support and consultations"
+    ],
+    "visitSite": "Visit FSB DOORS",
+    "since": "since 2015"
+  },
+  "cta": {
+    "title": "Need Help?",
+    "description": "Contact us for a free consultation on your fire protection needs."
+  },
+  "contactCta": {
+    "label": "Contact Us",
+    "title": "Need expert help with",
+    "titleHighlight": "fire protection?",
+    "description": "Contact us for free consultations. Our team of experts is at your disposal for all your inquiries and projects.",
+    "requestQuote": "Request a Quote",
+    "callUs": "Call us",
+    "sendEmail": "Send email"
+  },
+  "trustBadges": {
+    "yearsExperience": {
+      "title": "30+ years",
+      "description": "Industry experience"
+    },
+    "iso": {
+      "title": "ISO 9001",
+      "description": "Certified system"
+    },
+    "projects": {
+      "title": "300+ projects",
+      "description": "Successfully completed"
+    },
+    "team": {
+      "title": "Expert team",
+      "description": "Certified engineers"
+    },
+    "response": {
+      "title": "Fast response",
+      "description": "24/7 support"
+    },
+    "onTime": {
+      "title": "On time",
+      "description": "Meeting deadlines"
+    }
+  },
+  "director": {
+    "label": "Leadership",
+    "name": "Dipl. ing. Miro Baclija",
+    "title": "Director and Founder",
+    "bio1": "With over 30 years of experience in fire protection, Miro Baclija is one of the leading experts in Croatia. He graduated from the Faculty of Mechanical Engineering and Naval Architecture in Zagreb.",
+    "bio2": "Under his leadership, FSB Fire Protection has grown into one of the leading fire protection companies in the region, with over 300 successfully completed projects.",
+    "bio3": "He actively participates in the development of standards and regulations and regularly educates the professional public through seminars and publications."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "FSB Fire Protection",
+    "description": "Building trust through excellence in fire protection for over three decades.",
+    "ourStory": "Our Story",
+    "storyParagraph1": "FSB Fire Protection was founded with the goal of providing top-quality fire protection services in the market. From the very beginning, our focus has been on quality, expertise, and reliability.",
+    "storyParagraph2": "Over more than 30 years of operation, we have completed over 300 projects for the most demanding clients - from healthcare facilities and office buildings to public infrastructure and industrial facilities.",
+    "storyParagraph3": "Our team consists of experienced professionals with many years of experience in fire protection. We continuously educate ourselves and follow the latest trends and technologies in the industry.",
+    "ourMission": "Our Mission",
+    "missionStatement": "To ensure the highest level of fire protection for all types of buildings by combining expert knowledge, quality materials, and professional execution.",
+    "ourValues": "Our Values",
+    "values": {
+      "expertise": {
+        "title": "Expertise",
+        "description": "Continuous improvement and following the latest industry standards."
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Using only proven materials and technologies of the highest quality."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Fulfilling promises and respecting agreed deadlines and conditions."
+      },
+      "partnership": {
+        "title": "Partnership",
+        "description": "Building long-term relationships with clients based on trust."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Contact",
+    "description": "We are at your disposal for all inquiries about fire protection.",
+    "phone": "Phone",
+    "email": "Email",
+    "workingHours": "Working Hours",
+    "weekdays": "Mon - Fri: 08:00 - 16:00",
+    "weekend": "Saturday and Sunday: closed",
+    "responseTime": "We respond within 24 hours",
+    "sendInquiry": "Send an Inquiry",
+    "inquiryDescription": "Fill out the form and we will get back to you as soon as possible.",
+    "ourLocations": "Our Locations",
+    "locationsDescription": "Visit us at one of our locations in Zagreb.",
+    "emergency": {
+      "title": "Emergency?",
+      "description": "For urgent situations, call us directly. We are available for consultations outside working hours."
+    },
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "company": "Company",
+      "companyPlaceholder": "Enter company name",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is your inquiry about?",
+      "message": "Message",
+      "messagePlaceholder": "Describe your inquiry in detail...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join Our Team",
+    "description": "We are looking for talented individuals to join our growing team.",
+    "viewAllPositions": "View all positions",
+    "openPositions": "Open Positions",
+    "applyNow": "Apply Now",
+    "jobDetails": {
+      "type": "Employment Type",
+      "location": "Location",
+      "department": "Department",
+      "responsibilities": "Responsibilities",
+      "requirements": "Requirements",
+      "benefits": "What We Offer"
+    },
+    "companies": {
+      "title": "Our Companies",
+      "description": "Career opportunities within the FSB Group"
+    },
+    "noPositions": "No open positions at the moment",
+    "spontaneousApplication": "Spontaneous Application",
+    "spontaneousDescription": "Don't see a suitable position? Send us your CV anyway."
+  },
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  },
+  "metadata": {
+    "home": {
+      "title": "FSB Fire Protection | Fire Protection Experts",
+      "description": "FSB Fire Protection - over 30 years of experience in fire protection. Construction, cost optimization, training, and laboratory testing."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "FSB Fire Protection - over 30 years of experience in fire protection. Meet our team and learn about our certifications and qualifications."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Professional fire protection services - construction, cost optimization, training, and laboratory testing."
+    },
+    "products": {
+      "title": "Products",
+      "description": "Premium fire protection products from leading European manufacturers. Fire sealing, coatings, boards, and more."
+    },
+    "solutions": {
+      "title": "Solutions",
+      "description": "Innovative fire protection solutions and systems. Cable sealing, fire dampers, smoke ventilation, and more."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore our completed fire protection projects in healthcare, commercial, industrial, and public buildings."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Latest news, regulations, and technical guidelines in fire protection."
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Join the FSB team. Open positions in fire protection projects, sales, and execution."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact FSB Fire Protection for all your fire protection inquiries. Available by phone, email, or in person."
+    }
+  }
+}

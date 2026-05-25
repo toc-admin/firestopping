@@ -1,0 +1,114 @@
+{
+  "companies": [
+    {
+      "name": "FSB d.o.o.",
+      "description": "Fuehrendes kroatisches Brandschutzunternehmen mit ueber 30 Jahren Erfahrung. Wir sind spezialisiert auf Planung, Ausfuehrung und Ueberwachung von Brandschutzsystemen in allen Gebaeudetypen."
+    },
+    {
+      "name": "FSB SOLUTIONS d.o.o.",
+      "description": "Schwesterunternehmen spezialisiert auf Vertrieb und technischen Support von Brandschutzprodukten hoechster Qualitaet. Wir vertreten fuehrende europaeische Hersteller und bieten vollstaendigen technischen Support."
+    }
+  ],
+  "contactEmail": "hr@fsb-zagreb.hr",
+  "jobs": [
+    {
+      "slug": "fire-protection-project-manager",
+      "title": "Projektleiter Brandschutz",
+      "type": "Vollzeit",
+      "location": "Zagreb",
+      "department": "Projekte",
+      "description": "Wir suchen einen erfahrenen Projektleiter zur Koordination von Brandschutzarbeiten bei anspruchsvollen Projekten in ganz Kroatien. Werden Sie Teil unseres Teams und arbeiten Sie an den anspruchsvollsten Projekten der Region.",
+      "responsibilities": [
+        "Planung und Koordination von Brandschutzarbeiten",
+        "Fuehrung des Projektteams und Zusammenarbeit mit Subunternehmern",
+        "Kommunikation mit Investoren und Bauleitern",
+        "Ueberwachung des Projektfortschritts und Qualitaetskontrolle",
+        "Erstellung von Berichten und Dokumentation",
+        "Sicherstellung der Einhaltung von Terminen und Budgets"
+      ],
+      "requirements": [
+        "Hochschulabschluss im technischen Bereich (Bauingenieurwesen, Maschinenbau oder aehnlich)",
+        "Mindestens 5 Jahre Erfahrung im Projektmanagement",
+        "Kenntnisse der Brandschutzvorschriften",
+        "Ausgezeichnete organisatorische und kommunikative Faehigkeiten",
+        "Fuehrerschein Klasse B",
+        "Englischkenntnisse"
+      ],
+      "benefits": [
+        "Wettbewerbsfaehiges Gehalt und Boni",
+        "Firmenwagen",
+        "Kontinuierliche Weiterbildung und Zertifizierungen",
+        "Aufstiegsmoeglichkeiten",
+        "Arbeit an prestigetraechtigen Projekten",
+        "Anregendes Arbeitsumfeld"
+      ],
+      "active": true
+    },
+    {
+      "slug": "fire-sealing-installation-technician",
+      "title": "Monteur fuer Brandschottung",
+      "type": "Vollzeit",
+      "location": "Zagreb und Umgebung",
+      "department": "Montage",
+      "description": "Wir suchen motivierte Monteure fuer die Installation von Brandschottungen auf Baustellen. Wir bieten Schulung und Zertifizierung fuer die Arbeit mit den neuesten Materialien und Technologien.",
+      "responsibilities": [
+        "Installation von Brandschottungen gemaess Projektdokumentation",
+        "Arbeit mit verschiedenen Durchfuehrungsarten (Kabel, Rohre, kombiniert)",
+        "Einhaltung technischer Spezifikationen und Standards",
+        "Dokumentation der ausgefuehrten Arbeiten",
+        "Anbringen von Identifikationsschildern",
+        "Zusammenarbeit mit Projektleiter und anderen Teammitgliedern"
+      ],
+      "requirements": [
+        "Technische Berufsausbildung",
+        "Erfahrung im Bauwesen (Brandschutzerfahrung bevorzugt)",
+        "Bereitschaft zur Arbeit in der Hoehe und in beengten Raeumen",
+        "Koerperliche Fitness fuer Ausseneinsaetze",
+        "Fuehrerschein Klasse B",
+        "Verantwortungsbewusstsein und Praezision bei der Arbeit"
+      ],
+      "benefits": [
+        "Regelmaessiges Gehalt und Tagessaetze fuer Ausseneinsaetze",
+        "Kostenlose Schulung und Zertifizierung",
+        "Moeglichkeit zur Festanstellung",
+        "Arbeitsausruestung und Werkzeuge",
+        "Teamarbeit und Unterstuetzung durch Kollegen",
+        "Aufstiegsmoeglichkeiten"
+      ],
+      "active": true
+    },
+    {
+      "slug": "sales-engineer",
+      "title": "Vertriebsingenieur",
+      "type": "Vollzeit",
+      "location": "Zagreb",
+      "department": "Vertrieb",
+      "description": "Werden Sie Teil unseres Vertriebsteams als Vertriebsingenieur und praesentieren Sie unseren Kunden hochwertige Brandschutzprodukte. Ideale Position fuer technische Fachkraefte mit Vertriebstalent.",
+      "responsibilities": [
+        "Entwicklung und Pflege von Beziehungen zu bestehenden Kunden",
+        "Identifizierung neuer Verkaufschancen",
+        "Technische Praesentation von Produkten und Loesungen",
+        "Erstellung von Angeboten und technischer Dokumentation",
+        "Markt- und Wettbewerbsbeobachtung",
+        "Teilnahme an Messen und Fachveranstaltungen"
+      ],
+      "requirements": [
+        "Hochschulabschluss im technischen Bereich",
+        "Mindestens 2 Jahre Erfahrung im technischen Vertrieb",
+        "Kenntnisse der Baubranche",
+        "Ausgezeichnete Praesentations- und Verhandlungsfaehigkeiten",
+        "Fuehrerschein Klasse B",
+        "Englischkenntnisse"
+      ],
+      "benefits": [
+        "Attraktives Grundgehalt + Provision",
+        "Firmenwagen und Handy",
+        "Flexible Arbeitszeiten",
+        "Kontinuierliche Weiterbildung",
+        "Aufstiegsmoeglichkeiten",
+        "Arbeit mit fuehrenden Marken der Branche"
+      ],
+      "active": true
+    }
+  ]
+}

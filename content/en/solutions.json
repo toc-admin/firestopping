@@ -1,0 +1,82 @@
+{
+  "solutions": [
+    {
+      "slug": "fsg-s",
+      "title": "FSG-S",
+      "description": "Cable penetration fire sealing system",
+      "fullDescription": "FSG-S is an innovative cable penetration fire sealing system that provides excellent fire resistance up to 120 minutes. The system is certified according to European standards and is ideal for use in all types of buildings.\n\nSystem features:\n\n- Fire resistance: EI 120\n- Easy installation\n- Possibility of subsequent cable addition\n- Certified according to EN 1366-3",
+      "image": "/images/solutions/fsg-s.jpg",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "application": "Cable trays and individual cables"
+      },
+      "category": "sealing"
+    },
+    {
+      "slug": "fsp-90",
+      "title": "FSP-90",
+      "description": "Fire protection board for steel structure protection",
+      "fullDescription": "FSP-90 is a high-performance fire protection board designed for steel structure protection. It provides fire resistance up to 90 minutes and is ideal for use in industrial halls, warehouses, and commercial buildings.\n\nProduct features:\n\n- Fire resistance: R 90\n- Low weight\n- Easy assembly\n- Aesthetic finish",
+      "image": "/images/solutions/fsp-90.jpg",
+      "specifications": {
+        "fireResistance": "R 90",
+        "standard": "EN 13381-4",
+        "application": "Steel structures"
+      },
+      "category": "boards"
+    },
+    {
+      "slug": "smoke-heat-exhaust-system",
+      "title": "Smoke and Heat Exhaust System",
+      "description": "Complete system for natural ventilation and smoke exhaust",
+      "fullDescription": "The Smoke and Heat Exhaust System is a complete system that ensures safe evacuation of smoke and heat in case of fire. The system enables natural ventilation and is a key element of passive fire protection.\n\nSystem advantages:\n\n- Automatic activation in case of fire\n- Manual activation as an option\n- Low maintenance\n- Long service life",
+      "image": "/images/solutions/vod-dim.jpg",
+      "specifications": {
+        "fireResistance": "E 90 / EI 60",
+        "standard": "EN 12101-2",
+        "application": "Industrial buildings, garages, atriums"
+      },
+      "category": "ventilation"
+    },
+    {
+      "slug": "fsd-1",
+      "title": "FSD-1",
+      "description": "Fire damper for ventilation ducts",
+      "fullDescription": "FSD-1 is a reliable fire damper designed for installation in ventilation ducts. It automatically closes in case of fire, preventing the spread of fire and smoke through the ventilation system.\n\nFeatures:\n\n- Automatic closure with thermal trigger\n- Remote control capability\n- Fire resistance up to 120 minutes\n- Certified according to EN 15650",
+      "image": "/images/solutions/fsd-1.jpg",
+      "specifications": {
+        "fireResistance": "EI 120 S",
+        "standard": "EN 15650",
+        "application": "Ventilation ducts"
+      },
+      "category": "dampers"
+    },
+    {
+      "slug": "fsd-1-hh",
+      "title": "FSD-1-HH",
+      "description": "Fire damper for high-rise buildings",
+      "fullDescription": "FSD-1-HH is a specialized fire damper developed for use in high-rise buildings. It meets the strictest safety requirements and provides reliable protection under the most demanding conditions.\n\nFeatures:\n\n- Reinforced construction for high buildings\n- Integrated monitoring system\n- Fire resistance up to 120 minutes\n- Tested at elevated pressure",
+      "image": "/images/solutions/fsd-1-hh.jpg",
+      "specifications": {
+        "fireResistance": "EI 120 S",
+        "standard": "EN 15650",
+        "application": "High-rise buildings"
+      },
+      "category": "dampers"
+    },
+    {
+      "slug": "pipe-fire-seal",
+      "title": "Pipe Fire Seal",
+      "description": "Universal seal for sealing pipe penetrations through walls and ceilings",
+      "fullDescription": "Our pipe fire seal provides reliable sealing of metal and plastic pipe penetrations through fire barriers. The system is easy to install and allows for subsequent interventions.\n\nAdvantages:\n\n- Applicable to metal and plastic pipes\n- Easy installation\n- Possibility of disassembly and reassembly\n- Fire resistance up to 120 minutes",
+      "image": "/images/solutions/brtva-cijevi.jpg",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "application": "Pipe penetrations"
+      },
+      "category": "sealing"
+    }
+  ]
+}

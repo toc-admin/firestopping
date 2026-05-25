@@ -1,0 +1,82 @@
+{
+  "solutions": [
+    {
+      "slug": "fsg-s",
+      "title": "FSG-S",
+      "description": "Kabelabschottungssystem",
+      "fullDescription": "FSG-S ist ein innovatives Kabelabschottungssystem, das eine hervorragende Feuerwiderstandsfaehigkeit von bis zu 120 Minuten bietet. Das System ist nach europaeischen Normen zertifiziert und ideal fuer den Einsatz in allen Gebaeudetypen.\n\nSystemeigenschaften:\n\n- Feuerwiderstand: EI 120\n- Einfache Installation\n- Moeglichkeit der nachtraeglichen Kabelzufuehrung\n- Zertifiziert nach EN 1366-3",
+      "image": "/images/solutions/fsg-s.jpg",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "application": "Kabeltrassen und Einzelkabel"
+      },
+      "category": "sealing"
+    },
+    {
+      "slug": "fsp-90",
+      "title": "FSP-90",
+      "description": "Brandschutzplatte zum Schutz von Stahlkonstruktionen",
+      "fullDescription": "FSP-90 ist eine Hochleistungs-Brandschutzplatte zum Schutz von Stahlkonstruktionen. Sie bietet einen Feuerwiderstand von bis zu 90 Minuten und ist ideal fuer den Einsatz in Industriehallen, Lagerhaeusern und Geschaeftsgebaeuden.\n\nProdukteigenschaften:\n\n- Feuerwiderstand: R 90\n- Geringes Gewicht\n- Einfache Montage\n- Aesthetische Oberflaeche",
+      "image": "/images/solutions/fsp-90.jpg",
+      "specifications": {
+        "fireResistance": "R 90",
+        "standard": "EN 13381-4",
+        "application": "Stahlkonstruktionen"
+      },
+      "category": "boards"
+    },
+    {
+      "slug": "smoke-heat-exhaust-system",
+      "title": "Rauch- und Waermeabzugssystem",
+      "description": "Komplettes System fuer natuerliche Belueftung und Rauchabzug",
+      "fullDescription": "Das Rauch- und Waermeabzugssystem ist ein Komplettsystem, das im Brandfall eine sichere Abfuehrung von Rauch und Waerme gewaehrleistet. Das System ermoeglicht natuerliche Belueftung und ist ein Schluesselelement des passiven Brandschutzes.\n\nSystemvorteile:\n\n- Automatische Aktivierung im Brandfall\n- Manuelle Aktivierung als Option\n- Geringer Wartungsaufwand\n- Lange Lebensdauer",
+      "image": "/images/solutions/vod-dim.jpg",
+      "specifications": {
+        "fireResistance": "E 90 / EI 60",
+        "standard": "EN 12101-2",
+        "application": "Industriegebaeude, Garagen, Atrien"
+      },
+      "category": "ventilation"
+    },
+    {
+      "slug": "fsd-1",
+      "title": "FSD-1",
+      "description": "Brandschutzklappe fuer Lueftungskanaele",
+      "fullDescription": "FSD-1 ist eine zuverlaessige Brandschutzklappe fuer den Einbau in Lueftungskanaele. Sie schliesst im Brandfall automatisch und verhindert die Ausbreitung von Feuer und Rauch durch das Lueftungssystem.\n\nEigenschaften:\n\n- Automatisches Schliessen mit thermischem Ausloeser\n- Fernsteuerungsmoeglichkeit\n- Feuerwiderstand bis zu 120 Minuten\n- Zertifiziert nach EN 15650",
+      "image": "/images/solutions/fsd-1.jpg",
+      "specifications": {
+        "fireResistance": "EI 120 S",
+        "standard": "EN 15650",
+        "application": "Lueftungskanaele"
+      },
+      "category": "dampers"
+    },
+    {
+      "slug": "fsd-1-hh",
+      "title": "FSD-1-HH",
+      "description": "Brandschutzklappe fuer Hochhaeuser",
+      "fullDescription": "FSD-1-HH ist eine spezialisierte Brandschutzklappe fuer den Einsatz in Hochhaeusern. Sie erfuellt die strengsten Sicherheitsanforderungen und bietet zuverlaessigen Schutz unter anspruchsvollsten Bedingungen.\n\nEigenschaften:\n\n- Verstaerkte Konstruktion fuer Hochhaeuser\n- Integriertes Ueberwachungssystem\n- Feuerwiderstand bis zu 120 Minuten\n- Bei erhoehtem Druck getestet",
+      "image": "/images/solutions/fsd-1-hh.jpg",
+      "specifications": {
+        "fireResistance": "EI 120 S",
+        "standard": "EN 15650",
+        "application": "Hochhaeuser"
+      },
+      "category": "dampers"
+    },
+    {
+      "slug": "pipe-fire-seal",
+      "title": "Rohrbrandschutz-Dichtung",
+      "description": "Universaldichtung zur Abdichtung von Rohrdurchfuehrungen durch Waende und Decken",
+      "fullDescription": "Unsere Rohrbrandschutz-Dichtung bietet zuverlaessige Abdichtung von Metall- und Kunststoffrohr-Durchfuehrungen durch Brandschutzwaende. Das System ist einfach zu installieren und ermoeglicht nachtraegliche Eingriffe.\n\nVorteile:\n\n- Anwendbar auf Metall- und Kunststoffrohre\n- Einfache Installation\n- Moeglichkeit der Demontage und Wiedermontage\n- Feuerwiderstand bis zu 120 Minuten",
+      "image": "/images/solutions/brtva-cijevi.jpg",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "application": "Rohrdurchfuehrungen"
+      },
+      "category": "sealing"
+    }
+  ]
+}
