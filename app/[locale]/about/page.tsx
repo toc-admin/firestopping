@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
 import Stats from "@/components/sections/Stats";
-import Certifications from "@/components/sections/Certifications";
-import Director from "@/components/sections/Director";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
 
 export async function generateMetadata({
   params,
@@ -31,6 +32,7 @@ export async function generateMetadata({
   };
 }
 
+// About page in K1 language: paper story, anthracite stats, numbered values.
 export default async function AboutPage({
   params,
 }: {
@@ -42,99 +44,162 @@ export default async function AboutPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+
+  const values = [
+    dict.about.values.expertise,
+    dict.about.values.quality,
+    dict.about.values.reliability,
+    dict.about.values.partnership,
+  ];
+  const certifications = [
+    dict.certifications.items.iso,
+    dict.certifications.items.mup,
+    dict.certifications.items.eta,
+    dict.certifications.items.ce,
+  ];
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.about.title}
         subtitle={dict.about.subtitle}
         description={dict.about.description}
       />
 
-      {/* Story section with image */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-                {dict.about.ourStory}
-              </h2>
-              <div className="space-y-4 text-neutral-600">
-                <p>{dict.about.storyParagraph1}</p>
-                <p>{dict.about.storyParagraph2}</p>
-                <p>{dict.about.storyParagraph3}</p>
+      {/* ── 1.0 Story ──────────────────────────────────── */}
+      <section className={`${container} py-20 md:py-24`}>
+        <Reveal>
+          <SectionHead index="1.0" title={dict.about.ourStory} />
+        </Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <Reveal>
+            <div className="space-y-4 text-neutral-600 leading-relaxed max-w-xl">
+              <p>{dict.about.storyParagraph1}</p>
+              <p>{dict.about.storyParagraph2}</p>
+              <p>{dict.about.storyParagraph3}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <figure className="border border-hairline bg-white p-2">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/services/izvodjenje-radova.jpg"
+                  alt={dict.common.companyName}
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
               </div>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/services/izvodjenje-radova.jpg"
-                alt={dict.common.companyName}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+            </figure>
+          </Reveal>
         </div>
       </section>
 
-      <Stats locale={locale as Locale} dict={dict} />
+      {/* ── Stats — anthracite band ────────────────────── */}
+      <Stats locale={loc} dict={dict} />
 
-      {/* Mission & Values */}
-      <section className="py-20 md:py-28 bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900 mb-4">
-              {dict.about.ourMission}
-            </h2>
-            <p className="text-lg text-neutral-600">
-              {dict.about.missionStatement}
+      {/* ── 2.0 Mission & values ───────────────────────── */}
+      <section className={`${container} py-20 md:py-24`}>
+        <Reveal>
+          <SectionHead index="2.0" title={dict.about.ourMission} note={dict.about.ourValues} />
+          <p className="max-w-2xl text-lg text-neutral-600 mb-12">
+            {dict.about.missionStatement}
+          </p>
+        </Reveal>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-hairline">
+          {values.map((value, i) => (
+            <Reveal key={value.title} delay={i * 0.05} className="bg-white">
+              <div className="p-6 h-full">
+                <span className="font-mono text-[11px] text-red">
+                  V.{String(i + 1).padStart(2, "0")}
+                </span>
+                <h4 className="mt-2 font-bold tracking-tight">{value.title}</h4>
+                <p className="mt-2 text-sm text-neutral-600 leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ── 3.0 Certifications ─────────────────────────── */}
+      <section className="border-t border-hairline bg-white">
+        <div className={`${container} py-20 md:py-24`}>
+          <Reveal>
+            <SectionHead
+              index="3.0"
+              title={dict.certifications.sectionTitle}
+              note={dict.certifications.sectionLabel}
+            />
+            <p className="max-w-2xl text-neutral-600 mb-10">
+              {dict.certifications.sectionDescription}
             </p>
-          </div>
-
-          <h3 className="text-xl font-bold text-neutral-900 mb-6">
-            {dict.about.ourValues}
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-6 bg-white rounded-2xl border border-neutral-200">
-              <h4 className="font-semibold text-neutral-900 mb-2">
-                {dict.about.values.expertise.title}
-              </h4>
-              <p className="text-sm text-neutral-600">
-                {dict.about.values.expertise.description}
-              </p>
-            </div>
-            <div className="p-6 bg-white rounded-2xl border border-neutral-200">
-              <h4 className="font-semibold text-neutral-900 mb-2">
-                {dict.about.values.quality.title}
-              </h4>
-              <p className="text-sm text-neutral-600">
-                {dict.about.values.quality.description}
-              </p>
-            </div>
-            <div className="p-6 bg-white rounded-2xl border border-neutral-200">
-              <h4 className="font-semibold text-neutral-900 mb-2">
-                {dict.about.values.reliability.title}
-              </h4>
-              <p className="text-sm text-neutral-600">
-                {dict.about.values.reliability.description}
-              </p>
-            </div>
-            <div className="p-6 bg-white rounded-2xl border border-neutral-200">
-              <h4 className="font-semibold text-neutral-900 mb-2">
-                {dict.about.values.partnership.title}
-              </h4>
-              <p className="text-sm text-neutral-600">
-                {dict.about.values.partnership.description}
-              </p>
-            </div>
+          </Reveal>
+          <div className="border-t border-hairline">
+            {certifications.map((cert, i) => (
+              <Reveal key={cert.title} delay={i * 0.04}>
+                <div className="grid grid-cols-12 gap-4 items-baseline border-b border-hairline py-5">
+                  <span className="col-span-2 md:col-span-1 font-mono text-[12px] text-red">
+                    C.{String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h4 className="col-span-10 md:col-span-4 text-lg font-bold tracking-tight">
+                    {cert.title}
+                  </h4>
+                  <p className="col-span-10 col-start-3 md:col-span-7 md:col-start-6 text-sm text-neutral-600">
+                    {cert.description}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      <Certifications locale={locale as Locale} dict={dict} />
-      <Director locale={locale as Locale} dict={dict} />
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+      {/* ── 4.0 Leadership ─────────────────────────────── */}
+      <section className={`${container} py-20 md:py-24`}>
+        <Reveal>
+          <SectionHead index="4.0" title={dict.director.name} note={dict.director.label} />
+        </Reveal>
+        <Reveal>
+          <div className="border border-hairline bg-white p-7 md:p-10 max-w-3xl">
+            <span className={monoLabel}>{dict.director.title}</span>
+            <div className="mt-5 space-y-4 text-neutral-600 leading-relaxed">
+              <p>{dict.director.bio1}</p>
+              <p>{dict.director.bio2}</p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ── Contact CTA — ink ──────────────────────────── */}
+      <section className="bg-ink text-white">
+        <div className={`${container} py-16 md:py-20`}>
+          <Reveal>
+            <span className={monoLabel}>{dict.contactCta.label}</span>
+            <h2 className="mt-5 text-3xl md:text-4xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
+              {dict.contactCta.title}{" "}
+              <span className="text-red">{dict.contactCta.titleHighlight}</span>
+            </h2>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={`/${loc}/contact`}
+                className="px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                {dict.common.contactUs}
+              </Link>
+              <a
+                href="tel:+38514878515"
+                className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
+              >
+                +385 1 4878 515
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </div>
   );
 }

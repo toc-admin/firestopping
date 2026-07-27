@@ -30,6 +30,32 @@ interface ContactFormProps {
   };
 }
 
+// K1 form idiom: numbered mono labels, square white fields, hairline borders.
+const inputClass =
+  "w-full px-4 py-3 bg-white border border-hairline focus:border-red outline-none transition-colors";
+
+function FieldLabel({
+  htmlFor,
+  index,
+  children,
+  required,
+}: {
+  htmlFor: string;
+  index: string;
+  children: React.ReactNode;
+  required?: boolean;
+}) {
+  return (
+    <label
+      htmlFor={htmlFor}
+      className="block mb-2 font-mono text-[11px] uppercase tracking-[0.14em] text-neutral-500"
+    >
+      <span className="text-red">{index}</span> / {children}
+      {required && " *"}
+    </label>
+  );
+}
+
 export default function ContactForm({ locale, dict }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
@@ -97,26 +123,15 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
 
   if (status === "success") {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg
-            className="w-8 h-8 text-green-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold text-green-900 mb-2">{successMessage.title}</h3>
-        <p className="text-green-700">
-          {successMessage.description}
-        </p>
+      <div className="border border-ink bg-white p-8">
+        <span className="font-mono text-[12px] text-red">✓</span>
+        <h3 className="mt-2 text-xl font-bold tracking-tight">{successMessage.title}</h3>
+        <p className="mt-2 text-neutral-600 leading-relaxed">{successMessage.description}</p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-4 text-green-600 font-medium hover:text-green-700"
+          className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-red hover:underline underline-offset-4"
         >
-          {successMessage.button}
+          {successMessage.button} →
         </button>
       </div>
     );
@@ -126,9 +141,9 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-2">
-            {dict.contact.form.name} *
-          </label>
+          <FieldLabel htmlFor="name" index="01" required>
+            {dict.contact.form.name}
+          </FieldLabel>
           <input
             type="text"
             id="name"
@@ -136,14 +151,14 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+            className={inputClass}
             placeholder={dict.contact.form.namePlaceholder}
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">
-            {dict.contact.form.email} *
-          </label>
+          <FieldLabel htmlFor="email" index="02" required>
+            {dict.contact.form.email}
+          </FieldLabel>
           <input
             type="email"
             id="email"
@@ -151,7 +166,7 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+            className={inputClass}
             placeholder={dict.contact.form.emailPlaceholder}
           />
         </div>
@@ -159,46 +174,46 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-2">
+          <FieldLabel htmlFor="phone" index="03">
             {dict.contact.form.phone}
-          </label>
+          </FieldLabel>
           <input
             type="tel"
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+            className={inputClass}
             placeholder={dict.contact.form.phonePlaceholder}
           />
         </div>
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-neutral-700 mb-2">
+          <FieldLabel htmlFor="company" index="04">
             {dict.contact.form.company}
-          </label>
+          </FieldLabel>
           <input
             type="text"
             id="company"
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+            className={inputClass}
             placeholder={dict.contact.form.companyPlaceholder}
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium text-neutral-700 mb-2">
-          {dict.contact.form.subject} *
-        </label>
+        <FieldLabel htmlFor="subject" index="05" required>
+          {dict.contact.form.subject}
+        </FieldLabel>
         <select
           id="subject"
           name="subject"
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
+          className={inputClass}
         >
           <option value="">{dict.contact.form.subjectPlaceholder}</option>
           {subjectOptions.map((option) => (
@@ -210,9 +225,9 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-2">
-          {dict.contact.form.message} *
-        </label>
+        <FieldLabel htmlFor="message" index="06" required>
+          {dict.contact.form.message}
+        </FieldLabel>
         <textarea
           id="message"
           name="message"
@@ -220,13 +235,13 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
           rows={5}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-neutral-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all resize-none"
+          className={`${inputClass} resize-none`}
           placeholder={dict.contact.form.messagePlaceholder}
         />
       </div>
 
       {status === "error" && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+        <div className="border border-red bg-white p-4 font-mono text-[12px] text-red">
           {dict.contact.form.error}
         </div>
       )}

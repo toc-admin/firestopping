@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { locales, type Locale, localeNames } from "@/i18n/config";
+import { locales, type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -68,7 +68,7 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} className="h-full" suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
         <StructuredData locale={locale as Locale} />
         <Header locale={locale as Locale} dict={dict} />

@@ -2,12 +2,29 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel, monoMeta } from "@/components/site/tokens";
 import { getAllServices } from "@/lib/content";
+
+// Locale-bound UI copy for the K1 layout (content strings stay in messages/).
+const L10N = {
+  en: {
+    indexTitle: "Service index",
+    count: "services",
+    ctaLabel: "Request a quote",
+    ctaTitle: "Need one contractor accountable for the complete system?",
+  },
+  de: {
+    indexTitle: "Leistungsverzeichnis",
+    count: "Leistungen",
+    ctaLabel: "Angebot anfordern",
+    ctaTitle: "Sie suchen einen Partner, der das Gesamtsystem verantwortet?",
+  },
+} as const;
 
 export async function generateMetadata({
   params,
@@ -31,6 +48,7 @@ export async function generateMetadata({
   };
 }
 
+// Services list as spec-table rows (S.01–S.xx) — K1 direction.
 export default async function ServicesPage({
   params,
 }: {
@@ -42,54 +60,92 @@ export default async function ServicesPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const services = await getAllServices(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const services = await getAllServices(loc);
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.services.title}
         subtitle={dict.services.subtitle}
         description={dict.services.description}
       />
 
-      <section className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          {/* Services grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service) => (
+      {/* ── 1.0 Service index: spec-table rows ─────────── */}
+      <section className={`${container} py-20 md:py-28`}>
+        <Reveal>
+          <SectionHead
+            index="1.0"
+            title={t.indexTitle}
+            note={`${services.length} ${t.count}`}
+          />
+        </Reveal>
+        <div className="border-t border-hairline">
+          {services.map((service, i) => (
+            <Reveal key={service.slug} delay={i * 0.08}>
               <Link
-                key={service.slug}
-                href={`/${locale}/services/${service.slug}`}
-                className="group relative rounded-2xl overflow-hidden h-[320px]"
+                href={`/${loc}/services/${service.slug}`}
+                className="group grid grid-cols-12 gap-x-4 gap-y-3 items-start border-b border-hairline py-8 transition-colors hover:bg-white"
               >
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent" />
-
-                <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                  <h2 className="text-2xl font-bold text-white mb-2">
+                <span className="col-span-2 md:col-span-1 font-mono text-[12px] text-red pt-1">
+                  S.{String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="relative hidden md:block md:col-span-2 aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(min-width: 768px) 16vw, 0vw"
+                    className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
+                  />
+                </div>
+                <div className="col-span-10 md:col-span-4">
+                  <h2 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-red transition-colors">
                     {service.title}
                   </h2>
-                  <p className="text-neutral-300 mb-4">
-                    {service.description}
-                  </p>
-                  <div className="flex items-center gap-2 text-white text-sm font-medium">
-                    <span>{dict.common.learnMore}</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  <span className={`mt-3 block ${monoMeta}`}>
+                    {service.features.join(" · ")}
+                  </span>
                 </div>
+                <p className="col-span-10 col-start-3 md:col-span-4 md:col-start-8 text-sm text-neutral-600 leading-relaxed">
+                  {service.description}
+                </p>
+                <span className="hidden md:block md:col-span-1 text-right text-xl group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
               </Link>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+      {/* ── Contact CTA — ink ──────────────────────────── */}
+      <section className="bg-ink text-white">
+        <div className={`${container} py-20 md:py-24`}>
+          <Reveal>
+            <span className={monoLabel}>{t.ctaLabel}</span>
+            <h2 className="mt-5 text-3xl md:text-4xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
+              {t.ctaTitle}
+            </h2>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={`/${loc}/contact`}
+                className="px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                {dict.common.contactUs}
+              </Link>
+              <a
+                href="tel:+38514878515"
+                className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
+              >
+                +385 1 4878 515
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </div>
   );
 }

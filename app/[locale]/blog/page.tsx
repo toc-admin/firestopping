@@ -2,12 +2,19 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container } from "@/components/site/tokens";
 import { getAllBlogPosts, getBlogCategories } from "@/lib/content";
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: { archive: "Article archive", records: "records" },
+  de: { archive: "Artikelarchiv", records: "Einträge" },
+} as const;
 
 export async function generateMetadata({
   params,
@@ -31,6 +38,7 @@ export async function generateMetadata({
   };
 }
 
+// Blog as numbered catalog rows — K1 direction.
 export default async function BlogPage({
   params,
 }: {
@@ -42,92 +50,92 @@ export default async function BlogPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const posts = await getAllBlogPosts(locale as Locale);
-  const categories = await getBlogCategories(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const posts = await getAllBlogPosts(loc);
+  const categories = await getBlogCategories(loc);
 
-  const dateLocale = locale === 'de' ? 'de-DE' : 'en-US';
+  const dateLocale = loc === "de" ? "de-DE" : "en-US";
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.blog.title}
         subtitle={dict.blog.subtitle}
         description={dict.blog.description}
       />
 
-      <section className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          {/* Category filters */}
-          <div className="flex flex-wrap gap-2 mb-12">
-            <span className="px-4 py-2 bg-neutral-900 text-white rounded-full text-sm font-medium">
-              {dict.common.viewAll}
-            </span>
+      <section className={`${container} py-20 md:py-28`}>
+        <Reveal>
+          <SectionHead
+            index="1.0"
+            title={t.archive}
+            note={`${posts.length} ${t.records}`}
+          />
+        </Reveal>
+
+        {/* Category chips — static index (no filtering logic existed before) */}
+        <Reveal>
+          <div className="flex flex-wrap gap-2 mb-10 font-mono text-[11px] uppercase tracking-[0.12em]">
             {categories.map((category) => (
-              <span
-                key={category}
-                className="px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 cursor-pointer transition-colors"
-              >
+              <span key={category} className="px-3 py-1.5 border border-hairline text-neutral-500">
                 {category}
               </span>
             ))}
           </div>
+        </Reveal>
 
-          {/* Blog posts grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article
-                key={post.slug}
-                className="group bg-white rounded-2xl overflow-hidden border border-neutral-200 hover:border-neutral-300 hover:shadow-lg transition-all duration-300"
+        {/* Posts as catalog rows */}
+        <div className="border-t border-hairline">
+          {posts.map((post, i) => (
+            <Reveal key={post.slug} delay={(i % 4) * 0.05}>
+              <Link
+                href={`/${loc}/blog/${post.slug}`}
+                className="group grid grid-cols-12 gap-x-4 gap-y-3 items-center border-b border-hairline py-6 transition-colors hover:bg-white"
               >
-                <Link href={`/${locale}/blog/${post.slug}`}>
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-brand-500 text-white text-xs font-medium rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
+                <span className="col-span-2 md:col-span-1 font-mono text-[12px] text-red">
+                  B.{String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="relative col-span-10 md:col-span-2 aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="220px"
+                    className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-500"
+                  />
+                </div>
+                <div className="col-span-10 col-start-3 md:col-span-6 md:col-start-auto md:pl-2">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 font-mono text-[11px] uppercase tracking-[0.14em]">
+                    <span className="text-red">{post.category}</span>
+                    <span className="text-neutral-400">
+                      {new Date(post.date).toLocaleDateString(dateLocale, {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="text-neutral-400">
+                      {post.readTime} {dict.blog.readTime}
+                    </span>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-neutral-500 mb-3">
-                      <span className="flex items-center gap-1.5">
-                        <Calendar className="h-4 w-4" />
-                        {new Date(post.date).toLocaleDateString(dateLocale, {
-                          day: "numeric",
-                          month: "long",
-                          year: "numeric",
-                        })}
-                      </span>
-                      <span className="flex items-center gap-1.5">
-                        <Clock className="h-4 w-4" />
-                        {post.readTime}
-                      </span>
-                    </div>
-                    <h2 className="text-xl font-semibold text-neutral-900 group-hover:text-brand-600 transition-colors mb-3 line-clamp-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-neutral-600 line-clamp-3 mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-2 text-brand-600 font-medium">
-                      <span>{dict.common.readMore}</span>
-                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
+                  <h2 className="mt-2 text-xl md:text-2xl font-bold tracking-tight group-hover:text-red transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-neutral-600 leading-relaxed line-clamp-2">
+                    {post.excerpt}
+                  </p>
+                </div>
+                <span className="hidden md:flex md:col-span-3 items-center justify-end gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400 group-hover:text-ink transition-colors">
+                  {dict.common.readMore}
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </Link>
+            </Reveal>
+          ))}
         </div>
       </section>
-
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+    </div>
   );
 }

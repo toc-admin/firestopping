@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Clock, ExternalLink } from "lucide-react";
 import type { Locale } from "@/i18n/config";
 
 interface FooterProps {
@@ -49,6 +48,15 @@ interface FooterProps {
   };
 }
 
+const NORMS = [
+  "EN 1366-3",
+  "EN 13381-8",
+  "EN 16034",
+  "EN 1364-1",
+  "ISO 9001",
+];
+
+// Footer on the anthracite surface — the site's technical colophon.
 export default function Footer({ locale, dict }: FooterProps) {
   const footerNavigation = {
     services: [
@@ -71,157 +79,132 @@ export default function Footer({ locale, dict }: FooterProps) {
       { name: dict.navigation.careers, href: `/${locale}/careers` },
       { name: dict.navigation.contact, href: `/${locale}/contact` },
     ],
-    partner: [
-      { name: "FSB DOORS", href: "https://www.fsb-doors.com/", external: true },
-    ],
   };
 
+  const columns = [
+    ["1", dict.footer.servicesTitle, footerNavigation.services],
+    ["2", dict.footer.productsTitle, footerNavigation.products],
+    ["3", dict.footer.companyTitle, footerNavigation.company],
+  ] as const;
+
   return (
-    <footer className="bg-neutral-900 text-white">
+    <footer className="bg-anthracite text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company info */}
+          {/* Company + contact */}
           <div>
-            <Link href={`/${locale}`} className="inline-block">
-              <Image
-                src="/images/logo-fsb.png"
-                alt={dict.common.companyName}
-                width={150}
-                height={40}
-                className="h-10 w-auto brightness-0 invert"
-              />
+            <Link href={`/${locale}`} className="inline-flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-9 h-9 bg-ink">
+                <Image
+                  src="/images/logo-fsb.png"
+                  alt={dict.common.companyName}
+                  width={26}
+                  height={26}
+                  className="w-[26px] h-[26px] object-contain"
+                />
+              </span>
+              <span className="font-mono text-[12px] uppercase tracking-[0.18em]">
+                {dict.common.companyName}
+              </span>
             </Link>
-            <p className="mt-4 text-sm text-neutral-400 leading-relaxed">
+            <p className="mt-5 text-sm text-neutral-400 leading-relaxed">
               {dict.footer.description}
             </p>
-            <div className="mt-6 space-y-3">
-              <a
-                href="tel:+38514878515"
-                className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors"
-              >
-                <Phone className="h-4 w-4 text-brand-500" />
+            <address className="mt-6 flex flex-col gap-2.5 font-mono text-[12px] not-italic tracking-[0.08em] text-neutral-300">
+              <a href="tel:+38514878515" className="hover:text-white transition-colors">
                 +385 1 4878 515
               </a>
               <a
                 href="mailto:info@fsb-protupozarna-zastita.hr"
-                className="flex items-center gap-3 text-sm text-neutral-300 hover:text-white transition-colors"
+                className="hover:text-white transition-colors"
               >
-                <Mail className="h-4 w-4 text-brand-500" />
                 info@fsb-protupozarna-zastita.hr
               </a>
-              <div className="flex items-start gap-3 text-sm text-neutral-300">
-                <MapPin className="h-4 w-4 text-brand-500 mt-0.5 flex-shrink-0" />
-                <span>
-                  Samoborska Cesta 91B<br />
-                  Samoborski Odvojak 1<br />
-                  10000 Zagreb, Croatia
-                </span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-neutral-300">
-                <Clock className="h-4 w-4 text-brand-500" />
-                {dict.footer.workingHours}
-              </div>
-            </div>
+              <span>
+                Samoborska cesta 91
+                <br />
+                10000 Zagreb, {locale === "de" ? "Kroatien" : "Croatia"}
+              </span>
+              <span>{dict.footer.workingHours}</span>
+            </address>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              {dict.footer.servicesTitle}
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerNavigation.services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Indexes */}
+          {columns.map(([num, title, items]) => (
+            <nav key={title} aria-label={title}>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400">
+                {num}.0 / {title}
+              </p>
+              <ul className="mt-4 border-t border-hairline-dark">
+                {items.map((item) => (
+                  <li key={item.name} className="border-b border-hairline-dark">
+                    <Link
+                      href={item.href}
+                      className="block py-2.5 text-sm text-neutral-300 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              {title === dict.footer.companyTitle && (
+                <>
+                  <p className="mt-7 font-mono text-[11px] uppercase tracking-[0.18em] text-neutral-400">
+                    {dict.footer.partnerTitle}
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    <li>
+                      <a
+                        href="https://www.fsb-doors.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-neutral-300 hover:text-white transition-colors"
+                      >
+                        FSB DOORS ↗
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://protupozarna-zastita.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-neutral-300 hover:text-white transition-colors"
+                      >
+                        FSB d.o.o. (HR) ↗
+                      </a>
+                    </li>
+                  </ul>
+                </>
+              )}
+            </nav>
+          ))}
+        </div>
 
-          {/* Products */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              {dict.footer.productsTitle}
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerNavigation.products.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              {dict.footer.companyTitle}
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerNavigation.company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-neutral-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Partner subsection */}
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white mt-8">
-              {dict.footer.partnerTitle}
-            </h3>
-            <ul className="mt-4 space-y-3">
-              {footerNavigation.partner.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-neutral-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Norms strip — the technical signature */}
+        <div className="mt-14 pt-6 border-t border-hairline-dark flex flex-wrap gap-x-8 gap-y-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
+          {NORMS.map((n) => (
+            <span key={n}>{n}</span>
+          ))}
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-neutral-800">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-neutral-400">
-              &copy; {new Date().getFullYear()} {dict.common.companyName}. {dict.footer.copyright}
-            </p>
-            <div className="flex items-center gap-6">
-              <Link
-                href={`/${locale}/privacy-policy`}
-                className="text-sm text-neutral-400 hover:text-white transition-colors"
-              >
-                {dict.footer.privacyPolicy}
-              </Link>
-              <Link
-                href={`/${locale}/terms-of-use`}
-                className="text-sm text-neutral-400 hover:text-white transition-colors"
-              >
-                {dict.footer.termsOfUse}
-              </Link>
-            </div>
+        <div className="mt-8 pt-6 border-t border-hairline-dark flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="font-mono text-[11px] tracking-[0.1em] text-neutral-400">
+            © {new Date().getFullYear()} {dict.common.companyName} — {dict.footer.copyright}
+          </p>
+          <div className="flex items-center gap-6 font-mono text-[11px] tracking-[0.1em]">
+            <Link
+              href={`/${locale}/privacy-policy`}
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
+              {dict.footer.privacyPolicy}
+            </Link>
+            <Link
+              href={`/${locale}/terms-of-use`}
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
+              {dict.footer.termsOfUse}
+            </Link>
           </div>
         </div>
       </div>

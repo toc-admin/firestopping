@@ -2,15 +2,21 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import { type Locale, locales } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import { container, monoLabel } from "@/components/site/tokens";
 import { getBlogPostBySlug, getBlogPostSlugs, getAllBlogPosts } from "@/lib/content";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: { related: "Related articles" },
+  de: { related: "Verwandte Artikel" },
+} as const;
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -50,6 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Article with an anthracite meta header — K1 direction.
 export default async function BlogPostPage({ params }: Props) {
   const { locale, slug } = await params;
 
@@ -57,193 +64,222 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const post = await getBlogPostBySlug(locale as Locale, slug);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const post = await getBlogPostBySlug(loc, slug);
 
   if (!post) {
     notFound();
   }
 
-  const allPosts = await getAllBlogPosts(locale as Locale);
+  const allPosts = await getAllBlogPosts(loc);
   const relatedPosts = allPosts
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 
-  const dateLocale = locale === 'de' ? 'de-DE' : 'en-US';
+  const dateLocale = loc === "de" ? "de-DE" : "en-US";
+  const formattedDate = new Date(post.date).toLocaleDateString(dateLocale, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   return (
-    <>
-      {/* Article Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end">
-        <div className="absolute inset-0">
-          <Image
-            src={post.image}
-            alt={post.title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-neutral-900/20" />
-        </div>
-
-        <div className="relative z-10 w-full pb-12 md:pb-16">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <Link
-              href={`/${locale}/blog`}
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span>{dict.blog.viewAllPosts}</span>
-            </Link>
-
-            <span className="inline-block px-3 py-1 bg-brand-500 text-white text-sm font-medium rounded-full mb-4">
-              {post.category}
-            </span>
-
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              {post.title}
-            </h1>
-
-            <div className="flex flex-wrap items-center gap-6 text-white/80">
-              <span className="flex items-center gap-2">
-                <User className="h-5 w-5" />
-                {post.author}
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                {new Date(post.date).toLocaleDateString(dateLocale, {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })}
-              </span>
-              <span className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
+    <div className="bg-paper text-ink">
+      {/* ── Anthracite article header ──────────────────── */}
+      <section className="bg-anthracite text-paper border-b border-hairline-dark">
+        <div className={`${container} py-12 md:py-16`}>
+          <Link
+            href={`/${loc}/blog`}
+            className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400 hover:text-white transition-colors"
+          >
+            ← {dict.blog.viewAllPosts}
+          </Link>
+          <span className={`${monoLabel} mt-6 block`}>{post.category}</span>
+          <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.05] max-w-3xl">
+            {post.title}
+          </h1>
+          <dl className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-3 border-t border-hairline-dark pt-6 font-mono text-[12px] max-w-2xl">
+            <div>
+              <dt className="text-neutral-400 uppercase tracking-[0.12em] text-[10px]">
+                {dict.blog.author}
+              </dt>
+              <dd className="mt-1 text-paper">{post.author}</dd>
+            </div>
+            <div>
+              <dt className="text-neutral-400 uppercase tracking-[0.12em] text-[10px]">
+                {dict.blog.publishedOn}
+              </dt>
+              <dd className="mt-1 text-paper">{formattedDate}</dd>
+            </div>
+            <div>
+              <dt className="text-neutral-400 uppercase tracking-[0.12em] text-[10px]">
+                {dict.blog.category}
+              </dt>
+              <dd className="mt-1 text-paper">
                 {post.readTime} {dict.blog.readTime}
-              </span>
+              </dd>
             </div>
-          </div>
+          </dl>
         </div>
       </section>
 
-      {/* Article Content */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Main content */}
-            <div className="lg:col-span-3">
-              <article className="prose prose-lg max-w-none prose-headings:text-neutral-900 prose-p:text-neutral-600 prose-strong:text-neutral-900 prose-ul:text-neutral-600 prose-ol:text-neutral-600">
-                {post.content.split("\n\n").map((paragraph, index) => {
-                  if (paragraph.startsWith("## ")) {
-                    return (
-                      <h2 key={index} className="text-2xl font-bold text-neutral-900 mt-8 mb-4">
-                        {paragraph.replace("## ", "")}
-                      </h2>
-                    );
-                  }
-                  if (paragraph.startsWith("### ")) {
-                    return (
-                      <h3 key={index} className="text-xl font-semibold text-neutral-900 mt-6 mb-3">
-                        {paragraph.replace("### ", "")}
-                      </h3>
-                    );
-                  }
-                  if (paragraph.startsWith("- ")) {
-                    const items = paragraph.split("\n").filter(item => item.startsWith("- "));
-                    return (
-                      <ul key={index} className="list-disc pl-6 space-y-2 my-4">
-                        {items.map((item, i) => (
-                          <li key={i}>{item.replace("- ", "")}</li>
-                        ))}
-                      </ul>
-                    );
-                  }
-                  if (/^\d+\./.test(paragraph)) {
-                    const items = paragraph.split("\n").filter(item => /^\d+\./.test(item));
-                    return (
-                      <ol key={index} className="list-decimal pl-6 space-y-2 my-4">
-                        {items.map((item, i) => (
-                          <li key={i}>{item.replace(/^\d+\.\s*/, "")}</li>
-                        ))}
-                      </ol>
-                    );
-                  }
-                  if (paragraph.includes("**")) {
-                    const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
-                    return (
-                      <p key={index} className="text-neutral-600 leading-relaxed my-4">
-                        {parts.map((part, i) => {
-                          if (part.startsWith("**") && part.endsWith("**")) {
-                            return <strong key={i} className="text-neutral-900">{part.slice(2, -2)}</strong>;
-                          }
-                          return part;
-                        })}
-                      </p>
-                    );
-                  }
-                  return (
-                    <p key={index} className="text-neutral-600 leading-relaxed my-4">
-                      {paragraph}
-                    </p>
-                  );
-                })}
-              </article>
+      {/* ── Cover figure — full color documentary ───────── */}
+      <div className={`${container} pt-10`}>
+        <Reveal>
+          <figure className="mx-auto max-w-3xl border border-hairline bg-white p-2">
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(min-width: 768px) 768px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </figure>
+        </Reveal>
+      </div>
 
-              {/* Share / CTA */}
-              <div className="mt-12 p-8 bg-neutral-50 rounded-2xl">
-                <h3 className="text-xl font-bold text-neutral-900 mb-4">
-                  {dict.cta.title}
-                </h3>
-                <p className="text-neutral-600 mb-6">
-                  {dict.cta.description}
+      {/* ── Article body ───────────────────────────────── */}
+      <section className={`${container} py-14 md:py-20`}>
+        <div className="mx-auto max-w-3xl">
+          <article>
+            {post.content.split("\n\n").map((paragraph, index) => {
+              if (paragraph.startsWith("## ")) {
+                return (
+                  <h2
+                    key={index}
+                    className="mt-10 mb-4 border-t border-hairline pt-6 text-2xl font-bold tracking-tight"
+                  >
+                    {paragraph.replace("## ", "")}
+                  </h2>
+                );
+              }
+              if (paragraph.startsWith("### ")) {
+                return (
+                  <h3 key={index} className="mt-6 mb-3 text-xl font-semibold tracking-tight">
+                    {paragraph.replace("### ", "")}
+                  </h3>
+                );
+              }
+              if (paragraph.startsWith("- ")) {
+                const items = paragraph.split("\n").filter((item) => item.startsWith("- "));
+                return (
+                  <ul key={index} className="my-5 border-t border-hairline">
+                    {items.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-baseline gap-4 border-b border-hairline py-2.5"
+                      >
+                        <span className="font-mono text-[11px] text-red">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-neutral-600 leading-relaxed">
+                          {item.replace("- ", "")}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (/^\d+\./.test(paragraph)) {
+                const items = paragraph.split("\n").filter((item) => /^\d+\./.test(item));
+                return (
+                  <ol key={index} className="my-5 border-t border-hairline">
+                    {items.map((item, i) => (
+                      <li
+                        key={i}
+                        className="flex items-baseline gap-4 border-b border-hairline py-2.5"
+                      >
+                        <span className="font-mono text-[11px] text-red">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-neutral-600 leading-relaxed">
+                          {item.replace(/^\d+\.\s*/, "")}
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                );
+              }
+              if (paragraph.includes("**")) {
+                const parts = paragraph.split(/(\*\*[^*]+\*\*)/g);
+                return (
+                  <p key={index} className="my-4 text-neutral-600 leading-relaxed">
+                    {parts.map((part, i) => {
+                      if (part.startsWith("**") && part.endsWith("**")) {
+                        return (
+                          <strong key={i} className="text-ink">
+                            {part.slice(2, -2)}
+                          </strong>
+                        );
+                      }
+                      return part;
+                    })}
+                  </p>
+                );
+              }
+              return (
+                <p key={index} className="my-4 text-neutral-600 leading-relaxed">
+                  {paragraph}
                 </p>
-                <Link
-                  href={`/${locale}/contact`}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white font-medium rounded-full hover:bg-brand-500 transition-colors"
-                >
-                  {dict.common.contactUs}
-                </Link>
-              </div>
-            </div>
+              );
+            })}
+          </article>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-28">
-                {relatedPosts.length > 0 && (
-                  <div className="bg-neutral-50 rounded-2xl p-6">
-                    <h3 className="font-semibold text-neutral-900 mb-4">
-                      {dict.blog.title}
-                    </h3>
-                    <ul className="space-y-4">
-                      {relatedPosts.map((p) => (
-                        <li key={p.slug}>
-                          <Link
-                            href={`/${locale}/blog/${p.slug}`}
-                            className="group block"
-                          >
-                            <p className="font-medium text-neutral-900 group-hover:text-brand-500 transition-colors line-clamp-2">
-                              {p.title}
-                            </p>
-                            <p className="text-sm text-neutral-500 mt-1">
-                              {new Date(p.date).toLocaleDateString(dateLocale, {
-                                day: "numeric",
-                                month: "short",
-                                year: "numeric",
-                              })}
-                            </p>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+          {/* CTA panel */}
+          <Reveal>
+            <div className="mt-14 bg-anthracite text-paper p-7">
+              <span className={monoLabel}>{dict.cta.title}</span>
+              <p className="mt-3 text-neutral-300 leading-relaxed">{dict.cta.description}</p>
+              <Link
+                href={`/${loc}/contact`}
+                className="mt-6 inline-block bg-red px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                {dict.common.contactUs}
+              </Link>
             </div>
-          </div>
+          </Reveal>
+
+          {/* Related articles */}
+          {relatedPosts.length > 0 && (
+            <Reveal>
+              <div className="mt-14">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                  {t.related}
+                </p>
+                <ul className="mt-3 border-t border-hairline">
+                  {relatedPosts.map((p, i) => (
+                    <li key={p.slug} className="border-b border-hairline">
+                      <Link
+                        href={`/${loc}/blog/${p.slug}`}
+                        className="group flex items-baseline gap-4 py-3.5"
+                      >
+                        <span className="font-mono text-[11px] text-red">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="flex-1 font-semibold text-ink group-hover:text-red transition-colors">
+                          {p.title}
+                        </span>
+                        <span className="font-mono text-[11px] text-neutral-400">
+                          {new Date(p.date).toLocaleDateString(dateLocale, {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
-
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+    </div>
   );
 }

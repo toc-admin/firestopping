@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/i18n/config";
+import { container } from "@/components/site/tokens";
 
+// Stats band — anthracite plane, mono numerals like instrument readouts.
 interface StatsProps {
   locale: Locale;
   dict: {
@@ -60,14 +62,17 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [isVisible, value]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-bold text-white">
+    <div
+      ref={ref}
+      className="font-mono text-4xl md:text-5xl font-semibold text-white"
+    >
       {count}
       {suffix}
     </div>
   );
 }
 
-export default function Stats({ locale, dict, variant = "default" }: StatsProps) {
+export default function Stats({ dict }: StatsProps) {
   const stats = [
     {
       value: 30,
@@ -92,32 +97,19 @@ export default function Stats({ locale, dict, variant = "default" }: StatsProps)
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-brand-500 to-brand-600 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: '32px 32px'
-          }}
-        />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="text-center"
-            >
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              <div className="mt-2 text-white/80 font-medium">
-                {stat.label}
-              </div>
+    <section className="bg-anthracite border-y border-hairline-dark">
+      <div className={`${container} grid grid-cols-2 lg:grid-cols-4`}>
+        {stats.map((stat, i) => (
+          <div
+            key={stat.label}
+            className={`py-10 px-6 ${i > 0 ? "border-l border-hairline-dark" : ""}`}
+          >
+            <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+            <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
+              {stat.label}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

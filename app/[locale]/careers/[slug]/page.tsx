@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Briefcase, Check, Mail } from "lucide-react";
 import { type Locale, locales } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
 import { getJobBySlug, getJobSlugs, getCareerContactEmail } from "@/lib/content";
 
 interface Props {
@@ -49,6 +50,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Numbered dossier list used for responsibilities/requirements/benefits.
+function DossierList({
+  index,
+  title,
+  items,
+  prefix,
+}: {
+  index: string;
+  title: string;
+  items: string[];
+  prefix: string;
+}) {
+  return (
+    <Reveal>
+      <div>
+        <SectionHead index={index} title={title} />
+        <ul className="border-t border-hairline">
+          {items.map((item, i) => (
+            <li key={item} className="flex items-baseline gap-5 border-b border-hairline py-3.5">
+              <span className="font-mono text-[11px] text-red">
+                {prefix}.{String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="text-neutral-700 leading-relaxed">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Reveal>
+  );
+}
+
+// Job detail as an anthracite-headed dossier — K1 direction.
 export default async function JobPage({ params }: Props) {
   const { locale, slug } = await params;
 
@@ -56,159 +89,111 @@ export default async function JobPage({ params }: Props) {
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const job = await getJobBySlug(locale as Locale, slug);
-  const contactEmail = await getCareerContactEmail(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const job = await getJobBySlug(loc, slug);
+  const contactEmail = await getCareerContactEmail(loc);
 
   if (!job) {
     notFound();
   }
 
   return (
-    <>
-      {/* Job Hero */}
-      <section className="pt-32 pb-16 bg-neutral-900">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div className="bg-paper text-ink">
+      {/* ── Anthracite job header ──────────────────────── */}
+      <section className="bg-anthracite text-paper border-b border-hairline-dark">
+        <div className={`${container} py-12 md:py-16`}>
           <Link
-            href={`/${locale}/careers`}
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8"
+            href={`/${loc}/careers`}
+            className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400 hover:text-white transition-colors"
           >
-            <ArrowLeft className="h-4 w-4" />
-            <span>{dict.careers.viewAllPositions}</span>
+            ← {dict.careers.viewAllPositions}
           </Link>
-
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm">
-              <MapPin className="h-3.5 w-3.5" />
-              {job.location}
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 text-white/80 rounded-full text-sm">
-              <Briefcase className="h-3.5 w-3.5" />
-              {job.department}
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-500 text-white rounded-full text-sm font-medium">
-              {job.type}
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <span className={`${monoLabel} mt-6 block`}>
+            {job.department} · {job.location} · {job.type}
+          </span>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.02] max-w-3xl">
             {job.title}
           </h1>
-
-          <p className="text-xl text-neutral-300">
+          <p className="mt-5 text-lg text-neutral-300 leading-relaxed max-w-2xl">
             {job.description}
           </p>
         </div>
       </section>
 
-      {/* Job Content */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main content */}
-            <div className="lg:col-span-2 space-y-12">
-              {/* Responsibilities */}
-              <div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-6">
-                  {dict.careers.jobDetails.responsibilities}
-                </h2>
-                <ul className="space-y-4">
-                  {job.responsibilities.map((item, index) => (
-                    <li key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Check className="h-4 w-4 text-brand-600" />
-                      </div>
-                      <span className="text-neutral-700 pt-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+      <section className={`${container} py-16 md:py-24`}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2 space-y-14">
+            <DossierList
+              index="1.0"
+              title={dict.careers.jobDetails.responsibilities}
+              items={job.responsibilities}
+              prefix="R"
+            />
+            <DossierList
+              index="2.0"
+              title={dict.careers.jobDetails.requirements}
+              items={job.requirements}
+              prefix="Q"
+            />
+            <DossierList
+              index="3.0"
+              title={dict.careers.jobDetails.benefits}
+              items={job.benefits}
+              prefix="B"
+            />
+          </div>
 
-              {/* Requirements */}
-              <div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-6">
-                  {dict.careers.jobDetails.requirements}
-                </h2>
-                <ul className="space-y-4">
-                  {job.requirements.map((item, index) => (
-                    <li key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-neutral-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Check className="h-4 w-4 text-neutral-600" />
-                      </div>
-                      <span className="text-neutral-700 pt-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Benefits */}
-              <div className="p-8 bg-neutral-50 rounded-2xl">
-                <h2 className="text-2xl font-bold text-neutral-900 mb-6">
-                  {dict.careers.jobDetails.benefits}
-                </h2>
-                <ul className="space-y-4">
-                  {job.benefits.map((item, index) => (
-                    <li key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <span className="text-neutral-700 pt-1">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-                {/* Apply CTA */}
-                <div className="bg-neutral-900 rounded-2xl p-6 text-white">
-                  <h3 className="font-semibold text-lg mb-2">
-                    {dict.careers.applyNow}
-                  </h3>
-                  <p className="text-neutral-400 text-sm mb-6">
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-6">
+              <Reveal>
+                <div className="bg-ink text-white p-5">
+                  <span className={monoLabel}>{dict.careers.applyNow}</span>
+                  <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
                     {dict.contact.responseTime}
                   </p>
                   <a
                     href={`mailto:${contactEmail}?subject=${dict.careers.applyNow}: ${job.title}`}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-brand-500 text-white font-medium rounded-full hover:bg-brand-600 transition-colors"
+                    className="mt-5 block bg-red px-4 py-3 text-center text-sm font-semibold text-white hover:opacity-90 transition-opacity"
                   >
-                    <Mail className="h-5 w-5" />
-                    <span>{dict.careers.applyNow}</span>
+                    {dict.careers.applyNow}
                   </a>
-                  <p className="mt-4 text-xs text-neutral-500 text-center">
-                    {dict.contact.email}: {contactEmail}
+                  <p className="mt-4 font-mono text-[11px] tracking-[0.08em] text-neutral-500 text-center">
+                    {contactEmail}
                   </p>
                 </div>
+              </Reveal>
 
-                {/* Quick info */}
-                <div className="bg-neutral-50 rounded-2xl p-6">
-                  <h3 className="font-semibold text-neutral-900 mb-4">
-                    {dict.careers.jobDetails.type}
-                  </h3>
-                  <dl className="space-y-4">
-                    <div>
-                      <dt className="text-sm text-neutral-500">{dict.careers.jobDetails.location}</dt>
-                      <dd className="font-medium text-neutral-900">{job.location}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-neutral-500">{dict.careers.jobDetails.department}</dt>
-                      <dd className="font-medium text-neutral-900">{job.department}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-sm text-neutral-500">{dict.careers.jobDetails.type}</dt>
-                      <dd className="font-medium text-neutral-900">{job.type}</dd>
-                    </div>
+              <Reveal delay={0.06}>
+                <div className="border border-hairline bg-white">
+                  <div className="border-b border-hairline px-5 py-3.5">
+                    <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                      {dict.careers.jobDetails.type}
+                    </span>
+                  </div>
+                  <dl>
+                    {(
+                      [
+                        [dict.careers.jobDetails.location, job.location],
+                        [dict.careers.jobDetails.department, job.department],
+                        [dict.careers.jobDetails.type, job.type],
+                      ] as const
+                    ).map(([label, value]) => (
+                      <div key={label} className="border-b border-hairline px-5 py-3.5 last:border-b-0">
+                        <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-neutral-400">
+                          {label}
+                        </dt>
+                        <dd className="mt-1 font-semibold text-ink">{value}</dd>
+                      </div>
+                    ))}
                   </dl>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>
       </section>
-
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+    </div>
   );
 }

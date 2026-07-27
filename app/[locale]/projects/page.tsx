@@ -2,12 +2,29 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Calendar } from "lucide-react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
-import ContactCTA from "@/components/sections/ContactCTA";
-import { getAllProjects, getProjectCategories } from "@/lib/content";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
+import { getAllProjects } from "@/lib/content";
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: {
+    registry: "Project registry",
+    records: "records",
+    facts: { location: "Location", year: "Year", scope: "Scope", systems: "systems" },
+    ctaTitle: "Your project deserves a system that passes the test.",
+  },
+  de: {
+    registry: "Projektregister",
+    records: "Einträge",
+    facts: { location: "Standort", year: "Jahr", scope: "Umfang", systems: "Systeme" },
+    ctaTitle: "Ihr Projekt verdient ein System, das den Test besteht.",
+  },
+} as const;
 
 export async function generateMetadata({
   params,
@@ -31,6 +48,7 @@ export async function generateMetadata({
   };
 }
 
+// Projects as dossier rows — K1 direction.
 export default async function ProjectsPage({
   params,
 }: {
@@ -42,75 +60,105 @@ export default async function ProjectsPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const projects = await getAllProjects(locale as Locale);
-  const categories = await getProjectCategories(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const projects = await getAllProjects(loc);
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.projects.title}
         subtitle={dict.projects.subtitle}
         description={dict.projects.description}
       />
 
-      <section className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          {/* Category filters */}
-          <div className="flex flex-wrap gap-2 mb-12">
-            <span className="px-4 py-2 bg-neutral-900 text-white rounded-full text-sm font-medium">
-              {dict.common.viewAll}
-            </span>
-            {categories.map((category) => (
-              <span
-                key={category}
-                className="px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-sm font-medium hover:bg-neutral-200 cursor-pointer transition-colors"
-              >
-                {category}
-              </span>
-            ))}
-          </div>
+      <section className={`${container} py-20 md:py-28`}>
+        <Reveal>
+          <SectionHead
+            index="1.0"
+            title={t.registry}
+            note={`${projects.length} ${t.records}`}
+          />
+        </Reveal>
 
-          {/* Projects grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
+        <div className="space-y-px bg-hairline">
+          {projects.map((project, i) => (
+            <Reveal key={project.slug} delay={(i % 3) * 0.06} className="bg-paper">
               <Link
-                key={project.slug}
-                href={`/${locale}/projects/${project.slug}`}
-                className="group relative rounded-2xl overflow-hidden aspect-[4/5]"
+                href={`/${loc}/projects/${project.slug}`}
+                className="group grid grid-cols-1 md:grid-cols-2 gap-0"
               >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-brand-400 text-sm font-medium mb-2">
-                    {project.category}
-                  </p>
-                  <h2 className="text-xl font-semibold text-white group-hover:text-brand-100 transition-colors">
-                    {project.title}
-                  </h2>
-                  <div className="mt-3 flex items-center gap-4 text-sm text-neutral-300">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
-                      {project.location}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {project.year}
+                <div className="relative aspect-[16/10] md:aspect-auto md:min-h-[280px] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-500"
+                  />
+                </div>
+                <div className="p-7 md:p-10 flex flex-col justify-center border border-hairline md:border-l-0">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <span className={monoLabel}>{project.category}</span>
+                    <span className="font-mono text-[11px] text-neutral-400">
+                      PR.{String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
+                  <h2 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight group-hover:text-red transition-colors">
+                    {project.title}
+                  </h2>
+                  <dl className="mt-5 grid grid-cols-2 gap-y-1.5 font-mono text-[12px] max-w-xs">
+                    <dt className="text-neutral-400 uppercase tracking-[0.1em]">
+                      {t.facts.location}
+                    </dt>
+                    <dd>{project.location}</dd>
+                    <dt className="text-neutral-400 uppercase tracking-[0.1em]">
+                      {t.facts.year}
+                    </dt>
+                    <dd>{project.year}</dd>
+                    <dt className="text-neutral-400 uppercase tracking-[0.1em]">
+                      {t.facts.scope}
+                    </dt>
+                    <dd>
+                      {project.scope.length} {t.facts.systems}
+                    </dd>
+                  </dl>
+                  <p className="mt-5 text-sm text-neutral-600 leading-relaxed line-clamp-2">
+                    {project.description}
+                  </p>
                 </div>
               </Link>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+      {/* ── Contact CTA — ink ──────────────────────────── */}
+      <section className="bg-ink text-white">
+        <div className={`${container} py-16 md:py-20`}>
+          <Reveal>
+            <span className={monoLabel}>{dict.contactCta.label}</span>
+            <h2 className="mt-5 text-3xl md:text-4xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
+              {t.ctaTitle}
+            </h2>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href={`/${loc}/contact`}
+                className="px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                {dict.common.contactUs}
+              </Link>
+              <a
+                href="tel:+38514878515"
+                className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
+              >
+                +385 1 4878 515
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </div>
   );
 }

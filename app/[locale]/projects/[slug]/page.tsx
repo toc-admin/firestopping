@@ -2,16 +2,34 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Calendar, Check } from "lucide-react";
 import { type Locale, locales } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
-import ContactCTA from "@/components/sections/ContactCTA";
-import Button from "@/components/ui/Button";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
 import { getProjectBySlug, getProjectSlugs, getAllProjects } from "@/lib/content";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: {
+    dossier: "Project dossier",
+    about: "About the project",
+    facts: { location: "Location", year: "Year", category: "Category", scope: "Scope", systems: "systems" },
+    fig: "Fig.",
+    related: "Related projects",
+  },
+  de: {
+    dossier: "Projektdossier",
+    about: "Über das Projekt",
+    facts: { location: "Standort", year: "Jahr", category: "Kategorie", scope: "Umfang", systems: "Systeme" },
+    fig: "Abb.",
+    related: "Verwandte Projekte",
+  },
+} as const;
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -51,6 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Project detail as an anthracite-headed dossier — K1 direction.
 export default async function ProjectPage({ params }: Props) {
   const { locale, slug } = await params;
 
@@ -58,177 +77,194 @@ export default async function ProjectPage({ params }: Props) {
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const project = await getProjectBySlug(locale as Locale, slug);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const project = await getProjectBySlug(loc, slug);
 
   if (!project) {
     notFound();
   }
 
-  const allProjects = await getAllProjects(locale as Locale);
+  const allProjects = await getAllProjects(loc);
   const relatedProjects = allProjects
     .filter((p) => p.slug !== slug && p.category === project.category)
     .slice(0, 3);
 
+  const facts = [
+    [t.facts.location, project.location],
+    [t.facts.year, project.year],
+    [t.facts.category, project.category],
+    [t.facts.scope, `${project.scope.length} ${t.facts.systems}`],
+  ] as const;
+
   return (
-    <>
-      {/* Project Hero with background image */}
-      <section className="relative h-[70vh] min-h-[500px] flex items-end">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/50 to-neutral-900/20" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 w-full pb-12 md:pb-16">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <Link
-              href={`/${locale}/projects`}
-              className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span>{dict.projects.viewAllProjects}</span>
-            </Link>
-
-            <span className="inline-block px-3 py-1 bg-brand-500 text-white text-sm font-medium rounded-full mb-4">
-              {project.category}
-            </span>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              {project.title}
-            </h1>
-
-            <div className="flex flex-wrap items-center gap-6 text-white/80">
-              <span className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
-                {project.location}
-              </span>
-              <span className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                {project.year}
-              </span>
-            </div>
-          </div>
+    <div className="bg-paper text-ink">
+      {/* ── Anthracite dossier header ──────────────────── */}
+      <section className="bg-anthracite text-paper border-b border-hairline-dark">
+        <div className={`${container} py-12 md:py-16`}>
+          <Link
+            href={`/${loc}/projects`}
+            className="font-mono text-[11px] uppercase tracking-[0.15em] text-neutral-400 hover:text-white transition-colors"
+          >
+            ← {dict.projects.viewAllProjects}
+          </Link>
+          <span className={`${monoLabel} mt-6 block`}>
+            {t.dossier} · {project.category}
+          </span>
+          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.02] max-w-3xl">
+            {project.title}
+          </h1>
+          <dl className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-3 border-t border-hairline-dark pt-6 font-mono text-[12px] max-w-3xl">
+            {facts.map(([label, value]) => (
+              <div key={label}>
+                <dt className="text-neutral-400 uppercase tracking-[0.12em] text-[10px]">
+                  {label}
+                </dt>
+                <dd className="mt-1 text-paper">{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
-      {/* Project content */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Main content */}
-            <div className="lg:col-span-2">
-              {/* Description */}
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold text-neutral-900 mb-4">
-                  {dict.about.ourStory.replace('Our Story', 'About the Project')}
-                </h2>
-                <p className="text-lg text-neutral-600 leading-relaxed">{project.description}</p>
-              </div>
+      {/* ── Full-color cover — documentary proof ───────── */}
+      <div className={`${container} pt-10`}>
+        <Reveal>
+          <figure className="border border-hairline bg-white p-2">
+            <div className="relative aspect-[21/9] overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(min-width: 1280px) 1216px, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </figure>
+        </Reveal>
+      </div>
 
-              {/* Gallery */}
-              {project.gallery.length > 0 && (
-                <div className="mb-12">
-                  <h3 className="text-xl font-bold text-neutral-900 mb-6">{dict.projects.gallery}</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {project.gallery.map((image, index) => (
-                      <div
-                        key={index}
-                        className="relative aspect-square rounded-xl overflow-hidden bg-neutral-100"
-                      >
-                        <Image
-                          src={image}
-                          alt={`${project.title} - ${index + 1}`}
-                          fill
-                          className="object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+      <section className={`${container} py-16 md:py-20`}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+            {/* 1.0 About */}
+            <Reveal>
+              <SectionHead index="1.0" title={t.about} />
+              <p className="text-lg text-neutral-600 leading-relaxed max-w-2xl">
+                {project.description}
+              </p>
+            </Reveal>
 
-              {/* Scope */}
-              <div className="p-8 bg-neutral-50 rounded-2xl">
-                <h3 className="text-xl font-bold text-neutral-900 mb-6">
-                  {dict.projects.scope}
-                </h3>
-                <ul className="space-y-4">
+            {/* 2.0 Scope — numbered rows */}
+            <Reveal>
+              <div className="mt-14">
+                <SectionHead index="2.0" title={dict.projects.scope} />
+                <ul className="border-t border-hairline">
                   {project.scope.map((item, index) => (
-                    <li key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <span className="text-neutral-700 pt-1">{item}</span>
+                    <li
+                      key={item}
+                      className="flex items-baseline gap-5 border-b border-hairline py-4"
+                    >
+                      <span className="font-mono text-[11px] text-red">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-neutral-700 leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
 
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-28 space-y-6">
-                {/* CTA */}
-                <div className="bg-neutral-900 rounded-2xl p-6 text-white">
-                  <h3 className="font-semibold mb-2">
-                    {dict.cta.title}
-                  </h3>
-                  <p className="text-neutral-400 text-sm mb-6">
+            {/* 3.0 Gallery — full color with mono captions */}
+            {project.gallery.length > 0 && (
+              <Reveal>
+                <div className="mt-14">
+                  <SectionHead index="3.0" title={dict.projects.gallery} />
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-hairline">
+                    {project.gallery.map((image, index) => (
+                      <figure key={image} className="bg-paper p-2">
+                        <div className="relative aspect-square overflow-hidden">
+                          <Image
+                            src={image}
+                            alt={`${project.title} — ${index + 1}`}
+                            fill
+                            sizes="(min-width: 768px) 22vw, 45vw"
+                            className="object-cover"
+                          />
+                        </div>
+                        <figcaption className="pt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-neutral-400">
+                          {t.fig} {String(index + 1).padStart(2, "0")}/
+                          {String(project.gallery.length).padStart(2, "0")}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-6">
+              <Reveal>
+                <div className="bg-anthracite text-paper p-5">
+                  <span className={monoLabel}>{dict.cta.title}</span>
+                  <p className="mt-3 text-sm text-neutral-300 leading-relaxed">
                     {dict.cta.description}
                   </p>
-                  <Button href={`/${locale}/contact`} className="w-full">
+                  <Link
+                    href={`/${loc}/contact`}
+                    className="mt-5 block bg-red px-4 py-3 text-center text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+                  >
                     {dict.common.contactUs}
-                  </Button>
+                  </Link>
                 </div>
+              </Reveal>
 
-                {/* Related projects */}
-                {relatedProjects.length > 0 && (
-                  <div className="bg-neutral-50 rounded-2xl p-6">
-                    <h3 className="font-semibold text-neutral-900 mb-4">
-                      {dict.projects.title}
-                    </h3>
-                    <ul className="space-y-4">
+              {relatedProjects.length > 0 && (
+                <Reveal delay={0.06}>
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                      {t.related}
+                    </p>
+                    <ul className="mt-3 border-t border-hairline">
                       {relatedProjects.map((p) => (
-                        <li key={p.slug}>
+                        <li key={p.slug} className="border-b border-hairline">
                           <Link
-                            href={`/${locale}/projects/${p.slug}`}
-                            className="group flex items-center gap-4"
+                            href={`/${loc}/projects/${p.slug}`}
+                            className="group flex items-center gap-4 py-3"
                           >
-                            <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-neutral-200 flex-shrink-0">
+                            <div className="relative w-16 h-12 overflow-hidden flex-shrink-0">
                               <Image
                                 src={p.image}
                                 alt={p.title}
                                 fill
-                                className="object-cover"
+                                sizes="64px"
+                                className="object-cover grayscale-[35%] group-hover:grayscale-0 transition-all duration-500"
                               />
                             </div>
                             <div>
-                              <p className="font-medium text-neutral-900 group-hover:text-brand-500 transition-colors">
+                              <p className="text-sm font-semibold text-ink group-hover:text-red transition-colors">
                                 {p.title}
                               </p>
-                              <p className="text-sm text-neutral-500">{p.location}</p>
+                              <p className="font-mono text-[11px] text-neutral-400">
+                                {p.location}
+                              </p>
                             </div>
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
-                )}
-              </div>
+                </Reveal>
+              )}
             </div>
           </div>
         </div>
       </section>
-
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+    </div>
   );
 }

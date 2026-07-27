@@ -1,12 +1,19 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { MapPin, Briefcase, Building2, ArrowRight, Mail, Users } from "lucide-react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
-import ContactCTA from "@/components/sections/ContactCTA";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
 import { getActiveJobs, getCompanies, getCareerContactEmail } from "@/lib/content";
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: { position: "Position", positions: "open positions" },
+  de: { position: "Stelle", positions: "offene Stellen" },
+} as const;
 
 export async function generateMetadata({
   params,
@@ -30,6 +37,7 @@ export async function generateMetadata({
   };
 }
 
+// Careers: companies as index cells, jobs as dossier rows — K1 direction.
 export default async function CareersPage({
   params,
 }: {
@@ -41,155 +49,133 @@ export default async function CareersPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
-  const jobs = await getActiveJobs(locale as Locale);
-  const companies = await getCompanies(locale as Locale);
-  const contactEmail = await getCareerContactEmail(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
+  const jobs = await getActiveJobs(loc);
+  const companies = await getCompanies(loc);
+  const contactEmail = await getCareerContactEmail(loc);
+
+  const benefits = [
+    dict.about.values.expertise.title,
+    dict.about.values.quality.title,
+    dict.about.values.partnership.title,
+    dict.about.values.reliability.title,
+  ];
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.careers.title}
         subtitle={dict.careers.subtitle}
         description={dict.careers.description}
       />
 
-      {/* Companies section */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100 text-brand-600 font-medium text-sm mb-4">
-              <Building2 className="h-4 w-4" />
-              {dict.careers.companies.title}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              {dict.about.ourStory}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {companies.map((company) => (
-              <div
-                key={company.name}
-                className="p-8 bg-neutral-50 rounded-2xl border border-neutral-100"
-              >
-                <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-                  {company.name}
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  {company.description}
-                </p>
+      {/* ── 1.0 Companies ──────────────────────────────── */}
+      <section className={`${container} py-20 md:py-24`}>
+        <Reveal>
+          <SectionHead index="1.0" title={dict.careers.companies.title} />
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline">
+          {companies.map((company, i) => (
+            <Reveal key={company.name} delay={i * 0.08} className="bg-paper">
+              <div className="p-7 md:p-8 h-full">
+                <span className="font-mono text-[12px] text-red">
+                  T.{String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 text-2xl font-bold tracking-tight">{company.name}</h3>
+                <p className="mt-3 text-neutral-600 leading-relaxed">{company.description}</p>
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
+        </div>
 
-          {/* Benefits highlights */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { label: dict.about.values.expertise.title, icon: "📚" },
-              { label: dict.about.values.quality.title, icon: "💰" },
-              { label: dict.about.values.partnership.title, icon: "🤝" },
-              { label: dict.about.values.reliability.title, icon: "📈" },
-            ].map((benefit) => (
-              <div
-                key={benefit.label}
-                className="text-center p-6 bg-white rounded-xl border border-neutral-100"
-              >
-                <span className="text-3xl mb-3 block">{benefit.icon}</span>
-                <p className="text-sm font-medium text-neutral-700">{benefit.label}</p>
+        {/* Benefits — numbered cells */}
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline">
+          {benefits.map((label, i) => (
+            <Reveal key={label} delay={i * 0.05} className="bg-white">
+              <div className="p-6 h-full">
+                <span className="font-mono text-[11px] text-red">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="mt-2 text-sm font-semibold text-ink">{label}</p>
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      {/* Open positions */}
-      <section className="py-16 md:py-20 bg-neutral-50">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-100 text-brand-600 font-medium text-sm mb-4">
-              <Briefcase className="h-4 w-4" />
-              {dict.careers.openPositions}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              {dict.careers.subtitle}
-            </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-2xl mx-auto">
-              {dict.careers.description}
-            </p>
-          </div>
+      {/* ── 2.0 Open positions ─────────────────────────── */}
+      <section className="border-t border-hairline bg-white">
+        <div className={`${container} py-20 md:py-24`}>
+          <Reveal>
+            <SectionHead
+              index="2.0"
+              title={dict.careers.openPositions}
+              note={`${jobs.length} ${t.positions}`}
+            />
+          </Reveal>
 
-          <div className="space-y-4">
-            {jobs.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-neutral-600">{dict.careers.noPositions}</p>
-              </div>
-            ) : (
-              jobs.map((job) => (
-                <Link
-                  key={job.slug}
-                  href={`/${locale}/careers/${job.slug}`}
-                  className="group block bg-white p-6 md:p-8 rounded-2xl border border-neutral-200 hover:border-brand-300 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-neutral-900 group-hover:text-brand-600 transition-colors">
-                        {job.title}
-                      </h3>
-                      <div className="mt-3 flex flex-wrap items-center gap-3">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm">
-                          <MapPin className="h-3.5 w-3.5" />
-                          {job.location}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-sm">
-                          <Briefcase className="h-3.5 w-3.5" />
-                          {job.department}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-100 text-brand-600 rounded-full text-sm font-medium">
-                          {job.type}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2 text-brand-600 font-medium">
-                      <span>{dict.common.learnMore}</span>
-                      <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              ))
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Spontaneous application */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="bg-neutral-900 rounded-3xl p-8 md:p-12 text-center">
-            <div className="w-16 h-16 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Users className="h-8 w-8 text-white" />
+          {jobs.length === 0 ? (
+            <div className="border border-hairline bg-paper p-10">
+              <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-neutral-500">
+                {dict.careers.noPositions}
+              </p>
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          ) : (
+            <div className="border-t border-hairline">
+              {jobs.map((job, i) => (
+                <Reveal key={job.slug} delay={i * 0.05}>
+                  <Link
+                    href={`/${loc}/careers/${job.slug}`}
+                    className="group grid grid-cols-12 gap-x-4 gap-y-2 items-baseline border-b border-hairline py-6 transition-colors hover:bg-paper"
+                  >
+                    <span className="col-span-2 md:col-span-1 font-mono text-[12px] text-red">
+                      P.{String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="col-span-10 md:col-span-4 text-xl font-bold tracking-tight group-hover:text-red transition-colors">
+                      {job.title}
+                    </h3>
+                    <span className="col-span-10 col-start-3 md:col-span-5 md:col-start-auto font-mono text-[11px] uppercase tracking-[0.12em] text-neutral-500">
+                      {job.location} · {job.department} ·{" "}
+                      <span className="text-red">{job.type}</span>
+                    </span>
+                    <span className="hidden md:block md:col-span-2 text-right font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400 group-hover:text-ink transition-colors">
+                      {dict.common.learnMore} →
+                    </span>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* ── Spontaneous application — ink band ─────────── */}
+      <section className="bg-ink text-white">
+        <div className={`${container} py-16 md:py-20`}>
+          <Reveal>
+            <span className={monoLabel}>{t.position} / ∗</span>
+            <h2 className="mt-5 text-3xl md:text-4xl font-extrabold tracking-tight max-w-2xl leading-[1.05]">
               {dict.careers.spontaneousApplication}
             </h2>
-            <p className="text-neutral-300 max-w-xl mx-auto mb-8">
+            <p className="mt-5 max-w-xl text-neutral-300 leading-relaxed">
               {dict.careers.spontaneousDescription}
             </p>
-            <a
-              href={`mailto:${contactEmail}?subject=${dict.careers.spontaneousApplication}`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-neutral-900 font-semibold rounded-full hover:bg-brand-100 transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              <span>{dict.careers.applyNow}</span>
-            </a>
-            <p className="mt-6 text-sm text-neutral-400">
-              {dict.contact.email}: <span className="text-white">{contactEmail}</span>
-            </p>
-          </div>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <a
+                href={`mailto:${contactEmail}?subject=${dict.careers.spontaneousApplication}`}
+                className="px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
+              >
+                {dict.careers.applyNow}
+              </a>
+              <span className="font-mono text-[12px] tracking-[0.08em] text-neutral-400">
+                {contactEmail}
+              </span>
+            </div>
+          </Reveal>
         </div>
       </section>
-
-      <ContactCTA locale={locale as Locale} dict={dict} />
-    </>
+    </div>
   );
 }

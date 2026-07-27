@@ -1,10 +1,18 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { type Locale } from "@/i18n/config";
 import { getDictionary, hasLocale } from "@/i18n/dictionaries";
 import PageHeader from "@/components/sections/PageHeader";
 import ContactForm from "@/components/forms/ContactForm";
+import Reveal from "@/components/site/Reveal";
+import SectionHead from "@/components/site/SectionHead";
+import { container, monoLabel } from "@/components/site/tokens";
+
+// Locale-bound UI copy for the K1 layout.
+const L10N = {
+  en: { map: "Map", locationsNote: "2 locations in Zagreb" },
+  de: { map: "Karte", locationsNote: "2 Standorte in Zagreb" },
+} as const;
 
 export async function generateMetadata({
   params,
@@ -45,6 +53,7 @@ const locations = [
   },
 ];
 
+// Contact as numbered spec cells + framed maps — K1 direction.
 export default async function ContactPage({
   params,
 }: {
@@ -56,25 +65,24 @@ export default async function ContactPage({
     notFound();
   }
 
-  const dict = await getDictionary(locale as Locale);
+  const loc = locale as Locale;
+  const dict = await getDictionary(loc);
+  const t = L10N[loc];
 
   const contactInfo = [
     {
-      icon: Phone,
       title: dict.contact.phone,
       content: "+385 1 4878 515",
       href: "tel:+38514878515",
       description: dict.contact.weekdays,
     },
     {
-      icon: Mail,
       title: dict.contact.email,
       content: "info@fsb-fire-protection.com",
       href: "mailto:info@fsb-fire-protection.com",
       description: dict.contact.responseTime,
     },
     {
-      icon: Clock,
       title: dict.contact.workingHours,
       content: dict.contact.weekdays,
       description: dict.contact.weekend,
@@ -82,103 +90,83 @@ export default async function ContactPage({
   ];
 
   return (
-    <>
+    <div className="bg-paper text-ink">
       <PageHeader
         title={dict.contact.title}
         subtitle={dict.contact.subtitle}
         description={dict.contact.description}
       />
 
-      <section className="py-20 md:py-28 bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          {/* Contact cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-            {contactInfo.map((item) => {
-              const Icon = item.icon;
-              const content = (
-                <div className="p-6 bg-neutral-50 rounded-2xl hover:bg-brand-50 transition-colors h-full">
-                  <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="h-6 w-6 text-brand-500" />
-                  </div>
-                  <h3 className="font-semibold text-neutral-900">{item.title}</h3>
-                  <p className="mt-1 text-brand-600 font-medium">{item.content}</p>
+      <section className={`${container} py-16 md:py-24`}>
+        {/* ── 1.0 Contact cells ──────────────────────────── */}
+        <Reveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-hairline mb-16">
+            {contactInfo.map((item, i) => {
+              const inner = (
+                <div className="p-6 bg-white h-full transition-colors hover:bg-paper">
+                  <span className="font-mono text-[11px] text-red">
+                    {String(i + 1).padStart(2, "0")} /{" "}
+                    <span className="uppercase tracking-[0.14em]">{item.title}</span>
+                  </span>
+                  <p className="mt-2 font-mono text-[15px] font-semibold text-ink">
+                    {item.content}
+                  </p>
                   {item.description && (
                     <p className="mt-1 text-sm text-neutral-500">{item.description}</p>
                   )}
                 </div>
               );
-
-              if (item.href) {
-                return (
-                  <a
-                    key={item.title}
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="block"
-                  >
-                    {content}
-                  </a>
-                );
-              }
-
-              return <div key={item.title}>{content}</div>;
+              return item.href ? (
+                <a key={item.title} href={item.href} className="block">
+                  {inner}
+                </a>
+              ) : (
+                <div key={item.title}>{inner}</div>
+              );
             })}
           </div>
+        </Reveal>
 
-          {/* Location cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16">
-            {locations.map((location) => (
-              <a
-                key={location.name}
-                href={location.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div className="p-6 bg-neutral-50 rounded-2xl hover:bg-brand-50 transition-colors h-full">
-                  <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mb-4">
-                    <MapPin className="h-6 w-6 text-brand-500" />
-                  </div>
-                  <h3 className="font-semibold text-neutral-900">{location.name}</h3>
-                  <p className="mt-1 text-brand-600 font-medium">{location.address}</p>
-                  <p className="mt-1 text-sm text-neutral-500">{location.city}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* Form and map */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact form */}
+        {/* ── 2.0 Form + locations ───────────────────────── */}
+        <Reveal>
+          <SectionHead
+            index="2.0"
+            title={dict.contact.sendInquiry}
+            note={t.locationsNote}
+          />
+        </Reveal>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <Reveal>
             <div>
-              <h2 className="text-2xl font-bold text-neutral-900 mb-2">
-                {dict.contact.sendInquiry}
-              </h2>
-              <p className="text-neutral-600 mb-6">
-                {dict.contact.inquiryDescription}
-              </p>
-              <ContactForm locale={locale as Locale} dict={dict} />
+              <p className="text-neutral-600 mb-6">{dict.contact.inquiryDescription}</p>
+              <ContactForm locale={loc} dict={dict} />
             </div>
+          </Reveal>
 
-            {/* Maps */}
+          <Reveal delay={0.08}>
             <div>
-              <h2 className="text-2xl font-bold text-neutral-900 mb-2">
-                {dict.contact.ourLocations}
-              </h2>
-              <p className="text-neutral-600 mb-6">
-                {dict.contact.locationsDescription}
-              </p>
-              <div className="space-y-4">
-                {locations.map((location) => (
-                  <div key={location.name}>
-                    <div className="flex items-center gap-2 mb-2">
-                      <MapPin className="h-4 w-4 text-brand-500" />
-                      <span className="font-medium text-neutral-900">{location.name}</span>
-                      <span className="text-neutral-500">—</span>
-                      <span className="text-neutral-600">{location.address}</span>
-                    </div>
-                    <div className="relative aspect-video rounded-xl overflow-hidden bg-neutral-100">
+              <p className="text-neutral-600 mb-6">{dict.contact.locationsDescription}</p>
+              <div className="space-y-8">
+                {locations.map((location, i) => (
+                  <figure key={location.name}>
+                    <figcaption className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2 font-mono text-[11px] uppercase tracking-[0.14em]">
+                      <span className="text-red">L.{String(i + 1).padStart(2, "0")}</span>
+                      <span className="font-semibold text-ink normal-case tracking-normal text-[13px]">
+                        {location.name}
+                      </span>
+                      <span className="text-neutral-400">
+                        — {location.address}, {location.city}
+                      </span>
+                      <a
+                        href={location.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto text-neutral-400 hover:text-ink transition-colors"
+                      >
+                        {t.map} ↗
+                      </a>
+                    </figcaption>
+                    <div className="relative aspect-video border border-hairline bg-white p-1">
                       <iframe
                         src={location.embedUrl}
                         width="100%"
@@ -190,32 +178,31 @@ export default async function ContactPage({
                         title={`${location.name} location`}
                       />
                     </div>
-                  </div>
+                  </figure>
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Emergency CTA */}
-      <section className="py-16 bg-neutral-900 text-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">{dict.contact.emergency.title}</h2>
-            <p className="text-neutral-400 mb-6">
+      {/* ── Emergency — ink band ───────────────────────── */}
+      <section className="bg-ink text-white">
+        <div className={`${container} py-16 md:py-20`}>
+          <Reveal>
+            <span className={monoLabel}>{dict.contact.emergency.title}</span>
+            <p className="mt-5 max-w-xl text-lg text-neutral-300 leading-relaxed">
               {dict.contact.emergency.description}
             </p>
             <a
               href="tel:+38514878515"
-              className="inline-flex items-center gap-3 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-semibold transition-colors"
+              className="mt-8 inline-block px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
             >
-              <Phone className="h-5 w-5" />
-              <span>+385 1 4878 515</span>
+              +385 1 4878 515
             </a>
-          </div>
+          </Reveal>
         </div>
       </section>
-    </>
+    </div>
   );
 }
