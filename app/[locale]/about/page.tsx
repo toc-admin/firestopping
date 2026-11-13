@@ -71,7 +71,7 @@ export default async function AboutPage({
       {/* ── 1.0 Story ──────────────────────────────────── */}
       <section className={`${container} py-20 md:py-24`}>
         <Reveal>
-          <SectionHead index="1.0" title={dict.about.ourStory} />
+          <SectionHead index="1.0" title={dict.about.ourStory} note={dict.about.subtitle} />
         </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <Reveal>
@@ -85,11 +85,11 @@ export default async function AboutPage({
             <figure className="border border-hairline bg-white p-2">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/services/izvodjenje-radova.jpg"
+                  src="/images/fsb/rjesenja/parapet-1.jpg"
                   alt={dict.common.companyName}
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                  className="object-cover grayscale-[35%]"
                 />
               </div>
             </figure>
@@ -161,14 +161,32 @@ export default async function AboutPage({
       {/* ── 4.0 Leadership ─────────────────────────────── */}
       <section className={`${container} py-20 md:py-24`}>
         <Reveal>
-          <SectionHead index="4.0" title={dict.director.name} note={dict.director.label} />
+          <SectionHead index="4.0" title={dict.director.label} note={dict.director.title} />
         </Reveal>
         <Reveal>
-          <div className="border border-hairline bg-white p-7 md:p-10 max-w-3xl">
-            <span className={monoLabel}>{dict.director.title}</span>
-            <div className="mt-5 space-y-4 text-neutral-600 leading-relaxed">
-              <p>{dict.director.bio1}</p>
-              <p>{dict.director.bio2}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-hairline border border-hairline">
+            <div className="relative aspect-[4/5] lg:aspect-auto lg:min-h-[480px] bg-white">
+              <Image
+                src="/images/team/direktor.jpg"
+                alt={dict.director.name}
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+              <span className={monoLabel}>{dict.director.label}</span>
+              <h3 className="mt-3 text-3xl md:text-4xl font-bold tracking-tight">
+                {dict.director.name}
+              </h3>
+              <p className="mt-2 font-mono text-[12px] uppercase tracking-[0.15em] text-neutral-400">
+                {dict.director.title}
+              </p>
+              <div className="mt-6 space-y-4 text-neutral-600 leading-relaxed">
+                <p>{dict.director.bio1}</p>
+                <p>{dict.director.bio2}</p>
+                <p>{dict.director.bio3}</p>
+              </div>
             </div>
           </div>
         </Reveal>
@@ -191,10 +209,10 @@ export default async function AboutPage({
                 {dict.common.contactUs}
               </Link>
               <a
-                href="tel:+38514878515"
+                href="tel:+38513496811"
                 className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                +385 1 4878 515
+                +385 1 3496 811
               </a>
             </div>
           </Reveal>

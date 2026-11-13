@@ -10,7 +10,7 @@ import {
   getJobSlugs,
 } from "@/lib/content";
 
-const BASE_URL = "https://fsb-fire-protection.com";
+const BASE_URL = "https://www.firestopping.eu";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();

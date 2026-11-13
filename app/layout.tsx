@@ -18,23 +18,25 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "FSB Fire Protection | Fire Protection Experts",
-    template: "%s | FSB Fire Protection",
+    default: "FSB d.o.o. | Passive fire protection experts",
+    template: "%s | FSB d.o.o.",
   },
   description:
-    "FSB Fire Protection - over 30 years of experience in fire protection. Construction, cost optimization, training, and laboratory testing.",
+    "FSB d.o.o. - passive fire protection contractor with 20 years of experience. Works execution, consulting and cost optimization, and FSB Academy.",
   keywords: [
     "fire protection",
-    "fire sealing",
-    "fire coating",
-    "fire boards",
+    "passive fire protection",
+    "firestopping",
+    "fire doors",
+    "fire protection cladding",
     "FSB",
     "Europe",
     "Brandschutz",
+    "Abschottung",
   ],
-  authors: [{ name: "FSB Fire Protection" }],
-  creator: "FSB Fire Protection",
-  metadataBase: new URL("https://fsb-fire-protection.com"),
+  authors: [{ name: "FSB d.o.o." }],
+  creator: "FSB d.o.o.",
+  metadataBase: new URL("https://www.firestopping.eu"),
   robots: {
     index: true,
     follow: true,

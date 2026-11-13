@@ -29,6 +29,22 @@ const L10N = {
     ],
     facts: { location: "Location", year: "Year", scope: "Scope", systems: "systems" },
     allProjects: "All projects",
+    servicesNote: "From consulting to installation",
+    processTitle: "The system as a whole",
+    processNote: "How we run a project",
+    processIntro:
+      "In practice, the biggest problems don't arise in the product but in the system. That's why we take every system through all four phases — with no break in responsibility.",
+    phaseLabel: "phase",
+    phases: [
+      ["Consulting", "Project review and cost optimization without compromising safety."],
+      ["System selection", "Certified systems from proven manufacturers, matched to the project's requirements."],
+      ["Installation", "Our own certified crews carry out the works according to the manufacturer's instructions."],
+      ["Documentation", "Reports, declarations of performed works and complete handover documentation."],
+    ],
+    solutionsNote: "6 passive protection systems",
+    projectsNote: "Selected references",
+    ctaLabel: "Request a quote",
+    ctaTitle: "Your project deserves a system that passes the test.",
   },
   de: {
     heroTitle: "Passiver Brandschutz",
@@ -43,15 +59,24 @@ const L10N = {
     ],
     facts: { location: "Standort", year: "Jahr", scope: "Umfang", systems: "Systeme" },
     allProjects: "Alle Projekte",
+    servicesNote: "Von der Beratung bis zur Montage",
+    processTitle: "Das System als Ganzes",
+    processNote: "Wie wir Projekte führen",
+    processIntro:
+      "Die größten Probleme entstehen in der Praxis nicht im Produkt, sondern im System. Deshalb führen wir jedes System durch alle vier Phasen — ohne Unterbrechung der Verantwortung.",
+    phaseLabel: "Phase",
+    phases: [
+      ["Beratung", "Projektprüfung und Kostenoptimierung ohne Kompromisse bei der Sicherheit."],
+      ["Systemauswahl", "Zertifizierte Systeme bewährter Hersteller, abgestimmt auf die Anforderungen des Projekts."],
+      ["Montage", "Eigene zertifizierte Teams führen die Arbeiten nach Herstellervorgaben aus."],
+      ["Dokumentation", "Protokolle, Erklärungen über ausgeführte Arbeiten und vollständige Übergabedokumentation."],
+    ],
+    solutionsNote: "6 Systeme des passiven Brandschutzes",
+    projectsNote: "Ausgewählte Referenzen",
+    ctaLabel: "Angebot anfordern",
+    ctaTitle: "Ihr Projekt verdient ein System, das den Test besteht.",
   },
 } as const;
-
-const STATS = [
-  { value: "30+", key: "yearsExperience" },
-  { value: "300+", key: "projects" },
-  { value: "10+", key: "experts" },
-  { value: "100%", key: "quality" },
-] as const;
 
 export default async function Home({
   params,
@@ -123,7 +148,7 @@ export default async function Home({
           <SectionHead
             index="1.0"
             title={dict.navigation.services}
-            note={dict.services.subtitle}
+            note={t.servicesNote}
           />
         </Reveal>
         <Reveal>
@@ -152,14 +177,48 @@ export default async function Home({
         </Reveal>
       </section>
 
-      {/* ── 2.0 Solutions ──────────────────────────────── */}
+      {/* ── 2.0 Process — anthracite plane (thematic break) ── */}
+      <section className="bg-anthracite text-paper">
+        <div className={`${container} py-20 md:py-28`}>
+          <Reveal>
+            <SectionHead
+              dark
+              index="2.0"
+              title={t.processTitle}
+              note={t.processNote}
+            />
+          </Reveal>
+          <Reveal>
+            <p className="max-w-2xl text-lg text-neutral-300 mb-14">{t.processIntro}</p>
+          </Reveal>
+          <ol className="grid grid-cols-1 md:grid-cols-4 border-t border-paper/60">
+            {t.phases.map(([title, text], i) => (
+              <li
+                key={title}
+                className="relative pt-8 pb-4 pr-6 md:border-r md:border-hairline-dark last:border-r-0"
+              >
+                <Reveal delay={i * 0.08}>
+                  <span className="absolute top-0 left-0 -translate-y-1/2 inline-block w-2.5 h-2.5 bg-red" />
+                  <span className="font-mono text-[12px] text-neutral-400">
+                    {t.phaseLabel} {i + 1}/4
+                  </span>
+                  <h3 className="mt-2 text-xl font-bold">{title}</h3>
+                  <p className="mt-2 text-sm text-neutral-300 leading-relaxed">{text}</p>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── 3.0 Solutions ──────────────────────────────── */}
       <section className="border-t border-hairline bg-white">
         <div className={`${container} py-20 md:py-28`}>
           <Reveal>
             <SectionHead
-              index="2.0"
+              index="3.0"
               title={dict.navigation.solutions}
-              note={dict.solutions.subtitle}
+              note={t.solutionsNote}
             />
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-hairline">
@@ -201,32 +260,13 @@ export default async function Home({
         </div>
       </section>
 
-      {/* ── Stats band — anthracite ─────────────────────── */}
-      <section className="bg-anthracite border-y border-hairline-dark">
-        <div className={`${container} grid grid-cols-2 lg:grid-cols-4`}>
-          {STATS.map((stat, i) => (
-            <div
-              key={stat.key}
-              className={`py-10 px-6 ${i > 0 ? "border-l border-hairline-dark" : ""}`}
-            >
-              <div className="font-mono text-4xl md:text-5xl font-semibold text-white">
-                {stat.value}
-              </div>
-              <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-neutral-400">
-                {dict.stats[stat.key]}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── 3.0 Projects ───────────────────────────────── */}
+      {/* ── 4.0 Projects ───────────────────────────────── */}
       <section className={`${container} py-20 md:py-28`}>
         <Reveal>
           <SectionHead
-            index="3.0"
+            index="4.0"
             title={dict.navigation.projects}
-            note={dict.projects.sectionLabel}
+            note={t.projectsNote}
           />
         </Reveal>
         <div className="space-y-px bg-hairline">
@@ -290,7 +330,7 @@ export default async function Home({
           <div className={`${container} py-16`}>
             <Reveal>
               <SectionHead
-                index="4.0"
+                index="5.0"
                 title={dict.blog.sectionTitle}
                 note={latestPost.date}
               />
@@ -317,14 +357,10 @@ export default async function Home({
       <section className="bg-ink text-white">
         <div className={`${container} py-20 md:py-28`}>
           <Reveal>
-            <span className={monoLabel}>{dict.contactCta.label}</span>
+            <span className={monoLabel}>{t.ctaLabel}</span>
             <h2 className="mt-5 text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl leading-[1.05]">
-              {dict.contactCta.title}{" "}
-              <span className="text-red">{dict.contactCta.titleHighlight}</span>
+              {t.ctaTitle}
             </h2>
-            <p className="mt-6 max-w-xl text-lg text-neutral-300 leading-relaxed">
-              {dict.contactCta.description}
-            </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href={`/${loc}/contact`}
@@ -333,10 +369,10 @@ export default async function Home({
                 {dict.common.contactUs}
               </Link>
               <a
-                href="tel:+38514878515"
+                href="tel:+38513496811"
                 className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                +385 1 4878 515
+                +385 1 3496 811
               </a>
             </div>
           </Reveal>

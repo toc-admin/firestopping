@@ -72,14 +72,14 @@ export default async function ContactPage({
   const contactInfo = [
     {
       title: dict.contact.phone,
-      content: "+385 1 4878 515",
-      href: "tel:+38514878515",
+      content: "+385 1 3496 811",
+      href: "tel:+38513496811",
       description: dict.contact.weekdays,
     },
     {
       title: dict.contact.email,
-      content: "info@fsb-fire-protection.com",
-      href: "mailto:info@fsb-fire-protection.com",
+      content: "info@fsb-zagreb.hr",
+      href: "mailto:info@fsb-zagreb.hr",
       description: dict.contact.responseTime,
     },
     {
@@ -195,10 +195,10 @@ export default async function ContactPage({
               {dict.contact.emergency.description}
             </p>
             <a
-              href="tel:+38514878515"
+              href="tel:+38513496811"
               className="mt-8 inline-block px-7 py-3.5 bg-red text-white font-semibold hover:opacity-90 transition-opacity"
             >
-              +385 1 4878 515
+              +385 1 3496 811
             </a>
           </Reveal>
         </div>

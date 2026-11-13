@@ -1,82 +1,86 @@
 {
   "solutions": [
     {
-      "slug": "fsg-s",
-      "title": "FSG-S",
-      "description": "Kabelabschottungssystem",
-      "fullDescription": "FSG-S ist ein innovatives Kabelabschottungssystem, das eine hervorragende Feuerwiderstandsfaehigkeit von bis zu 120 Minuten bietet. Das System ist nach europaeischen Normen zertifiziert und ideal fuer den Einsatz in allen Gebaeudetypen.\n\nSystemeigenschaften:\n\n- Feuerwiderstand: EI 120\n- Einfache Installation\n- Moeglichkeit der nachtraeglichen Kabelzufuehrung\n- Zertifiziert nach EN 1366-3",
-      "image": "/images/solutions/fsg-s.jpg",
+      "slug": "fire-protection-paint",
+      "title": "Brandschutzbeschichtung",
+      "description": "Dämmschichtbildende Beschichtungen zum Schutz von Stahlkonstruktionen — unsichtbarer Schutz, der im Brandfall aufschäumt und die Tragfähigkeit erhält.",
+      "fullDescription": "Brandschutzfarben und -beschichtungen sind die eleganteste Art, Stahlkonstruktionen zu schützen. Unter normalen Bedingungen wirken sie wie ein gewöhnlicher Deckanstrich, im Brandfall schäumen sie auf und bilden eine Dämmschicht, die den Stahl vor dem Verlust der Tragfähigkeit schützt.\n\nUnsere Leistungen umfassen:\n\n- Auswahl des geeigneten Beschichtungssystems nach dem geforderten Feuerwiderstand (R 30 – R 120)\n- Maschinelle Applikation der Beschichtung (Airless)\n- Kontrolle der Trockenschichtdicke und Ausführungsprotokolle\n- Dekorative Deckbeschichtungen im gewünschten Farbton\n\nWir arbeiten mit bewährten Systemen der Hersteller Promat und Rudolf Hensel und passen die Ausführung an das Profil der Konstruktion, die Umgebungsbedingungen und die Projektanforderungen an.",
+      "image": "/images/fsb/rjesenja/boja-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "application": "Kabeltrassen und Einzelkabel"
+        "fireResistance": "R 30 – R 120",
+        "standard": "EN 13381-8",
+        "application": "Stahlkonstruktionen — Hallen, Sporthallen, Bürogebäude"
       },
-      "category": "sealing"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsp-90",
-      "title": "FSP-90",
-      "description": "Brandschutzplatte zum Schutz von Stahlkonstruktionen",
-      "fullDescription": "FSP-90 ist eine Hochleistungs-Brandschutzplatte zum Schutz von Stahlkonstruktionen. Sie bietet einen Feuerwiderstand von bis zu 90 Minuten und ist ideal fuer den Einsatz in Industriehallen, Lagerhaeusern und Geschaeftsgebaeuden.\n\nProdukteigenschaften:\n\n- Feuerwiderstand: R 90\n- Geringes Gewicht\n- Einfache Montage\n- Aesthetische Oberflaeche",
-      "image": "/images/solutions/fsp-90.jpg",
-      "specifications": {
-        "fireResistance": "R 90",
-        "standard": "EN 13381-4",
-        "application": "Stahlkonstruktionen"
+      "slug": "fire-doors-metalwork",
+      "title": "Brandschutztüren und -metallbau",
+      "description": "Unser eigenes Produkt unter der Marke FSB Doors — Brandschutztüren, Trennwände und Revisionsöffnungen, von der Fertigung bis zur Montage.",
+      "fullDescription": "Brandschutztüren und -metallbau sind unser eigenes Produkt — wir entwickeln und fertigen sie unter der Marke FSB Doors, zertifizieren sie nach europäischen Normen und montieren sie mit eigenen Teams.\n\nAus unserem Programm:\n\n- Ein- und zweiflügelige Brandschutztüren (EI 30 – EI 90)\n- Brandschutztüren für Tunnel und Infrastrukturbauwerke\n- Revisionsöffnungen und technische Türen\n- Türen mit Verglasung und Panikbeschlägen\n\nWeil wir das Produkt von der ersten Zeichnung an kennen, können wir die fachgerechte Montage und Funktion garantieren — denn eine Tür schützt nur, wenn sie richtig eingebaut ist.",
+      "image": "/images/fsb/rjesenja/bravarija-1.jpg",
+      "externalLink": {
+        "label": "FSB Doors — unser eigenes Produkt",
+        "url": "https://www.fsb-doors.com/"
       },
-      "category": "boards"
+      "specifications": {
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 16034 / EN 1634-1",
+        "application": "Gebäude aller Nutzungen, Tunnel, Industrie"
+      },
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "smoke-heat-exhaust-system",
-      "title": "Rauch- und Waermeabzugssystem",
-      "description": "Komplettes System fuer natuerliche Belueftung und Rauchabzug",
-      "fullDescription": "Das Rauch- und Waermeabzugssystem ist ein Komplettsystem, das im Brandfall eine sichere Abfuehrung von Rauch und Waerme gewaehrleistet. Das System ermoeglicht natuerliche Belueftung und ist ein Schluesselelement des passiven Brandschutzes.\n\nSystemvorteile:\n\n- Automatische Aktivierung im Brandfall\n- Manuelle Aktivierung als Option\n- Geringer Wartungsaufwand\n- Lange Lebensdauer",
-      "image": "/images/solutions/vod-dim.jpg",
+      "slug": "firestopping",
+      "title": "Abschottungen",
+      "description": "Abschottung von Kabel-, Rohr- und Lüftungsdurchführungen durch brandabschnittsbildende Bauteile — das Detail, von dem das gesamte System abhängt.",
+      "fullDescription": "Jede Installationsdurchführung durch ein brandabschnittsbildendes Bauteil ist eine potenzielle Stelle der Brandausbreitung. Abschottungen stellen den vollen Feuerwiderstand des Bauteils wieder her — und gerade an diesen Details entstehen in der Praxis die meisten Probleme.\n\nWir schotten alle Arten von Durchführungen ab:\n\n- Kabeltrassen und einzelne Kabel\n- Brennbare und nichtbrennbare Rohre (Manschetten, Bandagen, Dichtmassen)\n- Kombinierte Durchführungen\n- Dehn- und Anschlussfugen\n\nWir verwenden zertifizierte Systeme (Promat, Rudolf Hensel) und dokumentieren jede Position — Kennzeichnung, Erfassung und Protokolle sind Teil des Standardlieferumfangs.",
+      "image": "/images/fsb/rjesenja/brtvljenja-1.jpg",
       "specifications": {
-        "fireResistance": "E 90 / EI 60",
-        "standard": "EN 12101-2",
-        "application": "Industriegebaeude, Garagen, Atrien"
+        "fireResistance": "EI 60 – EI 120",
+        "standard": "EN 1366-3 / EN 1366-4",
+        "application": "Installationsdurchführungen durch brandabschnittsbildende Bauteile"
       },
-      "category": "ventilation"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsd-1",
-      "title": "FSD-1",
-      "description": "Brandschutzklappe fuer Lueftungskanaele",
-      "fullDescription": "FSD-1 ist eine zuverlaessige Brandschutzklappe fuer den Einbau in Lueftungskanaele. Sie schliesst im Brandfall automatisch und verhindert die Ausbreitung von Feuer und Rauch durch das Lueftungssystem.\n\nEigenschaften:\n\n- Automatisches Schliessen mit thermischem Ausloeser\n- Fernsteuerungsmoeglichkeit\n- Feuerwiderstand bis zu 120 Minuten\n- Zertifiziert nach EN 15650",
-      "image": "/images/solutions/fsd-1.jpg",
+      "slug": "fire-rated-glazing",
+      "title": "Brandschutzverglasung",
+      "description": "Feuerwiderstandsfähige Glaswände und Verglasungen — Transparenz und Sicherheit in einem.",
+      "fullDescription": "Brandschutzverglasungen ermöglichen natürliches Licht und visuelle Verbindung der Räume ohne Kompromisse bei der Brandsicherheit. Wir bauen sie in Trennwände, Türen und Fassadenpositionen ein.\n\nUnsere Lösungen umfassen:\n\n- Brandschutz-Glaswände (EI 30 – EI 90)\n- Verglasungen im Brandschutz-Metallbau\n- Große Glasflächen in Atrien und Verkehrsflächen\n- Kombinationen mit Rauchschutzdichtungen und Panikbeschlägen\n\nVon der Systemauswahl und Statik bis zur Montage und Übergabedokumentation — alles führt ein einziges Team aus, denn alle Systeme müssen als Ganzes funktionieren.",
+      "image": "/images/fsb/rjesenja/stakla-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120 S",
-        "standard": "EN 15650",
-        "application": "Lueftungskanaele"
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 1364-1",
+        "application": "Glaswände, Atrien, Verkehrsflächen, Fassaden"
       },
-      "category": "dampers"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsd-1-hh",
-      "title": "FSD-1-HH",
-      "description": "Brandschutzklappe fuer Hochhaeuser",
-      "fullDescription": "FSD-1-HH ist eine spezialisierte Brandschutzklappe fuer den Einsatz in Hochhaeusern. Sie erfuellt die strengsten Sicherheitsanforderungen und bietet zuverlaessigen Schutz unter anspruchsvollsten Bedingungen.\n\nEigenschaften:\n\n- Verstaerkte Konstruktion fuer Hochhaeuser\n- Integriertes Ueberwachungssystem\n- Feuerwiderstand bis zu 120 Minuten\n- Bei erhoehtem Druck getestet",
-      "image": "/images/solutions/fsd-1-hh.jpg",
+      "slug": "fire-protection-cladding",
+      "title": "Brandschutzbekleidungen",
+      "description": "Bekleidung von Stahl- und Betonkonstruktionen, Kanälen und Kabeltrassen mit Brandschutzplatten.",
+      "fullDescription": "Brandschutzbekleidungen mit Platten sind eine klassische und äußerst zuverlässige Lösung zum Schutz von Konstruktionen. Sie kommen überall dort zum Einsatz, wo hoher Feuerwiderstand, mechanische Festigkeit oder der nachträgliche Schutz bestehender Bauteile gefordert ist.\n\nWir führen Bekleidungen aus für:\n\n- Stahlstützen und -träger (bis R 240)\n- Lüftungs- und Entrauchungskanäle\n- Kabeltrassen und Installationsschächte\n- Selbsttragende Brandwände\n\nWir arbeiten mit Kalziumsilikatplatten (PROMATECT und verwandte Systeme) — mit vollständiger Begleitdokumentation der eingebauten Materialien und ausgeführten Details.",
+      "image": "/images/fsb/rjesenja/obloge-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120 S",
-        "standard": "EN 15650",
-        "application": "Hochhaeuser"
+        "fireResistance": "R 30 – R 240 / EI 30 – EI 120",
+        "standard": "EN 13381-4 / EN 1366-1",
+        "application": "Konstruktionen, Kanäle, Kabeltrassen, Brandwände"
       },
-      "category": "dampers"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "pipe-fire-seal",
-      "title": "Rohrbrandschutz-Dichtung",
-      "description": "Universaldichtung zur Abdichtung von Rohrdurchfuehrungen durch Waende und Decken",
-      "fullDescription": "Unsere Rohrbrandschutz-Dichtung bietet zuverlaessige Abdichtung von Metall- und Kunststoffrohr-Durchfuehrungen durch Brandschutzwaende. Das System ist einfach zu installieren und ermoeglicht nachtraegliche Eingriffe.\n\nVorteile:\n\n- Anwendbar auf Metall- und Kunststoffrohre\n- Einfache Installation\n- Moeglichkeit der Demontage und Wiedermontage\n- Feuerwiderstand bis zu 120 Minuten",
-      "image": "/images/solutions/brtva-cijevi.jpg",
+      "slug": "fire-rated-spandrel",
+      "title": "Brandschutz-Brüstung",
+      "description": "Unsere eigenentwickelte Lösung für die Brandabtrennung der Geschosse an der Fassade — verhindert die vertikale Brandausbreitung.",
+      "fullDescription": "Die Brandschutz-Brüstung verhindert die Brandausbreitung von Geschoss zu Geschoss über die Fassade — ein Detail, das bei modernen Glasfassaden für die Sicherheit des gesamten Gebäudes entscheidend ist.\n\nUnsere Brüstungslösung:\n\n- Entwickelt von unserem eigenen R&D-Team und geprüft in akkreditierten Laboren\n- Ein System aus Unterkonstruktion, Steinwolle und Brandschutzplatten\n- Anpassung an jede Fassadengeometrie\n- Montage durch eigene zertifizierte Teams\n\nAls Hersteller und Ausführender in einem übernehmen wir die volle Verantwortung für die Brüstung — von der Werkstattzeichnung bis zum Montageprotokoll.",
+      "image": "/images/fsb/rjesenja/parapet-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "application": "Rohrdurchfuehrungen"
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 1364-4",
+        "application": "Fassaden — Brandabtrennung der Geschosse"
       },
-      "category": "sealing"
+      "category": "passive-fire-protection"
     }
   ]
 }

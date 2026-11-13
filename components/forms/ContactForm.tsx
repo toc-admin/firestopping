@@ -17,8 +17,6 @@ interface ContactFormProps {
         phonePlaceholder: string;
         company: string;
         companyPlaceholder: string;
-        subject: string;
-        subjectPlaceholder: string;
         message: string;
         messagePlaceholder: string;
         submit: string;
@@ -62,7 +60,6 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
     email: "",
     phone: "",
     company: "",
-    subject: "",
     message: "",
   });
 
@@ -82,7 +79,6 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
         email: "",
         phone: "",
         company: "",
-        subject: "",
         message: "",
       });
     } catch {
@@ -91,31 +87,13 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
-
-  const subjectOptions = locale === 'de'
-    ? [
-        { value: "implementation", label: "Ausfuehrung von Arbeiten" },
-        { value: "optimization", label: "Kostenoptimierung" },
-        { value: "education", label: "Schulung" },
-        { value: "laboratory", label: "Laborpruefung" },
-        { value: "products", label: "Produkte" },
-        { value: "other", label: "Sonstiges" },
-      ]
-    : [
-        { value: "implementation", label: "Implementation work" },
-        { value: "optimization", label: "Cost optimization" },
-        { value: "education", label: "Training" },
-        { value: "laboratory", label: "Laboratory testing" },
-        { value: "products", label: "Products" },
-        { value: "other", label: "Other" },
-      ];
 
   const successMessage = locale === 'de'
     ? { title: "Nachricht gesendet!", description: "Vielen Dank fuer Ihre Anfrage. Wir werden uns so schnell wie moeglich bei Ihnen melden.", button: "Neue Nachricht senden" }
@@ -204,28 +182,7 @@ export default function ContactForm({ locale, dict }: ContactFormProps) {
       </div>
 
       <div>
-        <FieldLabel htmlFor="subject" index="05" required>
-          {dict.contact.form.subject}
-        </FieldLabel>
-        <select
-          id="subject"
-          name="subject"
-          required
-          value={formData.subject}
-          onChange={handleChange}
-          className={inputClass}
-        >
-          <option value="">{dict.contact.form.subjectPlaceholder}</option>
-          {subjectOptions.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div>
-        <FieldLabel htmlFor="message" index="06" required>
+        <FieldLabel htmlFor="message" index="05" required>
           {dict.contact.form.message}
         </FieldLabel>
         <textarea

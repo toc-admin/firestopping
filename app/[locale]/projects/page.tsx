@@ -150,10 +150,10 @@ export default async function ProjectsPage({
                 {dict.common.contactUs}
               </Link>
               <a
-                href="tel:+38514878515"
+                href="tel:+38513496811"
                 className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                +385 1 4878 515
+                +385 1 3496 811
               </a>
             </div>
           </Reveal>

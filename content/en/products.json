@@ -1,168 +1,322 @@
 {
   "categories": [
     {
-      "slug": "fire-sealing",
-      "title": "Fire Sealing",
-      "description": "Products for sealing cable, pipe, and other installation penetrations through fire barriers.",
-      "image": "/images/products/categories/brtvljenje.jpg"
+      "slug": "fire-protection-paint",
+      "title": "Fire protection paint",
+      "description": "Intumescent coatings and paints for protecting steel structures against fire.",
+      "image": "/images/fsb/rjesenja/boja-1.jpg"
     },
     {
-      "slug": "fire-coatings",
-      "title": "Fire Coatings",
-      "description": "Intumescent coatings and paints for protecting steel and wood structures from fire.",
-      "image": "/images/products/categories/boja.jpg"
+      "slug": "fire-doors-metalwork",
+      "title": "Fire doors and metalwork",
+      "description": "Fire doors, glazed partitions and access panels from FSB's own production.",
+      "image": "/images/fsb/rjesenja/bravarija-1.jpg"
     },
     {
-      "slug": "fire-boards",
-      "title": "Fire Protection Boards",
-      "description": "Fire-resistant boards for cladding structures and creating fire barriers.",
-      "image": "/images/products/categories/ploce.jpg"
+      "slug": "firestopping",
+      "title": "Firestopping",
+      "description": "Products for sealing penetrations of cables, pipes and other services through fire compartment walls.",
+      "image": "/images/fsb/rjesenja/brtvljenja-1.jpg"
     },
     {
-      "slug": "fire-modules",
-      "title": "Fire Protection Modules",
-      "description": "Modular systems for sealing complex penetrations with multiple types of installations.",
-      "image": "/images/products/categories/moduli.jpg"
+      "slug": "fire-rated-glazing",
+      "title": "Fire-rated glazing",
+      "description": "Fire-resistant glass for fire-rated partitions, doors and glazing.",
+      "image": "/images/fsb/rjesenja/stakla-1.jpg"
     },
     {
-      "slug": "fire-glass",
-      "title": "Fire Protection Glass",
-      "description": "Fire-resistant glass for fire walls, doors, and windows.",
-      "image": "/images/products/categories/stakla.jpg"
+      "slug": "fire-protection-cladding",
+      "title": "Fire protection cladding",
+      "description": "Calcium silicate boards for cladding structures and ducts and for building fire compartment walls.",
+      "image": "/images/fsb/rjesenja/obloge-1.jpg"
     },
     {
-      "slug": "fire-wool",
-      "title": "Fire Protection Wool",
-      "description": "Mineral wool for thermal insulation and fire protection.",
-      "image": "/images/products/categories/vuna.jpg"
-    },
-    {
-      "slug": "silicate-boards-fireplaces",
-      "title": "Silicate Boards for Fireplaces",
-      "description": "Specialized boards for fireplace and stove installation and protection.",
-      "image": "/images/products/categories/silikatne.jpg"
+      "slug": "fire-rated-spandrel",
+      "title": "Fire-rated spandrel",
+      "description": "FSB system for fire separation between floors at the façade.",
+      "image": "/images/fsb/rjesenja/parapet-1.jpg"
     }
   ],
   "products": [
     {
-      "slug": "promat-unicable",
-      "category": "fire-sealing",
-      "title": "PROMAT UNICABLE",
+      "slug": "promapaint-sc3",
+      "category": "fire-protection-paint",
+      "title": "PROMAPAINT-SC3",
       "manufacturer": "Promat",
-      "description": "Universal cable penetration sealing system",
-      "fullDescription": "PROMAT UNICABLE is an innovative cable penetration sealing system that enables easy installation and subsequent modifications. The system provides fire resistance up to 120 minutes and is certified according to EN 1366-3.\n\nAdvantages:\n- Easy installation\n- Possibility of adding cables later\n- Aesthetic appearance\n- Long service life",
+      "description": "Water-based intumescent coating for the protection of steel structures",
+      "fullDescription": "PROMAPAINT-SC3 is a water-based intumescent coating for the fire protection of steel structures. In case of fire the coating expands and forms an insulating layer that slows the heating of the steel and preserves the load-bearing capacity of the structure.\n\nAdvantages:\n- Thin application layers\n- For interior use\n- Machine (airless) or manual application\n- Option of a decorative top coat",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "sizes": "Various dimensions as required"
-      },
-      "image": "/images/products/promat-unicable.jpg",
-      "datasheet": "/documents/promat-unicable.pdf"
-    },
-    {
-      "slug": "promat-collar",
-      "category": "fire-sealing",
-      "title": "PROMAT COLLAR",
-      "manufacturer": "Promat",
-      "description": "Fire protection collar for plastic pipes",
-      "fullDescription": "PROMAT COLLAR is a fire protection collar designed for sealing plastic pipe penetrations. In case of fire, the intumescent material expands and closes the opening created by the melting of the plastic pipe.\n\nFeatures:\n- For plastic pipes up to diameter 160mm\n- Easy installation\n- Fire resistance EI 120\n- Certified according to EN 1366-3",
-      "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "sizes": "Diameter 32 - 160 mm"
-      },
-      "image": "/images/products/promat-collar.jpg",
-      "datasheet": "/documents/promat-collar.pdf"
-    },
-    {
-      "slug": "hensel-firesafe",
-      "category": "fire-coatings",
-      "title": "Rudolf Hensel FIRESAFE",
-      "manufacturer": "Rudolf Hensel",
-      "description": "Intumescent coating for steel structures",
-      "fullDescription": "Rudolf Hensel FIRESAFE is a premium intumescent coating for protecting steel structures from fire. The coating expands at elevated temperatures, creating an insulating layer that protects the steel.\n\nAdvantages:\n- Fire resistance up to R 120\n- Thin layer application\n- Various finishing colors\n- Certified according to EN 13381-8",
-      "specifications": {
-        "fireResistance": "R 30 - R 120",
+        "fireResistance": "R 30 – R 120",
         "standard": "EN 13381-8",
-        "coverage": "Depends on profile and required resistance"
+        "packaging": "25 kg pail"
       },
-      "image": "/images/products/hensel-firesafe.jpg",
-      "datasheet": "/documents/hensel-firesafe.pdf"
+      "image": "/images/fsb/proizvodi/promapaint-sc3.jpg"
     },
     {
-      "slug": "promat-board",
-      "category": "fire-boards",
+      "slug": "promapaint-sc4",
+      "category": "fire-protection-paint",
+      "title": "PROMAPAINT-SC4",
+      "manufacturer": "Promat",
+      "description": "Intumescent coating for steel structures with enhanced performance",
+      "fullDescription": "PROMAPAINT-SC4 is a water-based intumescent coating designed for the protection of open and hollow steel sections. It is characterised by efficient consumption and reliable performance confirmed by European testing.\n\nAdvantages:\n- Efficient consumption per m²\n- For open and hollow sections\n- Fast drying between coats\n- Compatible with standard primers",
+      "specifications": {
+        "fireResistance": "R 30 – R 120",
+        "standard": "EN 13381-8",
+        "packaging": "25 kg pail"
+      },
+      "image": "/images/fsb/proizvodi/promapaint-sc4.jpg"
+    },
+    {
+      "slug": "hensoterm-410ks",
+      "category": "fire-protection-paint",
+      "title": "HENSOTHERM 410 KS",
+      "manufacturer": "Rudolf Hensel",
+      "description": "Intumescent coating for steel — interior use",
+      "fullDescription": "HENSOTHERM 410 KS is a German intumescent coating for the fire protection of steel structures in interior spaces. It is part of the complete Hensel system of primers and top coats.\n\nAdvantages:\n- Reliable system from a German manufacturer\n- Economical protection R 30 – R 60\n- Easy film thickness control\n- Many years of proven references",
+      "specifications": {
+        "fireResistance": "R 30 – R 60",
+        "standard": "EN 13381-8",
+        "packaging": "25 kg pail"
+      },
+      "image": "/images/fsb/proizvodi/hensoterm-410ks.jpg"
+    },
+    {
+      "slug": "hensoterm-421ks",
+      "category": "fire-protection-paint",
+      "title": "HENSOTHERM 421 KS",
+      "manufacturer": "Rudolf Hensel",
+      "description": "High-efficiency intumescent coating for steel",
+      "fullDescription": "HENSOTHERM 421 KS is an intumescent coating for the protection of steel structures in interior spaces, intended for positions where an optimal ratio of layer thickness to achieved fire resistance is required.\n\nAdvantages:\n- High efficiency per coat\n- Interior use\n- Part of the certified Hensel system\n- Suitable for exposed structures",
+      "specifications": {
+        "fireResistance": "R 30 – R 60",
+        "standard": "EN 13381-8",
+        "packaging": "25 kg pail"
+      },
+      "image": "/images/fsb/proizvodi/hensoterm-421ks.jpg"
+    },
+    {
+      "slug": "hensomastik-5ks",
+      "category": "firestopping",
+      "title": "HENSOMASTIK 5 KS",
+      "manufacturer": "Rudolf Hensel",
+      "description": "Fire protection coating and sealant for cables and firestopping",
+      "fullDescription": "HENSOMASTIK 5 KS is a fire protection coating for cables and an integral part of soft firestopping systems (mineral wool + coating). It is applied to cable routes and the edges of seals to prevent the spread of fire.\n\nAdvantages:\n- For soft seals and cable coatings\n- Elastic after drying\n- Applied by brush or spray\n- Certified part of the Hensel firestopping system",
+      "specifications": {
+        "fireResistance": "EI 90 – EI 120 (in system)",
+        "standard": "EN 1366-3",
+        "packaging": "12.5 kg pail"
+      },
+      "image": "/images/fsb/proizvodi/hensomastik-5ks.jpg"
+    },
+    {
+      "slug": "promastop-fc",
+      "category": "firestopping",
+      "title": "PROMASTOP-FC",
+      "manufacturer": "Promat",
+      "description": "Fire protection pipe collar for combustible pipes",
+      "fullDescription": "PROMASTOP-FC is a fire protection pipe collar for sealing penetrations of combustible (plastic) pipes. In a fire the intumescent insert expands and closes the opening created by the melting pipe.\n\nAdvantages:\n- Fast and simple installation\n- For walls and ceilings\n- Wide range of pipe diameters\n- Certified according to EN 1366-3",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "sizes": "Ø 50 – Ø 250 mm"
+      },
+      "image": "/images/fsb/proizvodi/promastop-fc.jpg"
+    },
+    {
+      "slug": "promastop-u",
+      "category": "firestopping",
+      "title": "PROMASTOP-U UniCollar",
+      "manufacturer": "Promat",
+      "description": "Universal fire protection pipe collar in strip form — cut as much as you need",
+      "fullDescription": "PROMASTOP-U UniCollar is a universal fire protection pipe collar in strip form that is cut to the required length on site, so one product covers all pipe diameters.\n\nAdvantages:\n- One product for all diameters\n- No waste — cut as needed\n- Fast installation with steel clips\n- Ideal for service and retrofit works",
+      "specifications": {
+        "fireResistance": "EI 120",
+        "standard": "EN 1366-3",
+        "sizes": "Strip L = 2190 mm"
+      },
+      "image": "/images/fsb/proizvodi/promastop-u.jpg"
+    },
+    {
+      "slug": "promaseal-a",
+      "category": "firestopping",
+      "title": "PROMASEAL-A",
+      "manufacturer": "Promat",
+      "description": "Fire protection sealant for joints and smaller penetrations",
+      "fullDescription": "PROMASEAL-A is an acrylic fire protection sealant for sealing joints, connections and smaller service penetrations. After drying it remains permanently elastic and can be painted over.\n\nAdvantages:\n- Simple application with a cartridge\n- Permanently elastic\n- Can be painted over\n- For joints in walls and ceilings",
+      "specifications": {
+        "fireResistance": "EI 60 – EI 120",
+        "standard": "EN 1366-4",
+        "packaging": "310 ml cartridge"
+      },
+      "image": "/images/fsb/proizvodi/promaseal-a.jpg"
+    },
+    {
+      "slug": "promastop-cc",
+      "category": "firestopping",
+      "title": "PROMASTOP-CC",
+      "manufacturer": "Promat",
+      "description": "Fire protection coating for cables and cable trays",
+      "fullDescription": "PROMASTOP-CC is a fire protection coating applied to cables and cable trays to prevent the spread of fire along cable routes and through seals.\n\nAdvantages:\n- Reduces the combustibility of cables\n- Part of the soft firestopping system\n- Applied by brush or spray\n- White colour for easy visual inspection",
+      "specifications": {
+        "fireResistance": "EI 90 – EI 120 (in system)",
+        "standard": "EN 1366-3",
+        "packaging": "12.5 kg pail"
+      },
+      "image": "/images/fsb/proizvodi/promastop-cc.jpg"
+    },
+    {
+      "slug": "promastop-l",
+      "category": "firestopping",
+      "title": "PROMASTOP-L",
+      "manufacturer": "Promat",
+      "description": "Fire protection pillow for temporary and permanent seals",
+      "fullDescription": "PROMASTOP-L is a fire protection pillow for sealing cable penetrations and spare openings. It is ideal for positions with frequent changes to services, as it allows simple removal and reinstallation.\n\nAdvantages:\n- Dry installation without tools\n- Reusable\n- Ideal for server and technical rooms\n- Fast intervention when services change",
+      "specifications": {
+        "fireResistance": "EI 90 – EI 120",
+        "standard": "EN 1366-3",
+        "sizes": "Large pillow"
+      },
+      "image": "/images/fsb/proizvodi/promastop-l.jpg"
+    },
+    {
+      "slug": "promafoam-c",
+      "category": "firestopping",
+      "title": "PROMAFOAM-C",
+      "manufacturer": "Promat",
+      "description": "Fire-rated installation foam",
+      "fullDescription": "PROMAFOAM-C is a fire-rated polyurethane foam for sealing joints and gaps, for example around fire doors and windows and smaller openings in fire compartment walls.\n\nAdvantages:\n- Applied with a foam gun\n- Expands and cures quickly\n- Good thermal and acoustic insulation\n- For the installation of fire doors and metalwork",
+      "specifications": {
+        "fireResistance": "EI 60 – EI 120 (depending on joint)",
+        "standard": "EN 1366-4",
+        "packaging": "750 ml canister"
+      },
+      "image": "/images/fsb/proizvodi/promafoam-c.jpg"
+    },
+    {
+      "slug": "k84-adhesive",
+      "category": "fire-protection-cladding",
+      "title": "PROMAT K84",
+      "manufacturer": "Promat",
+      "description": "Fire protection adhesive for calcium silicate boards",
+      "fullDescription": "PROMAT K84 is a fire protection adhesive intended for bonding and sealing joints of calcium silicate boards in fire protection cladding systems.\n\nAdvantages:\n- Certified part of Promat cladding systems\n- High temperature resistance\n- Simple application\n- For joints, seams and repairs",
+      "specifications": {
+        "temperatureResistance": "Up to 1000 °C",
+        "standard": "Part of the EN 13381-4 system",
+        "packaging": "15 kg pail / 1 kg sausage"
+      },
+      "image": "/images/fsb/proizvodi/k84-ljepilo.jpg"
+    },
+    {
+      "slug": "promatect-h",
+      "category": "fire-protection-cladding",
       "title": "PROMATECT-H",
       "manufacturer": "Promat",
-      "description": "Calcium silicate board for fire protection",
-      "fullDescription": "PROMATECT-H is a high-performance calcium silicate board for structure protection and fire barrier construction. The board is stable, lightweight, and easy to process.\n\nApplications:\n- Steel structure cladding\n- Fire barrier construction\n- Cable tray protection\n- Tunnel linings",
+      "description": "Calcium silicate board for the most demanding cladding",
+      "fullDescription": "PROMATECT-H is a high-performance, moisture-resistant calcium silicate board intended for protecting structures and building fire compartment walls in the most demanding conditions — including tunnels and exterior applications.\n\nApplications:\n- Cladding of steel structures (up to R 240)\n- Cladding in tunnels and infrastructure\n- Smoke extraction ducts\n- Self-supporting fire compartment walls",
       "specifications": {
         "fireResistance": "Up to R 240",
         "standard": "EN 13501-2",
-        "thickness": "6 - 60 mm"
+        "thickness": "6 – 60 mm"
       },
-      "image": "/images/products/promatect-h.jpg",
-      "datasheet": "/documents/promatect-h.pdf"
+      "image": "/images/fsb/proizvodi/promatect-h.jpg"
     },
     {
-      "slug": "promat-modular",
-      "category": "fire-modules",
-      "title": "PROMAT MODULAR",
+      "slug": "promatect-100",
+      "category": "fire-protection-cladding",
+      "title": "PROMATECT-100",
       "manufacturer": "Promat",
-      "description": "Modular system for complex penetration sealing",
-      "fullDescription": "PROMAT MODULAR is a flexible modular system for sealing complex penetrations with different types of installations. The system allows combining cables, pipes, and ducts in one penetration.\n\nFeatures:\n- Flexible configuration\n- For all types of installations\n- Easy subsequent modifications\n- Fire resistance EI 120",
+      "description": "Lightweight board for interior cladding and partitions",
+      "fullDescription": "PROMATECT-100 is a lightweight fire protection board for interior applications — cladding of structures, wall partitions and ceiling membranes. It is easy to work with standard tools.\n\nApplications:\n- Fire compartment walls and wall cladding\n- Ceiling membranes\n- Protection of steel structures\n- Cladding of service shafts",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "configuration": "Modular - adaptable"
+        "fireResistance": "EI 30 – EI 120",
+        "standard": "EN 13501-2",
+        "thickness": "8 – 50 mm"
       },
-      "image": "/images/products/promat-modular.jpg",
-      "datasheet": "/documents/promat-modular.pdf"
+      "image": "/images/fsb/proizvodi/promatect-100.jpg"
     },
     {
-      "slug": "promat-systemglas",
-      "category": "fire-glass",
-      "title": "PROMAT SYSTEMGLAS",
+      "slug": "promatect-200",
+      "category": "fire-protection-cladding",
+      "title": "PROMATECT-200",
       "manufacturer": "Promat",
-      "description": "Fire protection glass for walls and doors",
-      "fullDescription": "PROMAT SYSTEMGLAS is fire protection glass intended for installation in fire walls and doors. It provides transparency and safety in one.\n\nFeatures:\n- Fire resistance EI 30 - EI 120\n- High transparency\n- UV stability\n- Certified according to EN 1364",
+      "description": "Calcium silicate board for the protection of steel structures",
+      "fullDescription": "PROMATECT-200 is a calcium silicate board optimised for the dry-fit protection of steel columns and beams, with an excellent ratio of thickness, weight and achieved fire resistance.\n\nApplications:\n- Box cladding of columns and beams\n- Fire compartment walls\n- Protection of composite structures\n- Smooth surface ready for finishing",
       "specifications": {
-        "fireResistance": "EI 30 - EI 120",
+        "fireResistance": "R 30 – R 180",
+        "standard": "EN 13381-4",
+        "thickness": "15 – 52 mm"
+      },
+      "image": "/images/fsb/proizvodi/promatect-200.jpg"
+    },
+    {
+      "slug": "masterboard",
+      "category": "fire-protection-cladding",
+      "title": "MASTERBOARD",
+      "manufacturer": "Promat",
+      "description": "Universal fire-resistant building board",
+      "fullDescription": "MASTERBOARD is a universal non-combustible building board for a wide range of applications in fire protection and drywall construction, including areas with elevated humidity.\n\nApplications:\n- Wall and ceiling cladding\n- Substrates for finishing layers\n- Protection of timber and steel elements\n- Non-combustible alternative to gypsum plasterboard",
+      "specifications": {
+        "reaction": "A1 (non-combustible)",
+        "standard": "EN 13501-1",
+        "thickness": "6 – 12 mm"
+      },
+      "image": "/images/fsb/proizvodi/masterboard.jpg"
+    },
+    {
+      "slug": "fsb-single-leaf-fire-door",
+      "category": "fire-doors-metalwork",
+      "title": "FSB single-leaf fire doors",
+      "manufacturer": "FSB",
+      "description": "Steel single-leaf fire doors from our own production",
+      "fullDescription": "Single-leaf fire doors from FSB's own production — our own product under the FSB Doors brand, certified according to European standards.\n\nCharacteristics:\n- Steel construction with fire-resistant infill\n- Fire resistance EI₂ 30 – EI₂ 90\n- Standard and special made-to-measure dimensions\n- Options: door closer, panic hardware, glazing, smoke seals\n\nAs a manufacturer, we offer short delivery times, adaptation to the project and installation by our own crews.",
+      "specifications": {
+        "fireResistance": "EI₂ 30 – EI₂ 90",
+        "standard": "EN 16034 / EN 1634-1",
+        "sizes": "Standard and made to measure"
+      },
+      "image": "/images/fsb/proizvodi/fsb-vrata-jednokrilna.jpg"
+    },
+    {
+      "slug": "fsb-double-leaf-fire-door",
+      "category": "fire-doors-metalwork",
+      "title": "FSB double-leaf fire doors",
+      "manufacturer": "FSB",
+      "description": "Steel double-leaf fire doors for larger openings",
+      "fullDescription": "Double-leaf fire doors from FSB's own production — our own product under the FSB Doors brand — intended for larger openings: technical rooms, industrial halls, garages and escape routes.\n\nCharacteristics:\n- Steel construction with high rigidity\n- Fire resistance EI₂ 30 – EI₂ 90\n- Door coordinator for closing sequence\n- Options: panic hardware, glazing, electric strikes\n\nThe doors are certified according to European standards, including the double-leaf version.",
+      "specifications": {
+        "fireResistance": "EI₂ 30 – EI₂ 90",
+        "standard": "EN 16034 / EN 1634-1",
+        "sizes": "Up to large formats, made to measure"
+      },
+      "image": "/images/fsb/proizvodi/fsb-vrata-dvokrilna.jpg"
+    },
+    {
+      "slug": "fsb-fire-rated-glass",
+      "category": "fire-rated-glazing",
+      "title": "FSB fire-rated glazed partitions",
+      "manufacturer": "FSB",
+      "description": "Systems of fire-rated glazed partitions and glazing",
+      "fullDescription": "FSB fire-rated glazed partition systems combine steel or aluminium profiles with certified fire-resistant glass, for positions where transparency is required along with full fire resistance.\n\nCharacteristics:\n- Partitions and glazing EI 30 – EI 90\n- Combination with FSB fire doors\n- Large glazed surfaces in atriums and corridors\n- Detailing, supply and installation from a single source",
+      "specifications": {
+        "fireResistance": "EI 30 – EI 90",
         "standard": "EN 1364-1",
-        "thickness": "15 - 43 mm"
+        "sizes": "According to the project"
       },
-      "image": "/images/products/promat-systemglas.jpg",
-      "datasheet": "/documents/promat-systemglas.pdf"
+      "image": "/images/fsb/proizvodi/fsb-staklo.jpg"
     },
     {
-      "slug": "promat-wool",
-      "category": "fire-wool",
-      "title": "PROMAT Stone Wool",
-      "manufacturer": "Promat",
-      "description": "Stone wool for fire protection insulation",
-      "fullDescription": "PROMAT stone wool is high-quality mineral wool for fire protection and thermal insulation. Ideal for use in sealing, cladding, and fire barriers.\n\nFeatures:\n- Melting point >1000 degrees C\n- Excellent thermal insulation\n- Sound insulation\n- Non-combustible material",
+      "slug": "fsb-fire-rated-spandrel",
+      "category": "fire-rated-spandrel",
+      "title": "FSB fire-rated spandrel",
+      "manufacturer": "FSB",
+      "description": "Our own developed system for fire separation between floors at the façade",
+      "fullDescription": "The FSB fire-rated spandrel is our own developed solution for preventing the vertical spread of fire across the façade. The system of substructure, mineral wool and fire protection boards adapts to any façade geometry.\n\nCharacteristics:\n- Developed by the FSB R&D team\n- Tested in accredited laboratories\n- Adaptation to the façade geometry\n- Supply and installation by our own crews",
       "specifications": {
-        "meltingPoint": ">1000 degrees C",
-        "standard": "EN 13501-1: A1",
-        "density": "40 - 150 kg/m3"
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 1364-4",
+        "sizes": "According to the façade design"
       },
-      "image": "/images/products/promat-wool.jpg",
-      "datasheet": "/documents/promat-wool.pdf"
-    },
-    {
-      "slug": "silca-fireplace-boards",
-      "category": "silicate-boards-fireplaces",
-      "title": "SILCA Fireplace Boards",
-      "manufacturer": "SILCA",
-      "description": "Silicate boards for fireplace installation",
-      "fullDescription": "SILCA fireplace boards are specialized calcium silicate boards intended for safe fireplace and stove installation. They provide the necessary thermal insulation and fire resistance.\n\nApplications:\n- Insulation behind fireplaces\n- Stove bases\n- Building element protection\n- Decorative claddings",
-      "specifications": {
-        "maxTemperature": "1100 degrees C",
-        "standard": "EN 13501-1: A1",
-        "thickness": "25 - 50 mm"
-      },
-      "image": "/images/products/silca-ploce.jpg",
-      "datasheet": "/documents/silca-ploce.pdf"
+      "image": "/images/fsb/proizvodi/fsb-parapet.jpg"
     }
   ]
 }

@@ -23,6 +23,10 @@ export interface Solution {
     standard: string;
     application: string;
   };
+  externalLink?: {
+    label: string;
+    url: string;
+  };
   category: string;
 }
 

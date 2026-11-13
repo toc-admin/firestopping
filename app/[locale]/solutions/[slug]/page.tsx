@@ -18,12 +18,14 @@ const L10N = {
     sheet: "Technical sheet",
     related: "Related systems",
     docTitle: "Documentation",
+    ownProduct: "Own product",
     ctaTitle: "Let's check if this system fits your project.",
   },
   de: {
     sheet: "Technisches Datenblatt",
     related: "Verwandte Systeme",
     docTitle: "Dokumentation",
+    ownProduct: "Eigenes Produkt",
     ctaTitle: "Prüfen wir, ob dieses System zu Ihrem Projekt passt.",
   },
 } as const;
@@ -219,6 +221,26 @@ export default async function SolutionPage({ params }: Props) {
                 </div>
               </Reveal>
 
+              {/* Own product — external brand link */}
+              {solution.externalLink && (
+                <Reveal delay={0.04}>
+                  <div className="bg-paper p-6 border border-hairline">
+                    <span className={monoLabel}>{t.ownProduct}</span>
+                    <p className="mt-4 text-sm text-neutral-600 leading-relaxed">
+                      {solution.externalLink.label}
+                    </p>
+                    <a
+                      href={solution.externalLink.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-block font-mono text-[12px] uppercase tracking-[0.14em] text-red hover:opacity-80 transition-opacity"
+                    >
+                      fsb-doors.com ↗
+                    </a>
+                  </div>
+                </Reveal>
+              )}
+
               {/* Documentation — anthracite panel */}
               <Reveal delay={0.06}>
                 <div className="bg-anthracite text-paper p-5">
@@ -284,10 +306,10 @@ export default async function SolutionPage({ params }: Props) {
                 {dict.common.contactUs}
               </Link>
               <a
-                href="tel:+38514878515"
+                href="tel:+38513496811"
                 className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                +385 1 4878 515
+                +385 1 3496 811
               </a>
             </div>
           </Reveal>

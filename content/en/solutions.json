@@ -1,82 +1,86 @@
 {
   "solutions": [
     {
-      "slug": "fsg-s",
-      "title": "FSG-S",
-      "description": "Cable penetration fire sealing system",
-      "fullDescription": "FSG-S is an innovative cable penetration fire sealing system that provides excellent fire resistance up to 120 minutes. The system is certified according to European standards and is ideal for use in all types of buildings.\n\nSystem features:\n\n- Fire resistance: EI 120\n- Easy installation\n- Possibility of subsequent cable addition\n- Certified according to EN 1366-3",
-      "image": "/images/solutions/fsg-s.jpg",
+      "slug": "fire-protection-paint",
+      "title": "Fire Protection Paint",
+      "description": "Intumescent coatings for the protection of steel structures — invisible protection that expands in a fire and preserves load-bearing capacity.",
+      "fullDescription": "Fire protection paints and coatings are the most elegant way to protect steel structures. Under normal conditions they look like an ordinary finishing coat, and in the event of fire they expand and form an insulating layer that protects the steel from losing its load-bearing capacity.\n\nOur services include:\n\n- Selection of the appropriate coating system according to the required resistance (R 30 – R 120)\n- Machine application of the coating (airless)\n- Dry film thickness control and execution records\n- Decorative top coats in the desired colour\n\nWe work with proven systems from Promat and Rudolf Hensel, adapting the execution to the structural profile, ambient conditions and project requirements.",
+      "image": "/images/fsb/rjesenja/boja-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "application": "Cable trays and individual cables"
+        "fireResistance": "R 30 – R 120",
+        "standard": "EN 13381-8",
+        "application": "Steel structures — industrial halls, sports halls, office buildings"
       },
-      "category": "sealing"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsp-90",
-      "title": "FSP-90",
-      "description": "Fire protection board for steel structure protection",
-      "fullDescription": "FSP-90 is a high-performance fire protection board designed for steel structure protection. It provides fire resistance up to 90 minutes and is ideal for use in industrial halls, warehouses, and commercial buildings.\n\nProduct features:\n\n- Fire resistance: R 90\n- Low weight\n- Easy assembly\n- Aesthetic finish",
-      "image": "/images/solutions/fsp-90.jpg",
-      "specifications": {
-        "fireResistance": "R 90",
-        "standard": "EN 13381-4",
-        "application": "Steel structures"
+      "slug": "fire-doors-metalwork",
+      "title": "Fire-Rated Doors and Metalwork",
+      "description": "Our own product under the FSB Doors brand — fire doors, partitions and access panels, from production to installation.",
+      "fullDescription": "Fire-rated doors and metalwork are our own product — we develop and manufacture them under the FSB Doors brand, certify them to European standards and install them with our own crews.\n\nFrom our range:\n\n- Single-leaf and double-leaf fire doors (EI 30 – EI 90)\n- Fire doors for tunnels and infrastructure facilities\n- Access panels and technical doors\n- Doors with glazing and panic hardware\n\nBecause we know the product from the very first drawing, we can guarantee correct installation and function — because a door only protects if it is correctly installed.",
+      "image": "/images/fsb/rjesenja/bravarija-1.jpg",
+      "externalLink": {
+        "label": "FSB Doors — our own product",
+        "url": "https://www.fsb-doors.com/"
       },
-      "category": "boards"
+      "specifications": {
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 16034 / EN 1634-1",
+        "application": "Buildings of all types, tunnels, industry"
+      },
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "smoke-heat-exhaust-system",
-      "title": "Smoke and Heat Exhaust System",
-      "description": "Complete system for natural ventilation and smoke exhaust",
-      "fullDescription": "The Smoke and Heat Exhaust System is a complete system that ensures safe evacuation of smoke and heat in case of fire. The system enables natural ventilation and is a key element of passive fire protection.\n\nSystem advantages:\n\n- Automatic activation in case of fire\n- Manual activation as an option\n- Low maintenance\n- Long service life",
-      "image": "/images/solutions/vod-dim.jpg",
+      "slug": "firestopping",
+      "title": "Firestopping",
+      "description": "Sealing of cable, pipe and ventilation penetrations through fire compartment walls — the detail the entire system depends on.",
+      "fullDescription": "Every service penetration through a fire compartment wall is a potential path for fire spread. Firestopping restores the wall's full fire resistance — and it is precisely these details that cause the most problems in practice.\n\nWe seal all types of penetrations:\n\n- Cable trays and individual cables\n- Combustible and non-combustible pipes (collars, wraps, sealants)\n- Mixed penetrations\n- Expansion and construction joints\n\nWe use certified systems (Promat, Rudolf Hensel) and document every position — labelling, records and reports are part of our standard delivery.",
+      "image": "/images/fsb/rjesenja/brtvljenja-1.jpg",
       "specifications": {
-        "fireResistance": "E 90 / EI 60",
-        "standard": "EN 12101-2",
-        "application": "Industrial buildings, garages, atriums"
+        "fireResistance": "EI 60 – EI 120",
+        "standard": "EN 1366-3 / EN 1366-4",
+        "application": "Service penetrations through fire compartment walls"
       },
-      "category": "ventilation"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsd-1",
-      "title": "FSD-1",
-      "description": "Fire damper for ventilation ducts",
-      "fullDescription": "FSD-1 is a reliable fire damper designed for installation in ventilation ducts. It automatically closes in case of fire, preventing the spread of fire and smoke through the ventilation system.\n\nFeatures:\n\n- Automatic closure with thermal trigger\n- Remote control capability\n- Fire resistance up to 120 minutes\n- Certified according to EN 15650",
-      "image": "/images/solutions/fsd-1.jpg",
+      "slug": "fire-rated-glazing",
+      "title": "Fire-Rated Glazing",
+      "description": "Fire-resistant glazed partitions and glazing — transparency and safety in one.",
+      "fullDescription": "Fire-rated glazing allows natural light and visual connection between spaces without compromising fire safety. We install it in partitions, doors and facade positions.\n\nOur solutions include:\n\n- Fire-rated glazed partitions (EI 30 – EI 90)\n- Glazing in fire-rated doors and metalwork\n- Large glazed surfaces in atriums and circulation areas\n- Combinations with smoke seals and panic hardware\n\nFrom system selection and structural analysis to installation and handover documentation — everything is carried out by a single team, because all systems must work as a whole.",
+      "image": "/images/fsb/rjesenja/stakla-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120 S",
-        "standard": "EN 15650",
-        "application": "Ventilation ducts"
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 1364-1",
+        "application": "Glazed partitions, atriums, circulation areas, facades"
       },
-      "category": "dampers"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "fsd-1-hh",
-      "title": "FSD-1-HH",
-      "description": "Fire damper for high-rise buildings",
-      "fullDescription": "FSD-1-HH is a specialized fire damper developed for use in high-rise buildings. It meets the strictest safety requirements and provides reliable protection under the most demanding conditions.\n\nFeatures:\n\n- Reinforced construction for high buildings\n- Integrated monitoring system\n- Fire resistance up to 120 minutes\n- Tested at elevated pressure",
-      "image": "/images/solutions/fsd-1-hh.jpg",
+      "slug": "fire-protection-cladding",
+      "title": "Fire Protection Cladding",
+      "description": "Cladding of steel and concrete structures, ducts and cable routes with fire protection boards.",
+      "fullDescription": "Board cladding is a classic and exceptionally reliable solution for protecting structures. It is used wherever high fire resistance, mechanical strength or retrofit protection of existing elements is required.\n\nWe install cladding for:\n\n- Steel columns and beams (up to R 240)\n- Ventilation and smoke extraction ducts\n- Cable routes and service shafts\n- Self-supporting fire compartment walls\n\nWe work with calcium silicate boards (PROMATECT and related systems), with complete supporting documentation of the installed materials and executed details.",
+      "image": "/images/fsb/rjesenja/obloge-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120 S",
-        "standard": "EN 15650",
-        "application": "High-rise buildings"
+        "fireResistance": "R 30 – R 240 / EI 30 – EI 120",
+        "standard": "EN 13381-4 / EN 1366-1",
+        "application": "Structures, ducts, cable routes, compartment walls"
       },
-      "category": "dampers"
+      "category": "passive-fire-protection"
     },
     {
-      "slug": "pipe-fire-seal",
-      "title": "Pipe Fire Seal",
-      "description": "Universal seal for sealing pipe penetrations through walls and ceilings",
-      "fullDescription": "Our pipe fire seal provides reliable sealing of metal and plastic pipe penetrations through fire barriers. The system is easy to install and allows for subsequent interventions.\n\nAdvantages:\n\n- Applicable to metal and plastic pipes\n- Easy installation\n- Possibility of disassembly and reassembly\n- Fire resistance up to 120 minutes",
-      "image": "/images/solutions/brtva-cijevi.jpg",
+      "slug": "fire-rated-spandrel",
+      "title": "Fire-Rated Spandrel",
+      "description": "Our own developed solution for fire separation between floors at the facade — prevents vertical fire spread.",
+      "fullDescription": "A fire-rated spandrel prevents fire from spreading from floor to floor across the facade — a detail that is decisive for the safety of the entire building with modern glazed facades.\n\nOur spandrel solution:\n\n- Developed by our in-house R&D team and tested in accredited laboratories\n- A system of subconstruction, stone wool and fire protection boards\n- Adapted to any facade geometry\n- Installed by our own certified crews\n\nAs manufacturer and installer in one, we take full responsibility for the spandrel — from the workshop drawing to the installation report.",
+      "image": "/images/fsb/rjesenja/parapet-1.jpg",
       "specifications": {
-        "fireResistance": "EI 120",
-        "standard": "EN 1366-3",
-        "application": "Pipe penetrations"
+        "fireResistance": "EI 30 – EI 90",
+        "standard": "EN 1364-4",
+        "application": "Facades — fire separation between floors"
       },
-      "category": "sealing"
+      "category": "passive-fire-protection"
     }
   ]
 }

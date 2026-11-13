@@ -1,14 +1,14 @@
 {
   "services": [
     {
-      "slug": "fire-protection-construction",
-      "title": "Fire Protection Construction",
-      "shortTitle": "Construction",
-      "description": "Professional execution of all types of fire protection work according to the highest quality standards.",
-      "fullDescription": "FSB Fire Protection offers professional execution of all types of fire protection work. Our team of experienced specialists ensures that every project is carried out according to the highest quality standards and in compliance with applicable regulations.\n\nOur construction services include:\n\n- Fire sealing of installation penetrations\n- Application of fire protection coatings on steel structures\n- Installation of fire protection boards\n- Assembly of smoke and heat exhaust systems\n- Installation of fire doors and windows\n\nWe carry out each project with special attention, from planning to final inspection, ensuring that our clients receive solutions that fully meet their needs and legal requirements.",
-      "image": "/images/services/izvodjenje-radova.jpg",
+      "slug": "fire-protection-works",
+      "title": "Execution of Fire Protection Works",
+      "shortTitle": "Works Execution",
+      "description": "Professional execution of all types of passive fire protection works to the highest quality standards.",
+      "fullDescription": "FSB d.o.o. carries out all types of passive fire protection works. Our team of experienced, certified installers ensures that every project is executed to the highest quality standards and in compliance with applicable regulations — because all systems must work as a whole.\n\nOur works execution services include:\n\n- Firestopping of service penetrations\n- Application of fire protection paints and coatings to steel structures\n- Installation of fire protection cladding and boards\n- Installation of fire-rated doors and metalwork — doors, partitions and access panels\n- Installation of fire-rated glazing and spandrels\n\nWe deliver every project with particular care, from preparation to final inspection and complete documentation, ensuring that our clients receive solutions that fully meet their needs and legal requirements.",
+      "image": "/images/fsb/rjesenja/obloge-1.jpg",
       "features": [
-        "Certified contractors",
+        "Certified installers",
         "Premium materials",
         "Complete documentation",
         "Quality guarantee"
@@ -17,13 +17,13 @@
     },
     {
       "slug": "cost-optimization",
-      "title": "Fire Protection Cost Optimization",
-      "shortTitle": "Cost Optimization",
-      "description": "Expert assistance in optimizing fire protection costs without compromising safety.",
-      "fullDescription": "We understand that fire protection costs are a significant item in every construction project. That's why we offer expert cost optimization services that enable you to achieve the maximum level of protection while using resources rationally.\n\nOur optimization services include:\n\n- Analysis of project documentation and identification of savings opportunities\n- Proposing alternative solutions of equal or better quality\n- Optimizing material selection based on price-performance ratio\n- Coordination with designers and contractors\n- Cost monitoring throughout the entire project\n\nWith our approach, clients regularly achieve significant savings while maintaining the highest level of fire protection and full compliance with regulations.",
-      "image": "/images/services/optimizacija.jpg",
+      "title": "Consulting and Cost Optimization",
+      "shortTitle": "Consulting and Optimization",
+      "description": "Consulting services based on long-standing execution experience — cost optimization and the selection of suitable solutions without compromising safety.",
+      "fullDescription": "Fire protection costs are a significant item in every construction project, and the biggest problems in practice arise not in the product, but in the system. Drawing on our long-standing execution experience, we provide consulting services aimed at optimizing costs and selecting suitable solutions.\n\nOur consulting services include:\n\n- Review of the planned systems and identification of savings opportunities\n- Proposing alternative solutions of equal or better quality\n- Optimizing the choice of materials based on the price-performance ratio\n- Technical support for all project participants\n- Support throughout the entire execution\n\nWith our approach, clients regularly achieve significant savings while maintaining the highest level of fire protection and full regulatory compliance.",
+      "image": "/images/fsb/rjesenja/stakla-1.jpg",
       "features": [
-        "Project analysis",
+        "Long-standing execution experience",
         "Alternative solutions",
         "Significant savings",
         "No compromise on quality"
@@ -31,34 +31,19 @@
       "icon": "calculator"
     },
     {
-      "slug": "training-education",
-      "title": "Training & Education - Guarantee of Excellence and Safety",
-      "shortTitle": "Education",
-      "description": "Specialized training programs for designers, contractors, and supervising engineers.",
-      "fullDescription": "We believe that knowledge is the foundation of safety. That's why we offer comprehensive training programs for all participants in the design and execution process of fire protection.\n\nOur training programs include:\n\n- Seminars for designers on new regulations and technologies\n- Practical training for contractors on proper system installation\n- Specialized workshops for supervising engineers\n- In-house training tailored to company needs\n- Certification programs for specific systems\n\nOur instructors are recognized experts with many years of practical experience. The training program is regularly updated in accordance with the latest regulations and technological achievements in fire protection.",
-      "image": "/images/services/edukacija.jpg",
+      "slug": "fsb-academy",
+      "title": "FSB Academy",
+      "shortTitle": "FSB Academy",
+      "description": "Training programs for installers, designers and all participants in the fire protection process. Coming soon.",
+      "fullDescription": "We believe that knowledge is the foundation of safety — educating the market is one of the greatest challenges of passive fire protection. That is why we are launching FSB Academy, a training program intended for all participants in the fire protection process.\n\nFSB Academy, currently in preparation, will offer:\n\n- Practical training for installers on the correct installation of systems\n- Seminars on new regulations, standards and technologies\n- Workshops on the most common on-site mistakes and how to avoid them\n- In-house training tailored to each company's needs\n\nWe pass on our knowledge of the systems first-hand — from daily practice on projects and construction sites. The FSB Academy program is currently in preparation; contact us for more information and upcoming dates.",
+      "image": "/images/fsb/rjesenja/parapet-1.jpg",
       "features": [
-        "Experienced instructors",
+        "First-hand knowledge",
         "Practical training",
-        "Certificates",
-        "Current content"
+        "Experienced specialists",
+        "Coming soon"
       ],
       "icon": "graduation-cap"
-    },
-    {
-      "slug": "laboratory-testing",
-      "title": "Laboratory Testing",
-      "shortTitle": "Laboratory Testing",
-      "description": "Accredited laboratory testing of fire protection systems and materials.",
-      "fullDescription": "Our accredited laboratory provides testing services for fire protection systems and materials in accordance with Croatian and European standards. Testing is carried out by certified specialists using state-of-the-art equipment.\n\nLaboratory testing services:\n\n- Fire resistance testing of building elements\n- Fire reaction testing of materials\n- Testing of fire sealing penetrations\n- Testing of fire protection coatings\n- Testing of fire doors and windows\n\nThe results of our tests are recognized by relevant authorities and can be used to obtain necessary certificates and approvals. We guarantee the accuracy, reliability, and confidentiality of all test results.",
-      "image": "/images/services/laboratorij.jpg",
-      "features": [
-        "Accredited laboratory",
-        "Certified specialists",
-        "Modern equipment",
-        "Recognized results"
-      ],
-      "icon": "flask"
     }
   ]
 }

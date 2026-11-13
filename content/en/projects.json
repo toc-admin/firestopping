@@ -1,115 +1,87 @@
 {
+  "categories": [
+    "Hospitals & Healthcare Facilities",
+    "Educational Institutions",
+    "Hotels & Hospitality",
+    "Industrial & Manufacturing Facilities",
+    "Public Buildings & Institutions",
+    "Shopping & Retail Centers",
+    "Residential & Office Buildings",
+    "Historic & Protected Buildings",
+    "Cultural & Religious Buildings",
+    "Transport Infrastructure"
+  ],
   "projects": [
     {
-      "slug": "kbc-sestre-milosrdnice",
-      "title": "KBC Sestre Milosrdnice Hospital",
-      "category": "Healthcare Facilities",
-      "location": "Zagreb, Croatia",
-      "year": "2022",
-      "description": "Complex fire protection project for a hospital complex. Included fire sealing of installation penetrations, installation of fire doors, and smoke exhaust systems.",
+      "slug": "spansko-swimming-pools",
+      "title": "Špansko Swimming Pools",
+      "category": "Public Buildings & Institutions",
+      "location": "Zagreb",
+      "year": "2023",
+      "description": "Fire protection of the Špansko municipal swimming pool complex. Cladding of ventilation ducts with fire-rated boards, firestopping of penetrations and protection of the steel structure in the plant room and technical areas.",
       "scope": [
-        "Fire sealing of cable penetrations",
-        "Installation of EI 60 fire doors",
-        "Smoke and heat exhaust system",
-        "Fire protection coatings on steel structures"
+        "Fire-rated cladding of ventilation ducts",
+        "Firestopping of service penetrations",
+        "Protection of the steel structure with fire-rated coatings",
+        "Fire-rated doors for technical areas"
       ],
-      "image": "/images/projects/kbc-sestre.jpg",
+      "image": "/images/fsb/projekti/bazeni-spansko-1.jpg",
       "gallery": [
-        "/images/projects/kbc-sestre-1.jpg",
-        "/images/projects/kbc-sestre-2.jpg",
-        "/images/projects/kbc-sestre-3.jpg"
+        "/images/fsb/projekti/bazeni-spansko-2.jpg",
+        "/images/fsb/projekti/bazeni-spansko-3.jpg",
+        "/images/fsb/projekti/bazeni-spansko-4.jpg"
       ],
       "featured": true
     },
     {
-      "slug": "bhb-office-building",
-      "title": "BHB Office Building",
-      "category": "Commercial Buildings",
-      "location": "Zagreb, Croatia",
-      "year": "2021",
-      "description": "Modern office building with the highest fire protection standards. The project included complete fire protection from foundation to roof.",
+      "slug": "kbc-sestre-milosrdnice",
+      "title": "KBC Sestre milosrdnice University Hospital",
+      "category": "Hospitals & Healthcare Facilities",
+      "location": "Zagreb",
+      "year": "2022",
+      "description": "A complex fire protection project for the hospital complex. It included firestopping of service penetrations, installation of fire-rated doors and fire-rated cladding.",
       "scope": [
-        "Fire sealing of all penetrations",
-        "Fire dampers in ventilation system",
-        "Fire protection glass in atrium",
-        "Fire detection system"
+        "Firestopping of cable penetrations",
+        "Installation of EI 60 fire-rated doors",
+        "Fire-rated cladding of service routes",
+        "Fire-rated coatings on steel structures"
+      ],
+      "image": "/images/projects/kbc-sestre.jpg",
+      "gallery": [],
+      "featured": true
+    },
+    {
+      "slug": "bhb-residential-office-building",
+      "title": "BHB Residential & Office Building",
+      "category": "Residential & Office Buildings",
+      "location": "Zagreb",
+      "year": "2021",
+      "description": "A residential and office building with the highest fire protection standards. The project included complete passive fire protection from the foundations to the roof.",
+      "scope": [
+        "Firestopping of all penetrations",
+        "Fire-rated glazing in the atrium",
+        "Fire-rated doors and glazed partitions",
+        "Fire-rated spandrel panels on the facade"
       ],
       "image": "/images/projects/bhb.jpg",
-      "gallery": [
-        "/images/projects/bhb-1.jpg",
-        "/images/projects/bhb-2.jpg"
-      ],
+      "gallery": [],
       "featured": true
     },
     {
       "slug": "sljeme-cable-car",
       "title": "Sljeme Cable Car",
-      "category": "Public Infrastructure",
-      "location": "Zagreb - Sljeme, Croatia",
+      "category": "Transport Infrastructure",
+      "location": "Zagreb - Sljeme",
       "year": "2022",
-      "description": "Fire protection for the new Sljeme cable car complex. Protection in demanding mountain conditions presented a special challenge.",
+      "description": "Fire protection of the new Sljeme cable car complex. A particular challenge was carrying out the protection works in demanding mountain conditions.",
       "scope": [
-        "Fire protection coatings on steel structures",
-        "Fire sealing in engine room",
-        "Cable tray protection",
-        "Fire protection boards"
+        "Fire-rated coatings on steel structures",
+        "Firestopping in the plant room",
+        "Protection of cable routes",
+        "Fire-rated cladding"
       ],
-      "image": "/images/projects/zicara-sljeme.jpg",
-      "gallery": [
-        "/images/projects/zicara-1.jpg",
-        "/images/projects/zicara-2.jpg"
-      ],
-      "featured": true
-    },
-    {
-      "slug": "arena-shopping-center",
-      "title": "Arena Shopping Center",
-      "category": "Shopping Centers",
-      "location": "Zagreb, Croatia",
-      "year": "2020",
-      "description": "Large shopping center with complex fire protection requirements. Implementation included coordination with numerous contractors.",
-      "scope": [
-        "Fire zone compartmentation",
-        "Fire doors and glass walls",
-        "Smoke exhaust system",
-        "Sealing of all installation penetrations"
-      ],
-      "image": "/images/projects/arena.jpg",
-      "gallery": [],
-      "featured": false
-    },
-    {
-      "slug": "westin-hotel",
-      "title": "Westin Hotel",
-      "category": "Hotels",
-      "location": "Zagreb, Croatia",
-      "year": "2019",
-      "description": "Prestigious hotel with the strictest safety requirements. Fire protection aligned with international standards.",
-      "scope": [
-        "Fire sealing on all floors",
-        "Fire doors in corridors",
-        "Elevator and staircase protection",
-        "Fire dampers"
-      ],
-      "image": "/images/projects/westin.jpg",
-      "gallery": [],
-      "featured": false
-    },
-    {
-      "slug": "pliva-pharmaceutical-plant",
-      "title": "Pliva Pharmaceutical Plant",
-      "category": "Industrial",
-      "location": "Zagreb, Croatia",
-      "year": "2021",
-      "description": "Industrial facility with special requirements for cleanliness and fire protection. Specialized systems were applied.",
-      "scope": [
-        "Fire sealing in clean rooms",
-        "Special fire dampers",
-        "Process installation protection",
-        "Fire protection coatings"
-      ],
-      "image": "/images/projects/pliva.jpg",
-      "gallery": [],
+      "image": "/images/fsb/factory/factory-aerial-4.jpg",
+      "gallery": ["/images/fsb/factory/factory-aerial-2.jpg"],
       "featured": false
     }
   ]

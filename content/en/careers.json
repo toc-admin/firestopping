@@ -2,111 +2,111 @@
   "companies": [
     {
       "name": "FSB d.o.o.",
-      "description": "Leading Croatian fire protection company with over 30 years of experience. We specialize in design, implementation, and supervision of fire protection systems in all types of buildings."
+      "description": "A leading Croatian company for passive fire protection. We specialize in the production of fire-rated doors and metalwork and in carrying out fire protection works in all types of buildings."
     },
     {
       "name": "FSB SOLUTIONS d.o.o.",
-      "description": "Sister company specialized in distribution and technical support of top-quality fire protection products. We represent leading European manufacturers and provide complete technical support."
+      "description": "A sister company specialized in the distribution and technical support of premium-quality fire protection products. We represent leading European manufacturers and provide complete technical support."
     }
   ],
   "contactEmail": "hr@fsb-zagreb.hr",
   "jobs": [
     {
-      "slug": "fire-protection-project-manager",
+      "slug": "voditelj-projekata-protupozarne-zastite",
       "title": "Fire Protection Project Manager",
       "type": "Full-time",
       "location": "Zagreb",
       "department": "Projects",
-      "description": "We are looking for an experienced project manager to coordinate fire protection work execution on demanding projects throughout Croatia. Join our team and work on the most challenging projects in the region.",
+      "description": "We are looking for an experienced project manager to coordinate the execution of fire protection works on demanding projects throughout Croatia. Join our team and work on the most challenging projects in the region.",
       "responsibilities": [
-        "Planning and coordinating fire protection work execution",
-        "Leading project team and collaborating with subcontractors",
-        "Communication with investors and supervising engineers",
+        "Planning and coordinating the execution of fire protection works",
+        "Leading the project team and cooperating with subcontractors",
+        "Communicating with investors and supervising engineers",
         "Monitoring project progress and quality control",
         "Preparing reports and documentation",
-        "Ensuring compliance with deadlines and budgets"
+        "Ensuring deadlines and budgets are met"
       ],
       "requirements": [
-        "Higher education in technical field (civil engineering, mechanical engineering, or similar)",
-        "Minimum 5 years of project management experience",
+        "University degree in a technical field (civil engineering, mechanical engineering or similar)",
+        "Minimum 5 years of experience in project management",
         "Knowledge of fire protection regulations",
         "Excellent organizational and communication skills",
-        "Category B driving license",
-        "Knowledge of English language"
+        "Category B driving licence",
+        "Knowledge of English"
       ],
       "benefits": [
         "Competitive salary and bonuses",
         "Company car",
         "Continuous education and certifications",
-        "Advancement opportunities",
+        "Opportunities for advancement",
         "Work on prestigious projects",
-        "Stimulating work environment"
+        "Motivating work environment"
       ],
       "active": true
     },
     {
-      "slug": "fire-sealing-installation-technician",
-      "title": "Fire Sealing Installation Technician",
+      "slug": "izvodac-radova-protupozarnog-brtvljenja",
+      "title": "Firestopping Installer",
       "type": "Full-time",
       "location": "Zagreb and surrounding area",
       "department": "Installation",
-      "description": "We are looking for motivated installation technicians for fire sealing installation on construction sites. We offer training and certification for working with the latest materials and technologies.",
+      "description": "We are looking for motivated installers for the installation of firestopping systems on construction projects. We offer training and certification for working with the latest materials and technologies.",
       "responsibilities": [
-        "Installing fire sealing according to project documentation",
-        "Working with different types of penetrations (cables, pipes, combined)",
-        "Following technical specifications and standards",
-        "Documenting completed work",
-        "Installing identification plates",
-        "Collaborating with project manager and other team members"
+        "Installing firestopping systems according to project documentation",
+        "Working with various types of penetrations (cables, pipes, mixed)",
+        "Complying with technical specifications and standards",
+        "Documenting the completed works",
+        "Applying identification labels",
+        "Cooperating with the project manager and other team members"
       ],
       "requirements": [
-        "Secondary technical education",
-        "Construction experience (fire protection experience preferred)",
-        "Willingness to work at heights and in confined spaces",
+        "Secondary school education in a technical field",
+        "Experience in construction (preferably in fire protection)",
+        "Willingness to work at height and in confined spaces",
         "Physical fitness for field work",
-        "Category B driving license",
-        "Responsibility and precision in work"
+        "Category B driving licence",
+        "Responsibility and precision at work"
       ],
       "benefits": [
         "Regular salary and per diems for field work",
-        "Free education and certification",
-        "Permanent employment opportunity",
+        "Free training and certification",
+        "Possibility of permanent employment",
         "Work equipment and tools",
-        "Teamwork and colleague support",
-        "Advancement opportunities"
+        "Teamwork and support from colleagues",
+        "Opportunities for advancement"
       ],
       "active": true
     },
     {
-      "slug": "sales-engineer",
+      "slug": "prodajni-inzenjer",
       "title": "Sales Engineer",
       "type": "Full-time",
       "location": "Zagreb",
       "department": "Sales",
-      "description": "Join our sales team as a sales engineer and represent premium fire protection products to our clients. Ideal position for technical professionals with sales skills.",
+      "description": "Join our sales team as a sales engineer and present premium fire protection products to our clients. An ideal position for technical professionals with sales skills.",
       "responsibilities": [
         "Developing and maintaining relationships with existing clients",
         "Identifying new sales opportunities",
         "Technical presentation of products and solutions",
-        "Preparing quotes and technical documentation",
-        "Monitoring market and competition",
-        "Participating in trade fairs and professional events"
+        "Preparing quotations and technical documentation",
+        "Monitoring the market and competition",
+        "Participating in trade fairs and industry events"
       ],
       "requirements": [
-        "Higher education in technical field",
-        "Minimum 2 years of technical sales experience",
-        "Knowledge of construction industry",
+        "University degree in a technical field",
+        "Minimum 2 years of experience in technical sales",
+        "Knowledge of the construction industry",
         "Excellent presentation and negotiation skills",
-        "Category B driving license",
-        "Knowledge of English language"
+        "Category B driving licence",
+        "Knowledge of English"
       ],
       "benefits": [
         "Attractive base salary + commission",
-        "Company car and phone",
+        "Company car and mobile phone",
         "Flexible working hours",
         "Continuous education",
-        "Advancement opportunities",
-        "Work with leading industry brands"
+        "Opportunities for advancement",
+        "Work with leading brands in the industry"
       ],
       "active": true
     }

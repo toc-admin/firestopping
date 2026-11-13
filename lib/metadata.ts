@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { type Locale } from "@/i18n/config";
 
-const BASE_URL = "https://fsb-fire-protection.com";
+const BASE_URL = "https://www.firestopping.eu";
 
 interface PageMetadata {
   title: string;
@@ -27,7 +27,7 @@ export function generatePageMetadata({
       title,
       description,
       url,
-      siteName: locale === "de" ? "FSB Brandschutz" : "FSB Fire Protection",
+      siteName: "FSB d.o.o.",
       images: [
         {
           url: `${BASE_URL}${image}`,
@@ -62,24 +62,24 @@ export function generateLocalBusinessSchema(locale: Locale = "en") {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: isGerman ? "FSB Brandschutz" : "FSB Fire Protection",
+    name: "FSB d.o.o.",
     description: isGerman
-      ? "Ueber 30 Jahre Erfahrung in Brandschutzplanung, -ausfuehrung und -ueberwachung."
-      : "Over 30 years of experience in fire protection design, execution, and supervision.",
+      ? "Hersteller und Ausführungsunternehmen für passiven Brandschutz."
+      : "Manufacturer and contractor of passive fire protection.",
     url: `${BASE_URL}/${locale}`,
-    telephone: "+385 1 4878 515",
-    email: "info@fsb-fire-protection.com",
+    telephone: "+385 1 3496 811",
+    email: "info@fsb-zagreb.hr",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Ivana Lucica 5",
+      streetAddress: "Samoborska cesta 91",
       addressLocality: "Zagreb",
       postalCode: "10000",
       addressCountry: "HR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 45.8018,
-      longitude: 15.9710,
+      latitude: 45.7994,
+      longitude: 15.8756,
     },
     openingHoursSpecification: [
       {
@@ -106,8 +106,6 @@ export function generateProductSchema(
   },
   locale: Locale = "en"
 ) {
-  const isGerman = locale === "de";
-
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -129,7 +127,7 @@ export function generateProductSchema(
       priceCurrency: "EUR",
       seller: {
         "@type": "Organization",
-        name: isGerman ? "FSB Brandschutz" : "FSB Fire Protection",
+        name: "FSB d.o.o.",
       },
     },
   };
@@ -153,10 +151,10 @@ export function generateServiceSchema(
     url: `${BASE_URL}/${locale}/services/${service.slug}`,
     provider: {
       "@type": "LocalBusiness",
-      name: isGerman ? "FSB Brandschutz" : "FSB Fire Protection",
+      name: "FSB d.o.o.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Ivana Lucica 5",
+        streetAddress: "Samoborska cesta 91",
         addressLocality: "Zagreb",
         postalCode: "10000",
         addressCountry: "HR",

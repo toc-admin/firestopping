@@ -19,16 +19,15 @@ interface FooterProps {
       items: {
         implementation: { title: string };
         optimization: { title: string };
-        education: { title: string };
-        testing: { title: string };
+        academy: { title: string };
       };
     };
     products: {
       categories: {
-        sealing: string;
-        coatings: string;
-        boards: string;
-        modules: string;
+        paint: string;
+        metalwork: string;
+        firestopping: string;
+        cladding: string;
       };
     };
     footer: {
@@ -60,16 +59,15 @@ const NORMS = [
 export default function Footer({ locale, dict }: FooterProps) {
   const footerNavigation = {
     services: [
-      { name: dict.services.items.implementation.title, href: `/${locale}/services/fire-protection-implementation` },
+      { name: dict.services.items.implementation.title, href: `/${locale}/services/fire-protection-works` },
       { name: dict.services.items.optimization.title, href: `/${locale}/services/cost-optimization` },
-      { name: dict.services.items.education.title, href: `/${locale}/services/education` },
-      { name: dict.services.items.testing.title, href: `/${locale}/services/laboratory-testing` },
+      { name: dict.services.items.academy.title, href: `/${locale}/services/fsb-academy` },
     ],
     products: [
-      { name: dict.products.categories.sealing, href: `/${locale}/products/fire-sealing` },
-      { name: dict.products.categories.coatings, href: `/${locale}/products/fire-coatings` },
-      { name: dict.products.categories.boards, href: `/${locale}/products/fire-boards` },
-      { name: dict.products.categories.modules, href: `/${locale}/products/fire-modules` },
+      { name: dict.products.categories.paint, href: `/${locale}/products/fire-protection-paint` },
+      { name: dict.products.categories.metalwork, href: `/${locale}/products/fire-doors-metalwork` },
+      { name: dict.products.categories.firestopping, href: `/${locale}/products/firestopping` },
+      { name: dict.products.categories.cladding, href: `/${locale}/products/fire-protection-cladding` },
     ],
     company: [
       { name: dict.navigation.about, href: `/${locale}/about` },
@@ -111,14 +109,14 @@ export default function Footer({ locale, dict }: FooterProps) {
               {dict.footer.description}
             </p>
             <address className="mt-6 flex flex-col gap-2.5 font-mono text-[12px] not-italic tracking-[0.08em] text-neutral-300">
-              <a href="tel:+38514878515" className="hover:text-white transition-colors">
-                +385 1 4878 515
+              <a href="tel:+38513496811" className="hover:text-white transition-colors">
+                +385 1 3496 811
               </a>
               <a
-                href="mailto:info@fsb-protupozarna-zastita.hr"
+                href="mailto:info@fsb-zagreb.hr"
                 className="hover:text-white transition-colors"
               >
-                info@fsb-protupozarna-zastita.hr
+                info@fsb-zagreb.hr
               </a>
               <span>
                 Samoborska cesta 91

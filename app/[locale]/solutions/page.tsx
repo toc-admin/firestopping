@@ -15,16 +15,12 @@ const L10N = {
   en: {
     systemsTitle: "Systems",
     systemsNote: "certified systems",
-    noteLabel: "Engineering note",
-    note: "Every solution is tested as a system — a seal, coating or door performs only as well as its installation.",
     ctaLabel: "Request a quote",
     ctaTitle: "Not sure which system fits your building?",
   },
   de: {
     systemsTitle: "Systeme",
     systemsNote: "zertifizierte Systeme",
-    noteLabel: "Technischer Hinweis",
-    note: "Jede Lösung ist als System geprüft — eine Abschottung, Beschichtung oder Tür ist nur so gut wie ihre Montage.",
     ctaLabel: "Angebot anfordern",
     ctaTitle: "Sie sind unsicher, welches System zu Ihrem Gebäude passt?",
   },
@@ -132,26 +128,6 @@ export default async function SolutionsPage({
         </div>
       </section>
 
-      {/* ── System as a whole — anthracite inset ───────── */}
-      <section className="bg-anthracite text-paper border-y border-hairline-dark">
-        <div className={`${container} py-14 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline`}>
-          <Reveal className="md:col-span-8">
-            <span className={monoLabel}>{t.noteLabel}</span>
-            <p className="mt-4 text-lg md:text-xl font-semibold leading-relaxed max-w-2xl">
-              {t.note}
-            </p>
-          </Reveal>
-          <Reveal delay={0.08} className="md:col-span-4 md:text-right">
-            <Link
-              href={`/${loc}/services`}
-              className="inline-block px-6 py-3 font-semibold border border-paper/40 hover:bg-white/10 transition-colors"
-            >
-              {dict.navigation.services} →
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ── Contact CTA — ink ──────────────────────────── */}
       <section className="bg-ink text-white">
         <div className={`${container} py-20 md:py-24`}>
@@ -168,10 +144,10 @@ export default async function SolutionsPage({
                 {dict.common.contactUs}
               </Link>
               <a
-                href="tel:+38514878515"
+                href="tel:+38513496811"
                 className="px-7 py-3.5 font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                +385 1 4878 515
+                +385 1 3496 811
               </a>
             </div>
           </Reveal>

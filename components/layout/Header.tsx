@@ -19,14 +19,6 @@ interface HeaderProps {
       contact: string;
       careers: string;
     };
-    services: {
-      items: {
-        implementation: { title: string };
-        optimization: { title: string };
-        education: { title: string };
-        testing: { title: string };
-      };
-    };
     common: {
       openMenu: string;
       closeMenu: string;
@@ -58,7 +50,7 @@ export default function Header({ locale, dict }: HeaderProps) {
         <Link
           href={`/${locale}`}
           className="flex items-center gap-3"
-          aria-label="FSB Fire Protection — home"
+          aria-label="FSB d.o.o. — home"
         >
           <span className="inline-flex items-center justify-center w-9 h-9 bg-ink">
             <Image

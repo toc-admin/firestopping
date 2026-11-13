@@ -75,8 +75,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 export default function Stats({ dict }: StatsProps) {
   const stats = [
     {
-      value: 30,
-      suffix: "+",
+      value: 20,
+      suffix: "",
       label: dict.stats.yearsExperience,
     },
     {

@@ -1,64 +1,49 @@
 {
   "services": [
     {
-      "slug": "fire-protection-construction",
-      "title": "Brandschutzausfuehrung",
-      "shortTitle": "Ausfuehrung",
-      "description": "Professionelle Ausfuehrung aller Brandschutzarbeiten nach hoechsten Qualitaetsstandards.",
-      "fullDescription": "FSB Brandschutz bietet professionelle Ausfuehrung aller Arten von Brandschutzarbeiten. Unser Team erfahrener Spezialisten stellt sicher, dass jedes Projekt nach hoechsten Qualitaetsstandards und unter Einhaltung der geltenden Vorschriften durchgefuehrt wird.\n\nUnsere Bauleistungen umfassen:\n\n- Brandschottung von Installationsdurchfuehrungen\n- Auftragen von Brandschutzbeschichtungen auf Stahlkonstruktionen\n- Montage von Brandschutzplatten\n- Installation von Rauch- und Waermeabzugssystemen\n- Einbau von Brandschutztueren und -fenstern\n\nWir fuehren jedes Projekt mit besonderer Sorgfalt durch, von der Planung bis zur Endkontrolle, um sicherzustellen, dass unsere Kunden Loesungen erhalten, die ihren Beduerfnissen und gesetzlichen Anforderungen vollstaendig entsprechen.",
-      "image": "/images/services/izvodjenje-radova.jpg",
+      "slug": "fire-protection-works",
+      "title": "Ausführung von Brandschutzarbeiten",
+      "shortTitle": "Ausführung",
+      "description": "Professionelle Ausführung aller Arbeiten des passiven Brandschutzes nach höchsten Qualitätsstandards.",
+      "fullDescription": "FSB d.o.o. führt alle Arten von Arbeiten des passiven Brandschutzes aus. Unser Team erfahrener, zertifizierter Monteure stellt sicher, dass jedes Projekt nach höchsten Qualitätsstandards und im Einklang mit den geltenden Vorschriften ausgeführt wird — denn alle Systeme müssen als Ganzes funktionieren.\n\nUnsere Ausführungsleistungen umfassen:\n\n- Abschottung von Installationsdurchführungen\n- Applikation von Brandschutzfarben und -beschichtungen auf Stahlkonstruktionen\n- Montage von Brandschutzbekleidungen und -platten\n- Montage von Brandschutztüren und -metallbau — Türen, Trennwände und Revisionsöffnungen\n- Montage von Brandschutzverglasungen und Brandschutz-Brüstungen\n\nJedes Projekt realisieren wir mit besonderer Sorgfalt, von der Vorbereitung bis zur Endkontrolle und vollständigen Dokumentation, und stellen sicher, dass unsere Kunden Lösungen erhalten, die ihre Anforderungen und die gesetzlichen Vorgaben vollständig erfüllen.",
+      "image": "/images/fsb/rjesenja/obloge-1.jpg",
       "features": [
-        "Zertifizierte Fachkraefte",
+        "Zertifizierte Monteure",
         "Hochwertige Materialien",
-        "Vollstaendige Dokumentation",
-        "Qualitaetsgarantie"
+        "Vollständige Dokumentation",
+        "Qualitätsgarantie"
       ],
       "icon": "wrench"
     },
     {
       "slug": "cost-optimization",
-      "title": "Kostenoptimierung im Brandschutz",
-      "shortTitle": "Kostenoptimierung",
-      "description": "Fachkundige Unterstuetzung bei der Optimierung der Brandschutzkosten ohne Kompromisse bei der Sicherheit.",
-      "fullDescription": "Wir verstehen, dass Brandschutzkosten ein bedeutender Posten in jedem Bauprojekt sind. Deshalb bieten wir fachkundige Kostenoptimierungsdienste an, die es Ihnen ermoeglichen, das maximale Schutzniveau bei rationeller Ressourcennutzung zu erreichen.\n\nUnsere Optimierungsleistungen umfassen:\n\n- Analyse der Projektdokumentation und Identifizierung von Einsparpotentialen\n- Vorschlag alternativer Loesungen gleicher oder besserer Qualitaet\n- Optimierung der Materialauswahl nach Preis-Leistungs-Verhaeltnis\n- Koordination mit Planern und Ausfuehrenden\n- Kostenueberwachung waehrend des gesamten Projekts\n\nMit unserem Ansatz erzielen Kunden regelmaessig erhebliche Einsparungen bei gleichzeitiger Aufrechterhaltung des hoechsten Brandschutzniveaus und vollstaendiger Einhaltung der Vorschriften.",
-      "image": "/images/services/optimizacija.jpg",
+      "title": "Beratung und Kostenoptimierung",
+      "shortTitle": "Beratung und Optimierung",
+      "description": "Beratungsleistungen auf Grundlage langjähriger Erfahrung in der Ausführung — Kostenoptimierung und Auswahl geeigneter Lösungen ohne Kompromisse bei der Sicherheit.",
+      "fullDescription": "Die Kosten des Brandschutzes sind in jedem Bauprojekt ein bedeutender Posten — und die größten Probleme entstehen in der Praxis nicht beim Produkt, sondern im System. Auf Grundlage langjähriger Erfahrung in der Ausführung bieten wir Beratungsleistungen mit dem Ziel der Kostenoptimierung und der Auswahl geeigneter Lösungen.\n\nUnsere Beratungsleistungen umfassen:\n\n- Prüfung der vorgesehenen Systeme und Identifikation von Einsparpotenzialen\n- Vorschlag alternativer Lösungen gleicher oder besserer Qualität\n- Optimierung der Materialauswahl nach dem Preis-Leistungs-Verhältnis\n- Technische Unterstützung aller Projektbeteiligten\n- Begleitung während der gesamten Ausführung\n\nMit unserem Ansatz erzielen unsere Kunden regelmäßig erhebliche Einsparungen — bei höchstem Brandschutzniveau und vollständiger Einhaltung der Vorschriften.",
+      "image": "/images/fsb/rjesenja/stakla-1.jpg",
       "features": [
-        "Projektanalyse",
-        "Alternative Loesungen",
+        "Langjährige Erfahrung in der Ausführung",
+        "Alternative Lösungen",
         "Erhebliche Einsparungen",
-        "Kein Kompromiss bei der Qualitaet"
+        "Keine Kompromisse bei der Qualität"
       ],
       "icon": "calculator"
     },
     {
-      "slug": "training-education",
-      "title": "Schulung und Ausbildung - Garantie fuer Exzellenz und Sicherheit",
-      "shortTitle": "Schulung",
-      "description": "Spezialisierte Schulungsprogramme fuer Planer, Ausfuehrende und Bauueberwacher.",
-      "fullDescription": "Wir glauben, dass Wissen die Grundlage der Sicherheit ist. Deshalb bieten wir umfassende Schulungsprogramme fuer alle Beteiligten am Planungs- und Ausfuehrungsprozess des Brandschutzes an.\n\nUnsere Schulungsprogramme umfassen:\n\n- Seminare fuer Planer zu neuen Vorschriften und Technologien\n- Praktische Schulung fuer Ausfuehrende zur ordnungsgemaessen Systeminstallation\n- Spezialisierte Workshops fuer Bauueberwacher\n- Firmeninterne Schulungen nach Unternehmensbedarf\n- Zertifizierungsprogramme fuer bestimmte Systeme\n\nUnsere Dozenten sind anerkannte Experten mit langjaehriger praktischer Erfahrung. Das Schulungsprogramm wird regelmaessig entsprechend den neuesten Vorschriften und technologischen Errungenschaften im Brandschutz aktualisiert.",
-      "image": "/images/services/edukacija.jpg",
+      "slug": "fsb-academy",
+      "title": "FSB Academy",
+      "shortTitle": "FSB Academy",
+      "description": "Schulungsprogramme für Monteure, Planer und alle Beteiligten im Brandschutzprozess. Demnächst.",
+      "fullDescription": "Wir sind überzeugt, dass Wissen die Grundlage der Sicherheit ist — die Schulung des Marktes ist eine der größten Herausforderungen des passiven Brandschutzes. Deshalb starten wir die FSB Academy, ein Schulungsprogramm für alle Beteiligten im Brandschutzprozess.\n\nDie FSB Academy in Vorbereitung bietet:\n\n- Praxisschulungen für Monteure zur fachgerechten Montage der Systeme\n- Seminare zu neuen Vorschriften, Normen und Technologien\n- Workshops zu den häufigsten Fehlern auf der Baustelle und wie man sie vermeidet\n- In-house-Schulungen, zugeschnitten auf die Bedürfnisse der Unternehmen\n\nUnser Wissen über die Systeme geben wir aus erster Hand weiter — aus der täglichen Praxis auf Projekten und Baustellen. Das Programm der FSB Academy befindet sich derzeit in Vorbereitung — für weitere Informationen und Terminankündigungen stehen wir gerne zur Verfügung.",
+      "image": "/images/fsb/rjesenja/parapet-1.jpg",
       "features": [
-        "Erfahrene Dozenten",
-        "Praktische Schulung",
-        "Zertifikate",
-        "Aktuelle Inhalte"
+        "Wissen aus erster Hand",
+        "Praxisnahe Schulung",
+        "Erfahrene Fachleute",
+        "Demnächst"
       ],
       "icon": "graduation-cap"
-    },
-    {
-      "slug": "laboratory-testing",
-      "title": "Laborpruefung",
-      "shortTitle": "Laborpruefung",
-      "description": "Akkreditierte Laborpruefung von Brandschutzsystemen und -materialien.",
-      "fullDescription": "Unser akkreditiertes Labor bietet Pruefleistungen fuer Brandschutzsysteme und -materialien nach kroatischen und europaeischen Normen an. Die Pruefungen werden von zertifizierten Spezialisten mit modernster Ausruestung durchgefuehrt.\n\nLaborpruefleistungen:\n\n- Feuerwiderstandspruefung von Bauelementen\n- Pruefung der Brandreaktion von Materialien\n- Pruefung von Brandschottungen\n- Pruefung von Brandschutzbeschichtungen\n- Pruefung von Brandschutztueren und -fenstern\n\nDie Ergebnisse unserer Pruefungen werden von den zustaendigen Behoerden anerkannt und koennen zur Erlangung der erforderlichen Zertifikate und Zulassungen verwendet werden. Wir garantieren die Genauigkeit, Zuverlaessigkeit und Vertraulichkeit aller Pruefergebnisse.",
-      "image": "/images/services/laboratorij.jpg",
-      "features": [
-        "Akkreditiertes Labor",
-        "Zertifizierte Spezialisten",
-        "Moderne Ausruestung",
-        "Anerkannte Ergebnisse"
-      ],
-      "icon": "flask"
     }
   ]
 }
